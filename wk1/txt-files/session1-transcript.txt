@@ -1,0 +1,970 @@
+ByteByte
+18:03:34
+
+Logistics. And this session is on top of our technical deep dive sessions. So it's just, um, in order to ensure that we understand how things work, what are the logistics how to get the most value out of the course, where to find the content, and so on. So, um, so that's it. And then, um, based on my experience, there are a lot of questions. And to make sure that we can effectively answer questions, I'll leave more time at the end. Um, and at the end by raised raised hands, we can go over all the questions.
+
+You
+18:03:34
+
+Introduction and logistics. And this session is on top of our technical deep dive sessions. So it's just, uh, in order to make for that, we understand how things work, what are the logistics how to get the most value out of the course, where to find the content, and so on. So, um, so that's it. And then, um, based on my experience, there are a lot of questions. And to make sure that we can effectively answer questions, I leave more time at the end. Um, and at the end by wrist by raised hands, we can go over all the questions.
+
+ByteByte
+18:04:24
+
+Alright. So I'll start with Kubernetes as the first question that you may have. My name is Ali. I'm the instructor for this cohort um, AI engineering. I'm currently working at Adobe. I'm an machine learning engineer and tech lead. Uh, for the last seven years, for the first three years, I've been working in the to build and ship certain recommendation systems. Over the last few years, I've been in the Firefly team. And as you may know, Firefly is a service work to build and ship, uh, generative AI technologies. Like text to video, and some applications like editing. Um, so that's mostly my I would be experience. So I'm I'm one of the tech leads in the, um, in the Firefly and in the Gen AI work. And I've worked on building and training larger scale text to video models.
+
+ByteByte
+18:06:34
+
+Um, before, uh, Adobe, I've been at Google in the Mac scene. And then there, I've been also working on building machine learning modules that machine learning systems to make their map experience better. Um, before Google, I cofounded and had a company named Confu. Um, and in Confu, our focus was to build um, assistive technologies for people with disabilities using machine learning technologies. Like, for instance, we had technologies to scan the environment and describe them So these days, these things might sound more much more obvious, but back then, it was very difficult problems to work on and solve. So Compu was acquired, and due to its overlap and similarity with the Google Map, I joined map I joined Google. So that pretty much wraps up my, um, work experience. Also, aside from that, I we have covered two hooks, um, for machine learning system design, uh, interview with my co author, Alex who is also the best selling seller of system design interviews. And also, um, generative AI system design interview with my wonderful co author, uh, who works at OpenAir right now. Um, and as part of the bonuses of, uh, this cohort, you can access to the digital format of these books along with some other books, um, through the by by by school. Um, I also teach at, uh, Stanford Extension Program. So, basically, it's the format and the study is very similar. Um, there are a bunch of courses offered by Stanford, and then there are a bunch of projects and deep dives. So I've done lots of deep dives on different, uh, courses, like AI principles and machine learning with wraps. Um, but, again, the format is very similar to to what we would um, be doing in this course. Um, and this course, we with with by partnering with by by score. So that's all about me and, um, my background. Next, um, is about the agenda. So we are going to focus on four, um, key topics, um, in this talk. One is our approach to AI engineering and, basically, why we created this course. Uh, what are the values that we hope to, uh, deliver. And what are our key principles that we had in mind when we created this course?
+
+ByteByte
+18:07:05
+
+Um, so yeah. So that's one thing. The other thing is, um, course logistics. We would go over um, how to get access to different materials, what are different materials, how how to get support how to get to there to ask your questions, and all those things. Um, after that, we go over, uh, the six week six week journey that you should expect. We'll briefly go over, um, the topics that we would cover throughout the six week journey. And finally, we would share some tips uh, for success and in order to get the most value out of the course.
+
+You
+18:07:09
+
+Alright. So I just started who are we as the first question that you may have. My name is Ali. I'm the instructor for this cohort, uh, AI engineering. I'm currently working at Adobe. I'm a machine learning engineer and tech lead, uh, for the last seven years. For the first few years, I've been working in the to build and ship search and recommendation systems. Um, over the last few years, I've been in the Fireflies team. And as you may know, Fireflies, Adobe's, um, work to build and ship generative AI technologies, like text to image, text to video, and some applications like editing. Um, so that's mostly my Adobe experience. So I'm I'm one of the tech leads in the, um, in the Firefly and in Gen AI work. And I've worked on building and training larger scale text to video models. Um, before, uh, Adobe, I've been at Google in the Mac team. And then there, I've been also working on building machine learning modules and machine learning systems to make the map experience better. Um, before Google, I cofounded and had a company named Kung Fu. Um, and in Kung Fu, our focus was to build, um, assistive technologies for people with disabilities using machine learning technologies. Like, for instance, we had technologies to scan the environment and describe them So these days, these things might sound more much more obvious, but back then, it was very difficult problems to work on as of. So Compu was acquired, and due to its overlap and similarity with Google Map, I joined I joined Google. So that pretty much wraps up my, um, work experience. Also, aside from that, I we have coauthored two books, machine learning system design, uh, interview with my coauthor, Alex. Who is also the best selling seller of system design interviews. And also, um, generated AI system design interview with my wonderful co author, uh, Paul, who works at OpenAir right now. Um, and as part of the bonuses of, uh, this cohort, you gain access to the digital format of these books along with some other books, uh, through the Wi Fi group. Um, I also teach at Stanford Extension Program. So, basically, it's the format and the study is very similar. Um, there are a bunch of courses offered by Stanford, and then there are a bunch of projects and deep dives. So I've done lots of deep dives on different, uh, courses, like AI principles and machine learning graphs. Um, but again, the format is very similar to what we would um, be doing in this course. Um, and this course we created is with with by partnering with White White Coat. So that's all about me. And, um, my background. Next, um, is about the agenda. So we are going to focus on four, um, key topics. Um, in this talk. Uh, one is our approach to AI engineering. And basically why we created this course, uh, what are the values that we hope to, uh, deliver, and what are our key principles that we had in mind when we created course. Um, so yeah, so that's one thing. The other thing is, um, course logistics. They would go over, um, how to get that to different materials, what are different materials, how how to get support, how to get there to ask your questions, and all those things. Um, after that, we go over, uh, six week six week journey that you should expect Um, we'll briefly go over, um, the topics that we would cover throughout the six week journey. And finally, we would share some tips uh, for success and in order to get the most value out of the course. So I just started this, uh, approach to AI engineering.
+
+You
+18:07:57
+
+So we had we have received lots of different, um, requests and feedback in general over the years, especially after we published our book Um, people were showing a lot of interest to learn AI or transitioning to AI or, um, the different backgrounds, or they may be in AI and they want to learn and and, uh, switch gears and learn something different. So we've been able to learn a lot about some of the pain points that are out there for people who want to learn. In the AI education space. So we created this course with the these three, uh, principles that we had in mind. I'm going to go over each of them in more detail. So one is learn by doing. The other is learn the right depth. And then uh, the third one is learn in a coming. Um, so let's just start with learn by doing.
+
+ByteByte
+18:13:24
+
+So I just started this, um, approach to AI engineering. So we had we have received lots of different, um, request and feedback in general over the years, especially after we published our books. People were showing a lot of interest to learn AI or transitioning into AI. Or, um, in different backgrounds, or they may be in AI and want to learn and and, uh, switch gears and learn something different. So we've been able to learn a lot about some of the pain points that are out there for people who want to learn in the AI education space. So we created this course with the these three, uh, principles that we had in mind. So I'm going to go over each of them in more detail. So one is learn by doing. The other is learn the right depth. And then uh, the third one is learn in a community. Um, so let's just start with learn by doing. Again, a lot of people are interested to learn different topics, let's say, AI. With different backgrounds. So they may not have any prior knowledge about AI. And this learning experience generally has two phases. One is the passive learning, and, um, it's followed by active learning. Um, passive learning is basically when you want to learn about something and then you go and read some technical reports or papers or some YouTube videos to understand how things work. Um, but learning usually doesn't stop there. Um, I've seen a lot of my coworkers, including myself, we want to build something, and then we have no idea how to build it. So first, we go and learn what is necessary to learn. After we learn and we come back to build it, we have still no idea how to build it. Where we start, what are the right tools to use. So, um, so so that's why we think that, uh, in order to build things, it shouldn't stop at the passive learning phase. And because of that, when we designed this course, we complement the passive learning with active learning. So we have some content that I will go over them soon in this talk. About asset learning, different kinds of material. So you can start from passive learning phase. And then following that, we have the active learning phase. Which is, um, taking what we learned and practicing it. And implementing something. And during this implementation, there are the definitely issues and failures, so we have to fix errors and try And this you would see this would happen, um, during our technical live sessions as we try to implement something. Had the experience of as we are implementing something goes wrong, then we have to go back and debug it. So we will do do all those kind of things, like uh, but that process itself helps a lot to to better understand that the topics. And, um, basically, the real understanding happens during the active learning. Um, so that was one one uh, principle that we had in mind. We offer both of these, passive learning and active learning. The second approach to AI engineering was to learn the right depth. A lot of the content and material out there are one of these two extremes. So either you can see on the left and on the right. So they are either very math heavy, so they have lots of math, uh, details and theories and lots of different techniques or, uh, proposals to solve something over the last twenty years. These are good for for certain people and use cases. Um, it's, for instance, can be good for researchers who want to learn every single every single way of solving something that were ever proposed over the like, twenty years. But it may not be a lot of those details may be unnecessary. If your goal is to build something or in even in industry. For example, I've been watching some really good courses uh, on YouTube, um, from some credit debt institutions. Um, they are so wonderful. I learned a lot. But a lot of the technique the techniques that they were talking about was more on the mister side. So none of those, I am that are not being used in industry. Because of efficiency reasons, because they they for whatever reason, they they won't work in practice. So and it's very hard to know which of those are unnecessary for someone who is transitioning into AIM. Um, you often see, like, three different ways that, let's say, you can prove a model or like, uh, can quantize the model, but you it's not as easy to know which of those are, um, practical. And useful and actively being used in industry. So this is one one extreme, and also a lot of textbooks are like that. Um, and the other extreme are the metro materials, books, courses, content, um, that are too shallow. They are more designed for you to be an AI user, not not so the focus is, um, they're good. They're just for for different, um, audience. If you want to be a AI user, you understand what are the tools to use AI tools like Gemini, and other different tools. Um, these courses are like, where these content are mostly for those people. Um, but the problem is that it's very shallow. Like, the technical things that people would learn by by, uh, going through this this extreme is simply to use AI or at best using their APIs and some request, get responses back, and and start using something. Our goal was to end here, uh, somewhere in between. We basically extract whatever is necessary and used in building actual systems in practice. Um, we extract all of those so you people can build their foundations, um, and know all the core topics that are in important. And then also include whatever is necessary on this side on the application level to make those work at practice in practice. So our goal was to really maintain a balance between, um, learning and doing. So this was the the second principle we had in mind designing this course. And then the third one is to learn in a community. Um, learning alone is generally hard. It's slow. It's discouraging. It can be easy to get stuck. These days, it AI tools, it might be easier to unlock yourself if if the issue is, like, a technical problem. But still, a lot of the actual value coming from generally, coming from real humans with real feedbacks.
+
+ByteByte
+18:16:16
+
+So that's why we believe that, uh, one uh, value of, uh, uh, the cohort would be to learn peers in a community. There are a few 100 people and it I I read the interest and lots of different backgrounds and, um, very different expertise, which is great with which actually makes this, um, cohort and learning experience a lot more meaningful. Um, because people now can collaborate with with, um, each other, uh, on for the capstone project. They can share and receive constructive feedback. And most importantly, we remain lasting connections, um, from our past two cohorts, we've got feedback that this this aspect was one of the most important parts of the course to connect with people. Uh, it can happen both during the capstone project, which I'm going to talk about, or in general during the the course to build connections that would last even beyond, um, this course. And also, we are in we are a community. We are a AI community. Um, our community would last even after the course. So and then we would keep adding, and we we have a alumni channel, which is keep adding more and more people. So over time, this community can be really helpful. And we can, um, provide a lot of value, um, to each other. So these are the three key things that we had in mind we created this course. So, um, I'm going to go to the next topic. So learn by doing, learn the right path, and learn the community. Um, the next topic is course logistics. Basically, what to expect each week and also how to get support. This part, I'm going to keep it a little bit brief because I'm going to demo you the course portal in a bit so you know how to navigate the course portal, what are different tabs, and attentions. Uh, so here, I'm just going to quickly say what to expect this week. Um, and then in the course demo, we'll we'll see the the the details. So each week, you can expect four items or four components. We have two live components and two, um, course. Materials. So these are mostly for you can think of those as your passive learning, and these are as your active learning. Um, Yeah. So real time AI project life, This is basically one of the projects that we've listed, um, on the website. We, um, typically, the way that it works, I share my screen. Uh, we go over their um, the the code template line by line. We implemented we debug it, and we explain it. Um, the focus of these projects are more on high level. Uh, so the the intention is not to go to low level, like, coding or programming. Um, first week is a little bit different because we want to build some, uh, foundation so we go to New York. But in general, then we are building this AI projects, the focus is to just keep it high level and focus on building blocks.
+
+You
+18:16:16
+
+Again, a lot of people are interested to learn uh, different topics, let's say AI. Different backgrounds. So they may not have any prior knowledge about AI. And this learning experience generally has two phases. One is the passive learning and um, it follows by active learning. Um, so passive learning is basically when you want to learn about something, and then you go and read some technical reports papers or some YouTube videos to understand how things work. Um, but learning usually doesn't stop there. Um, I've seen a lot of my coworkers, including myself, we want to build something, and then we have no idea how to build So first, we go and learn what is necessary to learn And after we learn and we come back to build it, we have still no idea how to build it, where to start, what are the right tool screens. So, um, so so that's why we think that, uh, in order to give things, it shouldn't stop at the passive learning phase. And because of that, then we designed this course, we complement the passive learning with active learning. So we have some content that I will go over them soon in this talk, uh, about passive learning, like, different kinds of material. So you can start from passive learning phase. And then following that, we have the active learning phase, which is, um, taking what we learned and practicing it and implementing something. And during this implementation, there are definitely issues and failures, so we have to fix errors and try. And this you would see this could happen, um, during our technical live sessions as we try to implement something. Had the experience of as we are implementing something goes wrong, then we have to go back and debug it. So we would do do all those kind of things like uh, but that process itself helps a lot to to better understand the the topics. And, um, basically, the real understanding happens during the active learning. Um, so that was one one uh, principle that we had in mind. We offer both of these, active learning and active learning. The second approach to AI engineering was to learn the right depth. A lot of the content and material out there are one of these two extremes. So either you can send the left hand and the right. So they are either very mackety, um, So they have lots of math, um, details, and theories and lots of different techniques or, uh, proposals to solve something over the last twenty years. These are good for for certain people and use cases. Um, it's, for instance, can be good for researchers who want to learn every single every single day of solving something that ever proposed over the, like, twenty years. But it may not be A lot of those details may be unnecessary if your goal is to build something. Or in even in industry. For example, I've been watching some really good courses, um, on YouTube. From some credible institutions. Um, they are so wonderful. I learned a lot. But a lot of the technique the techniques that they were talking about was more on the research side. So none of those, I am to very that are not being used in industry. Because of efficiency reasons, because they they or whatever reason, they they won't work in practice. So and it's very hard to know which of those are unnecessary unnecessary for someone who's transitioning into a f. Um, You often see, like, three different ways that, let's say, you can prune a model or, like, can quantize a model, but you it's not as easy to know which of those are, um, practical. And useful and actively being used in industry. So this is one one extreme, and also a lot of textbooks are like that. Um, and the other extreme are the materials, books, courses, content, uh, that are too shallow. They are more designed for you to be an AI user, not not so the focus is, um, they're good. They're just, uh, for for different, um, audience. Like, if you want to be a AI user, you understand what are the tools to use. AI tools like Gemini and other different tools. Um, these courses are, like, where these content are mostly for those people. But the problem is that it's very shallow. Like, the technical things that people would learn by by, um, going through this this extreme. Is simply to use AI or at best using their APIs and some request get responses back, and and start using something. Our goal was to gain here, um, somewhere in between. We basically extract whatever is necessary and use in building actual systems in practice. Um, we extract all of those, so you people can build their foundations, and know all the core topics that are important. And then also include whatever is necessary on this side on the application level to make those work at practice in practice. So our goal was to really maintain a balance between, um, learning and doing. So this was the the second principle we had in mind designing this course. And then the third one is to learn in a community. Um, learning alone is generally hard. It's slow. It's discouraging. It can be easy to get stuck. These days, with AI tools, it might be easier to unblock yourself if if the issue is, like, a technical problem. But still, a lot of the actual value coming from generally coming from real humans with real feedbacks. Um, So that's why we believe that one, um, value of the cohort would be to learn with peers in a community. There are a few 100 people, and they I I read the intros and lots of different backgrounds and, um, very different expertise, which is great. It it actually makes this, um, cohort and learning experience a lot more meaningful. Um, because people now can collaborate with with, um, each other, uh, on for the capstone project. They can share and receive constructive feedback. And most importantly, building lasting connections, um, from our past two cohorts, we've got feedback that this this aspect was one of the most important parts of the course to connect with people. Uh, it can happen both during the capstone project, which I'm going to talk about, or in general during the the course to build connections that would last even beyond, uh, this course. And also, we are in we are a community. We are AI community. Um, our community would last even after the course. So and then we would keep adding, and we we have a alumni channel. We would keep adding more and more people. So over time, this community can be really helpful. And we can, um, provide a lot of value, um, to each other. So these are the three key things that we had in mind we created this course. So, um, I'm going to go to the next one. So, yeah, learn by doing, learn at the right depth, and learn in the community. Um, the next topic is course logistics. Basically, what to expect each week and also how to get support. This part, I'm going to keep it a little bit brief because I'm going to demo you the course portal anyway so you know how to navigate the course portal, what are different tabs, and their their intentions. Here, I'm just going to briefly say what to expect each week. Uh, and then in the course demo, we'll see the the details. So each week, you can expect four items or four components. We have two live components and two, um, course materials. So these are mostly for you can think of those as your passive learning and these are as your active learning. Um, Yeah. So we've done a project. Right? This is basically one of the projects that we've listed, uh, on the website. The um, typically, the data reports, I share my screen. Uh, we go over there, um, uh, the the code template, line by line to implement it with the buggy, and we explain it. Um, the focus of these projects are more on high level Uh, so the the intention is not to go to low level, like, coding or programming. Uh, first week is a little bit different because we want to build some, um, foundations, so we go a little bit under the hood. But in general, then we are building this AI product projects, the focus is to just keep it high level and focus on building blocks.
+
+You
+18:17:44
+
+We have also office hour, which is live. Um, office hour is basically the time for you to ask whatever questions you might have. Whatever learning confusions from the from our live sessions, from our from the content, from the learning material, from the project template, and so on. So these two are live components, and then we have to, um, other components. One is project release, one is guided learning release. Um, guided learning release is, uh, prerecorded videos and it includes topics that are necessary for you to start practicing the project. So, basically, this is covering every important aspect that we think can be helpful to build an AI project. So it's a prerecorded video. It's usually a few hours. Um, and it just gives you the most important stuff that you may need to know. And then project release is basically a template. Um, it's the project that we would do the the deep dive the following week. It's basically giving you one week to learn the material and build your foundations. And if you are interested to practice by doing some hands on work, you work, um, on the project. Template and implement it. You are usually um, we have instructions for every project, like, how to set up your environment, what you need, um, like, even there there are certain segments that says, you know, your code here, so you know exactly. It's basically trying to navigate you on on the implement
+
+ByteByte
+18:19:45
+
+Um, we have also office hour, which is live. Um, office hour is basically the time you to ask whatever questions you might have, whatever lending confusions from the from our live sessions, from our from the content, from the learning material, from the project template, and so on. So these two are live components. And then we have two, um, other components. One is project release. One is guided learning release. Guided learning release is, uh, prerecorded video and it includes topics that are necessary for you to start practicing the project. So, basically, this is covering every important aspect that we think can be helpful to build an AI project. So it's a prerecorded video. It's usually a few hours. Um, and it just gives you the most important stuff that And then project release is basically a template. Um, it's the project that we would do the the deep dive the following week. It's basically giving you one week to learn the material and build your foundations. And if you are interested to practice by doing some hands on work, you work um, on the project template and implemented. They are usually, um, we have instructions for every project, like, how to set up your environment, you need, um, like, even there there are certain segments that says, you know, your code here, so you know exact It's basically trying to navigate you on on the implementation. And it's it's optional. Um, but, basically, it's a way for you to learn and practice before we do the the actual, uh, deep dive. I'm going to go over this in more detail soon when I'm demoing. And how you'll get support? So you'll get support in different ways. Um, we have weekly q and a channels. For portal, which I'm going to show again very soon. Um, so those channels are created for you to ask questions that are specific to a particular week. Um, for example, for week one, um, we released it's already released the project, and and the, um, pre the guided learning is released. So if you have questions, it's weekly q and a. Uh, week one q and a is the place to post your questions. And I usually try to answer, uh, quickly Also, I encourage everyone to help each other. So if you know and answer or if somebody has a question, has a, uh, has an issue that you have observed it while you were doing, um, please also engage and contribute. Uh, but this is where I can ask questions, technical questions for me. And also from others. We like that to be I also like to note that it's not only for questions. Basically, whatever is relevant to that topic It can be findings. It can be it can be some thoughts that you have or, um, some interesting, um, links out there that can be helpful for others to to or watch. Um, so that's that's one thing. The other thing is the general channel. So anything that doesn't fit here, you can you can ask in the general discussion. It can be shared some ideas or brainstorm or um, I don't know. I've seen in the previous cohorts, we have want to meet up and and chat about some um, content or things like that. So this is where general discussion is generally for. Um, so these are, like, places to ask your questions async and I would answer. But aside from that, we have also office hours, which you you can ask your questions live.
+
+You
+18:19:45
+
+implementation, and it's it's optional. Um, but, basically, it's a day for you to learn and practice before we do the the actual, uh, Deepgram. I'm going to go over this in more detail soon when I'm demoing. And how you get support? So you get support in different ways. We have weekly q and a, channels in the course portal, which I'm going to show again very soon. Um, so those channels are created for you to ask questions that are specific to a particular week. Um, for example, for week one, um, we release it's already released the project, and and they, uh, pre the guided learning is released. So if you have questions, it's weekly q and a Uh, big one q and a is the place to post your questions. And I usually try to answer, um, uh, quickly. Also, I encourage everyone to help each other. So if you know an answer or if somebody has a quest has a, uh, has an issue that you have observed it while you were doing, um, please, um, also engage and contribute. Uh, how but this is where I you can ask questions, technical questions from me. And also from others related to a week. I also like to note that it's not only for questions, Basically, whatever is relevant to that topic. It can be findings and capaign. Can be some thoughts that you have or, um, some interesting uh, links out there that can be helpful for others to to read it or watch. Um, so that's that's one thing. The other thing is the general channel. So anything that doesn't fit here, you can you can ask in the general discussion. It can be shared some ideas or brainstorm or, uh, I don't know. I've seen in the previous cohorts people, uh, want to meet up and and chat about some, um, content or things like that. So this is where general discussion is generally So these are, like, places to ask for questions facing, and I would answer But aside from that, we have also office hours, which you can ask your questions live.
+
+ByteByte
+18:20:04
+
+So and you can also email us. In general, if you have a question that it's not gonna benefit others, and it's more logistical, it's better to be asked in, uh, through email. But if you have something that can help others, potentially, you can it's better to use these channels.
+
+ByteByte
+18:26:24
+
+Great. So we covered the course logistics. Um, I'm going to m o you. Not not now, but, um, after the six weeks training. Um, so next topic that I want to cover is our six week journey and the topics that would be covered for each week. Including the the the foundational topics and concepts as well as the projects. Um, but before I go to the weeks, I wanted to say something. Again, Hatshev designed, of course. Um, a lot of times for learning in general, AI take a stack, let's say you want to learn agents. The best way is not to go and learn agents. I mean, you can, but it may not be as effective. The best way is to, um, because there are some dependents. For example, if you want to learn agents, you have to know how tools work. If you want to know how tools work, you have to be familiar with MCP and all those protocols. For that, for good agents, one component of agents is retrieval. So you need to know RACs and how retrieval are built and so on. Um, and, um, I've heard many people are are, are having this challenge because a lot of times, it's difficult to figure out what are the right dependencies. So if you actually draw all the dependencies, it's going to be a very complicated tree. Of dependencies. So we tried our best to create this content in a sequential manner so that you can um, start from the core topics like LMS, how organization works, how things work under the hood, SFD, RF chip, and all those things that are um, absolutely fundamental. And then on top of that so this is week one. And then on top of that, we would slowly expand, um, and benefit from, like, um, like, the compounding effect here, like, accumulating on top of our previous case knowledge. So I strongly encourage everyone to follow the content uh, sequentially unless you are, um, you're an in one of these and you don't see a need for that. So that's that's how, uh, in general, this is designed. For example, last week, which is the multimodal generation, is on top of everything that we've learned. So last week, we built something, a very, very simple version of GPD. So it has a router. It has image generation, video generation. Uh, we do not train. Uh, we use, um, um, existing lightweight models. So just we can demonstrate how things work. But in practice, uh, replacing or switching these models to more bigger difficult model sorry. More powerful models is very simple. Um, but again, the whole point here is that content is sequential. Our hope was to, um, to empower you to learn even without any prior AI knowledge. So if you go through the guided learning, for example, week one, it's not assuming that you have any particular knowledge in general. Things are high level, and then it slowly goes to the details. Um, alright. So before you get bored, I'm going to go to the to the actual, uh, weeks. Um, week one, our focus, again, is on LMM foundations to build um, your your, like, foundation and core topics that you need to know. Um, so so here, we cover topics like how chatbots like chat, GPT, they are initially built. And, again, we are not always sticking sticking to what is the most type or recent model. For example, right now, the most recent model is GPT. 5.2 wiping or Gemini three d Pro. But as part of this, uh, learnings, we focus on the like like, foundations, like, earlier models. For example, we we focus a lot on g p t two because everything after g p t two is mostly, like, scaling and all those things, which would be covered. Um, But Bitcoin is just understanding how to build something like Changepity. How under the it works, the architecture, the training process, evaluation mechanism, and so on. Um, and then the project for that week is to build a simple element break to take on. So the project of week one is it's so week one is a little bit out. It's slightly different from week two, uh, onboard. And the reason for that is we we in week one, we want to actually go a little bit under the hood and understand things how how they're built and how they work. Starting with doing the project, we no longer really go and actually implement those. We rely on some libraries that are out there with apps abstractions that we can just easily in one line of code be we create a component that we want. But we think that it's very necessary to know the the found to to know the details and under the hood. So BigQuery is mostly focused on that. Um, what else about Bitcoin? I think that's mostly it for the week one. Um, So okay. Another point for week one. Please don't get discouraged Week one is more overwhelming than week two. Um, and the project is is more difficult in a sense that you have to actually implement under the hoods. Even though we have provided a lot of instructions and hints, um, it may be a little bit overwhelming. Please don't, uh, get discouraged if you have questions. If you get the stuff, please ask questions. I will be always available to unlock you. Um, and then we will do the deep dive anyway. Uh, on Saturday. So week two is the focus is on racks. Um, how to build retrieval augmentate generations. And each week, again, has an, uh, has a has a corresponding project. Which is a good real use case of that core technology. So for example, what we will learn here is every com everything about RackDot is in important, like retrieval and generation, how to get retrievals with our different components of retrieval how nearest neighbor or approximate nearest neighbor work works um, and generations. And also prompt engineering. Also adaptation techniques, like, a lot of things. It's already listed in the WhiteHat AI website. Um, so the those are the things that we would learn. And then in the project, we would use it to build, um, uh, a popular use case, which is, like, a customer software chat bot. It can be a chat bot for for any use case. It can be, uh, in general, you can have a chatbot for any use case, but in this project, it's like a customer support chatbot. We also, as part of the project, provide some, uh, data so you can, um, you can work on the project. So that's about the second VQ.
+
+You
+18:26:24
+
+So and you can also email us. So In general, if you have a question that it's not gonna benefit others, and it's more logistical, it's better to be asked in, uh, through email. But if you have something that can help others, potentially, you can it's better to use this channel. Channels. Um, great. So we covered the course logistics. Um, I'm going to demo you. Not not now, but uh, after the c suite training. So next topic that I want to cover is our six week journey. And the topics that would be covered for each week, including the the the foundational topics and concepts as well as the projects. Um, but before I go to the weeks, I want to say something. Again, as we designed the course. Um, a lot of times for learning in general, AI ticket stack, let's say you want to learn agents. The best way is not to go and learn agents. I mean, you can, but it may not be as effective. The best way is to, uh, because there are some dependents. For example, if you want to learn agents, you have to know how tools work. If you want to know how tools work, have to be familiar with MCT and all those protocols. For that, for good agents, one component of agents is retrieval. So you need to know rags and how retrieval are built and so on. Um, and, um, I've heard many people are are, um, are having this challenge because a lot of times, it's difficult to figure out what are the right dependencies. So if you actually draw all the dependencies, it's going to be a very complicated tree of dependencies. So we tried our best to create this content in a sequential manner so that you can uh, start from the core topics like LLMs, how to organization works, how things work under the hood, SFD, RLT, and all those things that are um, absolutely fundamental. And then on top of it so this is week one. And then on top of that, we would slowly expand, um, and benefit from, like, um, like, the compounding effect here. Like, accumulating on top of our previous base knowledge. So I strongly encourage everyone to follow content, uh, sequentially, unless you are um, you are an expert in one of these and you don't see a need for that. So that's that's how, uh, in general, this is decent. For example, last week, which is the multimodal, uh, generation, is on top of everything that we've learned. So last week, we built something a very, very simple version of Chai GPT. So it has a router. It has image generation, video generation. Uh, we do not train. Uh, we use, um, um, existing lightweight models, so just we can demonstrate how things work. But in practice, practice, uh, replacing or switching these models to more bigger, difficult model sorry. More powerful models is very simple. But again, the whole point here is that content is sequential. Our hope was to, um, to empower you to learn even without any prior AI knowledge. So um, if you go through the guided learning, for example, week one, it's not assuming that you have any particular knowledge in general. Things are high level, and then it slowly goes to the details. Um, alright. So before you get bored, I'm going to go to the the actual, um, fix. Um, week one, our focus, again, is on LMM foundations to build um, your your, like, foundation and core topics that you need to know. So here, we cover topics like how chat bots like chat GPT were initially built. And, again, you're not always sticking sticking to what is the most high or recent model. For example, right now, the most recent model is GPT 5.2, I think, or Gemini three Pro. But as part of these, uh, learnings, we focus on the like, like, foundations at early models. For example, we we we focus a lot on GPT two because everything after GPT two is mostly, like, scaling and all those things, which would be covered. Um, But Bitcoin is just understanding how to build something like change it to. How under the hood it works, the architecture, the training process, evaluation mechanism, and so on. On. Um, and then the project for that be is to build a simple telemetry playground. So the project of week one is it's so week one is a little bit outlier. It's slightly different from week two, um, onward. And the reason for that is we we in week one, we want to actually actually go a little bit under the hood and understand things how how they are built and how they work. But starting with two in the project, we no longer really go and actually implement. We rely on some libraries that are out there with abstractions that we can easily, in one line of code, be be create a component that we want. But we think that it's very necessary to know the the found to to know the details and under the hood, so Bitcoin is mostly focused on that. What else about Bitcoin? I think that's mostly it for the week one. So okay. Another point for week one. Please don't get discouraged. Week one is more overwhelming than week two. Um, and the project is is more difficult in a sense that you have to actually implement under the hoods. Even though we have provided a lot of instructions and hints, um, it may still be a little bit overwhelming. Please don't, uh, get discouraged. If you have questions, if you get stuck, please ask questions. I will be always available to unblock you. And then you will do the deep dive anyway, uh, on Saturday. So week two is the focus is on RACs. Um, how to build retrieval augmented generations. And each week, again, has an, uh, has a has a corresponding project. Which is a good real use case of that core technology. So for example, what we will learn here is every com everything about rank that is important. Like retrieval and generation, have to be retrievals with our different components of retrieval. How nearest neighbor or approximate nearest neighbor for works, uh, and generation, and also prompt engineering. Or and also adaptation techniques, like, a lot of things. It's already listed in the by by the AI website. Um, so those are the things that we would learn. And then in the project, we would use it to build, um, a a popular use case, which is, like, a customer support chat It can be a chatbot for for any use case. It can be, uh, in general, you can have a chatbot for any use case, but in this project, it's like a customer support chatbot. We also, as part of the project, provide some uh, data so you can, um, you can work on the project. So that's about the second meeting.
+
+You
+18:27:34
+
+Third week is agents, which is my my favorite pick. Think I also, uh, yeah, I think I also say this in the prerecorded video. But, still, it's my my favorite bit, um, because it suddenly gives you a lot of flexibility to, um, to be able to build different things if you have in mind at some point in future. Um, so the things that we talked about in this week in the guided learning is tools out tool calling works, what is MCP, what is the motivation behind it, how it works, and different things that are related to agents, all different components, like reasoning loop reasoning loops, um, React framework, and also other patterns that are typically used to build agents. Uh, retrieval and everything. So you may see some it's built on top of the previous peak. For example, agent has one component, retrieval. So we it's already covered in week two. So week three is focused less on retrieval since we already know that. Uh, but anyway so the learning is going to be about the agents. And then, um,
+
+You
+18:28:03
+
+you would what you would build is something very similar to Perplexity. Again, when I say similar, I mean, in terms of the workflow and capability. I don't mean something production ready. Uh, of course, Perplexity has lots of different mechanisms like safety level, infrastructure, training, and lots of things. So that's not what I mean what I mean is to roughly understand how something like, the workflow, like, where per per per per per per per per per per per per per per per per per
+
+You
+18:28:39
+
+Ask the web page. And by the way, if if you have not, um, worked with per per pixel xity or or seen it. It's basically a answer engine, um, platform. So it relies on an LMM and also web search to answer your questions. Um, so when you ask a question that requires some live updates or some, uh, recent events that are not compressed in elements internal knowledge, we would, um, search the web and use other tools to to provide an up to date answer to it.
+
+You
+18:31:15
+
+So that's week three. Week four focuses on another very important topic, of reasoning and thinking elements. So this week, we cover a lot of things that are, um, very important and fundamental. So I would say this week probably is the most important bit in terms of learning things that are actually being used in most um, AI labs for building best, uh, chatbots. So we covered techniques like inference time, scaling, training time scaling, how to push a model to how to push a non business element to business, how to make it think, how to spend extra inference on compute, um, so the model can uh, try different approaches and different attempts before answering. So these are all different topics that will be covered. And by the way, this is very important because a lot of, um, applications that you would see these days are powered by reasoning algorithm, not a non reasoning algorithm. So in week one, week two, week three, our focus is on non reasoning elements. Uh, this week, we learn about reasoning, and anything that we've learned from week one to week three can be easily replaced. Um, the reason the non reasoning algorithm can be easily replaced with a resending element. So but, anyway, this is what would be learned this week. And then the corresponding project is a deep research deep research capability. Again, if you don't know deep research, I have some tabs open here, and this is Chai ChiPTi. Um, I think it was originally started this whole deep research feature. I think, if I'm not wrong, it was started from, uh, Chai JBT. But later, like, these days, most air labs have chat have decreased research capability. Like, I know Gemini grow up for sure. They do have, uh, on tropic. I know uh, they have. Um, and it's basically a feature here. He can enable it in search, and then whatever question you have, it would, um, start with multiple agents and one one lead agent, multiple sub agents. Um, and, again, I don't know under the how open air works, but this is this is the this is the typical workflow. Uh, and then those sub agents would go and search them and collect a lot of information on on your behalf, and then agent would just, um, synthesize it into a clean document and and uh, share it with you. So it deep research needs agent. It also needs a reasoning element. So that's why we have it here. After we learn, uh, agents and reasoning element, this will be then we are ready to build this deep research capability.
+
+You
+18:31:35
+
+Um, I'm not gonna, uh, show it here because it usually takes a lot of time. Uh, if you haven't tried it, if I ask something, it may take, like, ten, twenty, or thirty minutes. Um, long. Uh, you will see some examples when the pre guided learning is is released. Okay. So this is week four.
+
+ByteByte
+18:31:35
+
+Third week is agents, which is my my favorite week. I think I also, um, yeah, I think I also say this in the prerecorded video. But, still, it's my my favorite week, um, because it suddenly gives you a lot of flexibility to, um, to be able to build different things if you have in mind at some point in future. Um, so the things that we talk about in this week in the uh, guided learning is tools, how, um, tool calling works, what is MCP, what is the motivation behind it, how it works. And different things that are related to agents. All different components. Like reasoning loop, learning loops, um, React framework. And also other patterns that are typically used to build agents. Uh, retrieval and everything. So you may see some it's built on top of the previous peak. For example, agent has one component retrieval, so we it's already covered in week two. So week three is focused less on retrieval since you already know that. But, anyway, so the learning is going to be about the agents. And then, um, what you would what you would build is something very similar to. Again, then I say similar, I mean, in terms of the workflow and capability. I don't mean something production ready. Uh, of course, public city has lots of different mechanisms, like safety method, infrastructure, training, and lots of things. So that's not what I mean what I mean is to roughly understand how something like a workflow like per per per per So this is going to be the big three project. As the page. And by the way, if if you have not, um, um, worked with Per Perplexity or or seen it, it's basically a answer engine, um, platform. So it relies on an LLM and also web search. To answer your questions. Um, so when you ask a question that requires some live updates or some, uh, recent events that are not compressed in elements internal knowledge, it would, um, search the web and use other tools to to provide an up to date answer to you. Um, so that's week three. Week four focuses on another very important topic, of reasoning and thinking LMS. So this week, we cover a lot of things that are, um, very important and fundamental. So I would say this week probably is the most important week in terms of learning things that are actually being used in most um, AI apps for building best, uh, chatbots. We covered experience time, the scaling, training time scaling, how to push and model to how to push a non business LM to business, how to make it think, how to spend extra inference on compute, um, so the model can uh, try different approaches and different attempts before answering. So these are all different topics that will be covered. And by the way, this is very important because a lot of, um, applications that you would see these days are powered by a reasoning algorithm, not a non reasoning algorithm. So in week one, week two, week three, our focus is on non reasoning elements. Um, this week, we learn about reasoning, and anything that we've learned from week one to week three can be easily replaced. Um, the reason the non reasoning algorithm can be easily replaced with your resending element. So but, anyway, um, this is what we've been learned this week. And then the corresponding project is a deep research deep research capability. Again, if you don't know deep research, I have some tabs open here, and this is strategy p t. Um, I think it was originally started this whole in research feature. I think, if I'm not wrong, it was started from, uh, CHA JPT. But later, like, these days, most of their labs have chat have deep research capability. Like, I know a Gemini grow out for sure. They do have, uh, Entropic. I know uh, they have. Um, and it's basically a feature here. You can enable it, deep search. And then whatever question you have, you would, um, start with multiple agents and one one lead agent, multiple sub agents. Um, and, again, I don't know under the open networks, but this is this is the this is the typical workflow. And then those sub agents would go and search a bit and collect a lot of information on on your behalf. And then agent would just, um, synthesize it into a clean document and and um, share it with you. So it deep research needs agent. It also needs a reasoning guideline. So that's why we have it here after we learn, uh, agents and reasoning element. This week, then we are ready to build this deep research capability. I'm not gonna, uh, show it here because it usually takes a lot of time. Uh, if you haven't tried it, if I ask something, it may take, like, ten, twenty, or thirty minutes. Um, long. Um, you will see some examples when the provided learning is is released. Um, okay. So this is week four.
+
+You
+18:33:30
+
+Anything else? Okay. I think it's good. If I remember something, I would go back. Big five is where we switch our focus a little bit. First four four weeks are mostly focused on text generation, which is a very big portion of, like, Gen AI, Tech Stack. Um, but week one and week four week one to week four, it's not covering image or video generation. So this is basically the last remaining piece to learn, um, the most important parts of the Genesee Tech stack. So this week, we cover different generative techniques to, um, generate images. We cover DAEs, GANs briefly, autoregressive modeling, and diffusion models. The main focus this week is, um, diffusion models. To understand how it's built, how it works, how it's trained, and how can it really generate something. Um, and we also do the same for video generation. We learn different efficiency techniques um, because image and video generation in general are um, very intensive to build. It requires a lot of compute. And in general, they are more, um, more compute heavy. So because of this, there are a lot of additional things that need to be applied in order to productionize these models. Um, those are also covered in the provided, uh, pre in the guided learning. So this is what you will learn in week five. And then the project that we would build is basically, we just put together everything that we've learned. Um, with a focus on image and video generation. So first, we would practice video and image generation models and play with them. And then at the very end, we would build an agent similar to, um, simple version of SagicPT where it can cover different inquiries, whether it's a natural language question or a image generation. Again, I can, uh,
+
+ByteByte
+18:33:30
+
+Anything else? Okay. I think it's good. If I remember something, I would go back. Big five is where we switch our focus a little bit. First four four weeks are mostly focused on text generation. Which is a very big portion of, like, Gen AI, TechSight. But big one and big four, week one to week four, it's not covering image or video generation. So this is basically the last remaining piece to learn, um, the most important parts of the Genesys tech stack. So this week, we cover different generative techniques to, um, generate images. We cover VAEs, GANs briefly, auto recursive modeling, and diffusion models. The main focus this week is on diffusion models. To understand how it's built, how it works, how it's trained, and how can it really generate something. And we also do the same for video generation. We learn different efficiency techniques um, because image and video generation in general are um, very intensive to build. It requires a lot of compute. Um, and in general, they are more, um, more compute heavy. So because of this, there are a lot of additional things that need to be applied in order to productionize these models. So those are also covered in the pre guided, um, pre in the guided learning. So this is what you will learn in big five. And then the project that we build is basically just put together everything that we've learned. Um, with a focus on image and video generation. So first, we would practice video and image generation models and play with them. And then at the very end, we would build an agent similar to, um, simple version of chat, where it can cover different inquiries, whether it's a natural language question or an image generation. Again, I can, uh,
+
+You
+18:33:44
+
+um, so I can hear, for example, I mean, just a quick demo. Like, if I ask, um, what is your name, it would oh, it's deprecation.
+
+ByteByte
+18:33:45
+
+um, so I can hear, for example, I mean, just a quick demo. Like, if I ask, um, what is your name, it would immediately oh, it's Deep Research.
+
+ByteByte
+18:34:41
+
+So if I ask what is your name, you would understand that it's a natural language, uh, question. So it would immediately start producing text. But if I ask generate an image of a dog, um, it would know that my request and image generation. So it would just, uh, show this box. What is typically happening under the hood is there is a router and then the router determines and classify this prompt, whether it's a image generation or text. I don't think supports video, um, generation inquiries here. Um, but, again, in this project, we would we would practice that. And, again, in, um, these projects are the life components are of the course. So we released the template for you to practice. And then on on Saturday, we we build it. We, uh, we implemented and explain it line by line.
+
+You
+18:34:44
+
+So if I ask what is your name, it would understand that it's a natural language, uh, question. So it would immediately start producing text. But if I ask, generate an image of a duck, um, it would know that my request is an image generation. So it would just, uh, show this box. So what is typically happening under the hood is there is a router, and then the router determines and classify this prompt, whether it's a image generation or text I don't think charity supports video, um, generation inquiries here. But, again, in this project, we would we would practice that. That. And, again, in, um, these projects are the life components are of the course. So we release the template for you to practice, and then on Saturday, we we build it. We uh, we implement it and explain it line by line.
+
+You
+18:34:53
+
+Um, so this is this is these are our key client sessions. And these are our this is these are the passive learning parts.
+
+ByteByte
+18:35:00
+
+Um, so this is this is these are our deep dive sessions. Um, and these are our this is these are the passive learning parts. And finally, the six is the capstone project bit.
+
+You
+18:35:43
+
+And finally, week six is the capstone project week. This week was also found to be very helpful from the past cohorts We've received a lot of positive feedback. And also a lot of great projects have been built Later this week, I would share a document on on details of how to get started on your Capstone project. And also I would share some sample projects from their previous cohorts. Uh, but, basically, the goal here is to choose your one idea It can be something that you have in mind or you always had in mind, It can be something small or big that later can be turned into something bigger. Um, but basically, choose whatever you have in mind. Use the techniques that you've learned from the course. And, obviously, from outside the outside of the course, if if there are things that can help.
+
+ByteByte
+18:37:00
+
+This week was also found to be very helpful from the past cohorts Uh, we've received a lot of positive feedback. And, also, a lot of great projects have been built. Uh, later this week, I would share a document on on details of how to get started on your capstone project. And also I would share some sample projects from their previous cohorts. Uh, but, basically, the goal here is to choose your own idea. It can be something that you have in mind or you always had in mind, It can be something a small or a week that later can be turned into something bigger. Um, but, basically, choose whatever you have in mind. Use the techniques that you've learned from the course, and, obviously, from outside the outside of the course, if if there are things that can help, uh, But, basically, use whatever you've learned And, um, as you are building it, you get real time feedback. And, um, we have also one dedicated session for for demoing the projects. And, again, this this this demo projects, um, uh, are we found we got a lot of positive feedback. People have really, really, uh, great projects to show, and then there are a lot of learnings also involved. Um, I encourage everyone to start working on, uh, capstone projects sooner than later. Um, maybe at some point, later, uh, this week or starting next week, it might be a good time to start thinking about the capstone. Uh, there is also a lot of flexibility for capstone. Um, it first of all, it's optional. You don't have to do it. If you are interested to do it, you have a lot of flexibility. It can be done individually. Or it can be done in teams. If you want, you can form teams. The the the number of teams can be any number that that depending on the scope of the project, that you have in mind. Um, and there is also no no, uh, limitations or constraints on the topic. So I as long as they are related to, um, AI or general, it's it's it's fine. So that's the the cast.
+
+ByteByte
+18:37:07
+
+Um, next, I want to go to the course platform and show different, uh, parts of the platform and navigate through it.
+
+You
+18:37:09
+
+But basically, use whatever you've learned. And, um, as you are building it, you get real time feedback. And, uh, we have also one dedicated session for for demoing the projects. And, again, this is these demo projects, um, are we found we got a lot of positive feedback. People have really, really, um, great projects to show, and then there are a lot of learnings also involved. I encourage everyone to start working on capstone projects, um, sooner than later. Maybe at some point later, um, this week or starting next week, it might be a good time to start thinking about the capstone. There is also a lot of flexibility for capstone. Um, it's first of all, it's optional. You don't have to do it. If you are interested to do it, you have a lot of flexibility. It can be done individually. Or it can be done in teams. If you want, you can form teams. The the the number of teams can be any number that that depending on the scope of project that we have in mind. Um, and there is also no no, uh, limitations or constraints on the topic. So as long as they are related to, um, AI or general, it's it's it's fine. So that's the the capstone project. Um, next, I want to go to the course platform and show different, uh, parts of the platform and navigate through it.
+
+You
+18:37:43
+
+Okay. And by the way, this is the the dark web version. So, um, this is the the course portal. That you would see. Um, here, it says cohort three. Which is, uh, this cohort. You won't see this, uh, in my admin account, so that's why I'm saying, uh, previous cohorts. Um, you may not also see big two, big three because they are not released yet, but each week, you would these would appear in your UI, big two, big three, big four, and week five q and a, uh, channels. Um, but but yeah, I'm I'm going to go over all the tabs.
+
+You
+18:38:42
+
+You generally want to start from here. I assume you've completed this. If if you didn't get the chance, that's that's fine, but this is the first place to start. Um, there's some checklist here checklists, uh, items here. So uh, if you click on them, you can see a bunch of details. I've covered some of these, um, in the session. But you can you can read them. Also, some spaces and some, uh, general guidances um, like, spaces that you would use, which are here. I'm going to explain some. It's expectations, uh, access and links, and and alumni community. I'm going to talk about this in a second. But this is basically just to get a sense of how everything is organized step one. Step two, um, add events to your, uh, calendar. It's going to it's already so, uh, there are links here. If you haven't, please add them. It would I'll try just to your time zone. So this way, you would see all their, uh, live events that we have.
+
+You
+18:38:56
+
+Step three was introduced also. So I've already seen a lot of introductions, a lot of great diverse background expertise. Uh, I read every single introductions, and I'm very excited to learn from all of it.
+
+ByteByte
+18:39:06
+
+Okay. And by the way, this is the the doc that question. Right? So, um, this is the the course portal. That you would see. Um, here, it says cohort three. Which is, uh, this cohort. You won't see this Uh, it's my admin account, so that's why I'm seeing, uh, previous cohorts. You may not also see big two, big three because they are not released yet, but each week, you would these would appear in your UI. Big week three, week four, and week five q and a, uh, channels. But but yeah. I'm I'm going to go over all the tabs. You generally want to start from here. I assume you've completed this. If if you didn't get a chance, that's that's fine, but this is the first place to start. Um, there's some checklist checklists uh, items here. So, uh, if you click on them, we can see a bunch of details. Um, I've covered some of these. Um, in the session, but you can you can Also, some spaces and some, uh, general guidances um, slump like spaces that you would use, which are here. I'm going to explain some expectations, uh, access and links, and and alumni community. I'm going to talk about this in a second. But this is basically just to get a sense of how everything is organized, the step one and step two, um, add events to your, uh, calendar. It's going to it's already so, um, there are links here. If you haven't, please add them. It would auto adjust to your time zone. So this way, you would see all the, uh, live events that we have. Step three was introduce ourselves. I've already seen a lot of introductions, a lot of great diverse background expertise. Uh, I read every single um, introduction, and I'm very excited to learn from all of you. Uh, but this is basically if you haven't, please, uh, use this channel to introduce yourself. Uh, and some community guidelines. And if you need help, again, I shared some of those.
+
+You
+18:39:06
+
+Uh, and some community guidelines. And if you need help, again, I shared some of those
+
+You
+18:40:39
+
+For logistical platform related questions, please email. You have technical questions, um, you can can you use office hour sessions where you can ask here. Um, so that's how you get help. And this is the start here part. The next part is where the actual material is, uh, located. Uh, this is your course portal. You would not see again this UI. You would see this UI. Um, and then you can see each week. There are four items that I described earlier. We have big one, big two, big three, big four, big five, and big six. They're going to be released on a big three basis. So this item, for instance, is going to be released at 10AM, uh, next Saturday. All, like, all items. Uh, right now, the first week is already released. So if you click here, you can see here again, there are the four components. So this is the introduction and logistics, which is the additional session on top of our technical deep dives which you would have. Um, after this session ends, I would upload the session uh, the recording of this session here, so you would see the window, and you can watch it later.
+
+ByteByte
+18:40:39
+
+Um, for logistical platform related questions, please email Um, if you have technical questions, um, you can you can send you use office hour sessions, or you can ask here. So that's how you get help, and this is the start here part. The next part is where the actual material is, uh, located. Uh, this is your course portal. You would not see again this UI. You would see this UI. Um, and then you can see each week. There are the four items that I described earlier. So we have big one, big two, big three, big four, big five, and big six. They're going to be released on a weekly basis. So this item, for instance, is going to be released at 10AM, uh, next day. All, like, all the items. Uh, right now, the first kit is already released. So if you click here, you can see here again there are the four components. So this is the introduction and logistics, which is the the additional session on top of our technical deep dives, which we will have. Um, after this session ends, I would upload the session. Uh, the recording of this session here. So you will see the window, and you can watch it later.
+
+You
+18:40:43
+
+So, yeah, what else for here?
+
+ByteByte
+18:40:52
+
+So yeah. What else were here? Yep. It's it's basically just, um, it's it's their prerecorded videos that we would have. This is the guided learning part.
+
+You
+18:40:53
+
+Yeah. It's it's basically just, um, it's it's the prerecorded videos that you would have. This is the guided learning part.
+
+ByteByte
+18:41:26
+
+Sorry. It's the first time this is happening.
+
+You
+18:41:26
+
+Sorry. It's the first time. This is happening.
+
+ByteByte
+18:41:45
+
+I'm sure it's something I'll It actually happened. Not not not this exact thing. But there was a a few times that, um, circuit was down for for a very short period of time.
+
+You
+18:41:47
+
+I'm sure it's something gone. It actually happened. I'm not not this exact thing. Um, but there was a a few times that uh, Silica was down for for a very short period of time.
+
+You
+18:41:56
+
+Okay. Maybe for now, I can skip this. I would go back to it, uh, soon. So this is the announcement sessions. I would
+
+ByteByte
+18:41:56
+
+Okay. Maybe for now, I can skip this. I would go back to it. Uh, so and So this is the announcement sessions. I would
+
+ByteByte
+18:42:07
+
+Okay. I can send the chat It's work for everyone except me, probably.
+
+You
+18:42:09
+
+um, okay. I can see in the chats. It's work for everyone except me, probably. Yeah. So uh, okay. It's it's more confusing now.
+
+ByteByte
+18:42:11
+
+Yeah. Okay. It's it's more confusing now.
+
+ByteByte
+18:42:49
+
+Okay. Great. So I think it was just down for a second or something. But anyway, this is the where the guided learnings are there. It's already been released. This this video. Uh, it's, like, three hours, uh, sixty minute. It's it's there for you to learn all the, uh, foundations. And you can see some descriptions here and learning objectives. Um, so if you play it, you would see that I'm using this canvas because a lot of the concepts require, um, like, it cannot fit in a in a slide in a singular slide. I have to just move around between the between different topics. So I'm using one big, uh, canvas to just move around.
+
+You
+18:42:51
+
+Okay. Great. So I think it was just down for a second or something. But, anyway, this is the Vertech guided learnings out there. It's already released, this video. Um, it's, like, three hours, uh, sixty minute. It's it's there for you to learn all the, um, foundations. And you can see some descriptions here and learning objectives. Um, so if you play it, you would see that I'm using this canvas because a lot of the concepts require, um, like, it cannot fit in a in a slide in a single slide. I have to just move around between the between different topics. So I'm using one big, um, canvas to just move around.
+
+ByteByte
+18:44:12
+
+So, anyway, um, also, there is this tab here. Um, if you click, it has the files. Uh, if you want to, for instance, access the the canvas that I'm using here for so you can, uh, open it on your browser. You can download it from here. And in general, I upload things that are relevant to that particular item here under files. So for example, all the chats conversations in our live sessions would be also uploaded on their files. After our deep dives, the solutions will be uploaded under files. So, generally, here is where you can access to to files relevant to that week. Um, so here here asset, I'm explaining here It's already explained that we're we're to find it. And there are a bunch of links, and these are the links that are mentioned in the video. So if you want to learn about a single topic in more detail or you want to go to the papers, it's just an an more convenient way to to go and read more about some of those. But this is basically how the guided learning, uh, items look like. Um, if I go next, next is the live office outlet. Again, this is something that would be uploaded after we have to session. And then under files, it disappear in there are no files yet. But under the file, you can access to the chat history.
+
+You
+18:45:03
+
+So, anyway, um, also, there is this tab here. Um, if you click, it has the files. Uh, if you want to, for instance, access the the Canvas that I'm using here for so you can, uh, open it on your browser. You can download it from here. And in general, I upload things that are relevant to that particular item here on their files. So for example, all the chat conversations in our live sessions would be also uploaded on their files. After our deep dives, the solutions would be uploaded on their files. So, generally, here is where you can access to to files relevant to that week. Um, so here here asset, I'm explaining here. It's already explained that. Very clear to find it. And there are a bunch of links, and these are the links are mentioned in the video. So if you want to learn about a single topic in more detail or you want to go to the papers, it's just a a more convenient way to to go and read more about some of those. But this is basically how the guided learning, uh, items look like. Um, if I go next, next is the live office hour. Again, this is something that would be uploaded after we have the session. And then under files, it's not appearing in because there are no files yet. But under the files, you can access to the chat history. And finally, the project. Um, for example, project one is already released, the template. Um, here, you can read about it. Learning objectives and expectations and commitments. Um, and this is the repo. You can save it, uh, where we would release the project weekly. Um, so here, if I click it, it would go uh, here. So um, AI engineering port three. Um, you can see some you can read some overview and, uh, explanations about the projects. Right now, we have project one. We would keep adding project two, project three, and so on. Um, if you click on it, you would see generally, you would see a a a a Python notebook file and some environment variables. And depending on the project, you may see some additional assets.
+
+ByteByte
+18:45:05
+
+And finally, the project. Um, for example, project one is already released, the template. Um, here, you can read about it, uh, uh, learning objectives and expectation and commitments. Um, and this is the repo. You can save it. Uh, where we would release the projects weekly. Um, so here, if I click it, it would go, uh, here. So, uh, AI engineering core three. You can see some you can read some overview and, uh, explanations about the projects. Right now, we have project one. We would keep adding project two, project three, and so on. Um, if you click on it, you would see generally, you would see a a a a Python notebook file and some environment variables. And depending the project, you may see some additional assets.
+
+You
+18:45:49
+
+So, again, this is now a template. Uh, I just want to show you the structure and how it looks like. You can expect a a very similar template for future projects except that it's going to be more uh, higher level, uh, in terms of that libraries and projects and tools that are being used. Uh, but usually the project is here. These are the instructions that you can follow to set up your environment. Uh, some projects are suggested to run locally. Some are suggested to run on colab. For example, the first one is suggested to run on, uh, on, uh, um, Google Colab. Um, but also, additionally, we also provided an environment channel in case you want to run things locally with the instructions.
+
+ByteByte
+18:45:50
+
+So, again, this is now a template. Uh, I just want to show you the structure and how it looks like. You can expect a a very similar template for future projects except that it's going to be more uh, higher level, um, in terms of the libraries and projects and tools that are being used. Uh, but usually, the pride project is here. These are the instructions that you can follow to set up your environment. Some projects are suggested to run locally, Some are suggested to run on colab. For example, the first one is suggested to run on, um, on, CUDA CODA. Um, but also additional provided an environment in case you want to run things locally. They gave instructions.
+
+ByteByte
+18:45:53
+
+So
+
+You
+18:45:53
+
+So
+
+You
+18:46:12
+
+yeah, so this is this is how you can set things up. And these are the cells that you can go through and run Uh, for cells that for things that do not really add a lot of value to your lending experience is already implemented for you, so you don't have to spend time on those.
+
+You
+18:47:20
+
+But things that are going to help in the learning experience, it's it they're just left for you to practice them if you're interested. Um, but, basically, you have these sections, tokenization, uh, some explanation, and, um, how how it's typically implemented. And then there are parts like this. That says your code here. It's some, uh, hints about the number of lines that you should expect when you are working on this. Um, I also expect a lot of uh, web searches and online lookups, and that's absolutely normal. A lot of my day to day work in general goes into um, looking things up online quickly. Especially starting from week two because we are relying on libraries like, you know, Lambda chain, uh, and all those things. So to the best of my knowledge, nobody is remembering every single uh, signature or function or method. So it's it's pretty normal to go and search and see how things, uh, should be used. Um, so that part is normal in in general. I'm saying this because in the past, it there has been some people that felt uh, discouraged. So just want to say it is normal.
+
+ByteByte
+18:47:20
+
+yeah. So this is this is how you can set things up. And these are the cells that you can go through and run. Uh, for cells that for things that do not really add a lot of value to your learning experience. It's already implemented for you. You don't have to spend time on those. But things that are going to help with the learning experience, it's it's they're just left for you to practice them if you're interested. Um, but, basically, they have these sections, tokenization, uh, some explanation, and, um, how how it's typically implemented. And then there are parts like this that says your code here. With some, uh, hints about the number of lines that you should expect when you are working on this. I also expect a lot of, uh, web searches and online lookups and that's absolutely normal. A lot of my day to day work in general goes into, um, looking things up online quickly. Especially starting from week two because we are relying on libraries like you know, blockchain, uh, and all those things. So to the best of my knowledge, nobody is remembering every single um, signature or function or method. So it's it's pretty normal to go and how things, uh, should be used. Um, so that part is normal in in general. Um, I'm saying this because in the past, it there has been some people that felt, uh, discouraged. So just want to say it is normal.
+
+ByteByte
+18:47:26
+
+So and yet, there are different steps with some explanation. And
+
+You
+18:47:26
+
+So and, yeah, there are different steps. With some explanations and,
+
+ByteByte
+18:47:36
+
+what else? And here, we move to more, like, a production ready setup, like, using TikTok and and other, uh, libraries that are used in practice.
+
+You
+18:47:36
+
+what else? And here, we move to more, like, a production ready setup, like, using TikTok and TikTok and other, uh, libraries that are used in practice.
+
+You
+18:49:16
+
+Um, and section two, what is language model? Again, this assignment is going under the hood and more details. Uh, so it's it might be a bit overwhelming, but it it's it's aimed to build foundations. Um, and then what else? And here is the text generation, which is the last part of uh, figuring out and learning about the, uh, chatbots and elements. And here, we would switch to, um, also practice an instruction to an element like something very, um, recent compared like, compared to GPT two. For example, 20, um, 600,000,000. And, again, many of the models that we suggested here are lightweight so that you can just get things started and run Uh, but on most laptops, this would run uh, if you want to run them locally. Um, but again, you may be able to even switch to, uh, better, bigger models. So those are left for you. If you are interested, you can switch and and experiment with more. Depending on your infrastructure. This would, um, work on on most like, normal laptops, and Encore Lab definitely works. And finally, we usually have a optional part some demos. So just to get a sense of how it looks like if if you put things in in the UI. It's less related to UI, so if you are if you if you're not interested or if you don't want to complete those, that's totally fine. Uh, we would we would complete them in the deep dive, um, session anyway. So it's more like just building a UI so it looks nice. Um, so that's project one, and future projects looks like this, to some extent, it's more generally high high level and relying more on tools and and libraries.
+
+ByteByte
+18:49:18
+
+Um, and section two, what is language model? Again, this assignment is going under the hood and more details. Um, so it's it might be a bit overwhelming, but it it's it's aimed to build foundations. Um, and then what else? And here is the text generation, which is the last part of uh, figuring out and learning about the, uh, chatbots and elements. And here, we would switch to, um, also practice an instruction to use element, something very, um, recent compared, like, compared to GPT. Uh, for example, 20, um, 600,000,000. And, again, many of the models that we suggested here are lightweight so that you can just get things started and run Uh, but on most laptops, this would run. Uh, if you want to run them locally. Um, but, again, you may be able to even switch to, uh, better bigger models. Uh, so those are left for you. If you are interested, you can switch and and experiment with more. Depending on your infrastructure. These would, um, work on on most like, normal laptops, and then call app definitely works. Um, and finally, we usually have a optional part with some demos. So just to get a sense of how it looks like if if you put things in in the UI. It's less related to UI. So if you are if you want you're not interested or if you don't want to complete those, that's totally fine. Uh, we would we would complete them in the deep dive, um, session anyway. So it's more like just building a UI so it looks nice. Um, so that's project one, and future projects looks like this to some extent, it's more generally high high level and rely more on tools and and libraries.
+
+You
+18:49:25
+
+So, yeah, that's the that's the gist of And what else?
+
+ByteByte
+18:49:26
+
+So yeah, that's the that's the h triple. And what else?
+
+ByteByte
+18:49:37
+
+So, yeah, these are all the four items. And one more thing I want to share is about the the
+
+You
+18:49:38
+
+So, yeah, these are all the four items. And one more thing I want to share is about the suggested flow. So
+
+You
+18:50:32
+
+again, this is released, and then we would have a dive deep dive next week. Deep dive of this project. So we would build it here. And then simultaneously, next Saturday, we would release the project two, which is building a customer support chatbot and the guided So you get a week to work on those. And then we will have the deep dive live session of doing project to, uh, the following Saturday. So we would keep keep, uh, following this pattern. And then at the very end, we have the deep dive of project five, and also we have the demo. Presentation. Also, would like to note that these demos are very valuable. Um, if there are more demos that we cannot fit and we cannot complete or present in this session, we would certainly accommodate and add more sessions so everybody can present. So yeah. To just just, uh, side note,
+
+ByteByte
+18:50:33
+
+suggested flow. So, again, this is released and then we would have a dive deep dive next week, like deep dive of this project. So we would build it here. Um, and then simultaneously, next Saturday, we would release the project too, which is building a customer support chatbot and the guided learning. So you get a week to work on those. And then we would have the deep dive live session of doing project to, uh, the following Saturday. So we would keep follow keep, uh, following this pattern. And then at the very end, we have the deep dive of project five, and also we have the demo, uh, presentation. Also, um, I would like to note that these demos are very valuable. Um, if there are more demos that we cannot fit, and we cannot complete or present in this session, we would certainly accommodate and add more sessions. So everybody can present. Um, so yeah, just just, uh, side note.
+
+ByteByte
+18:50:35
+
+So
+
+You
+18:50:37
+
+So
+
+You
+18:50:52
+
+yeah. Again, I know you may have questions. I would take questions at the very end about all of these. I would have these tabs open so we can come back to this. So yeah. I just want to make sure I don't forget anything important.
+
+ByteByte
+18:50:52
+
+yeah. Again, I know you may have questions that would take questions at the very end about all of these. I would have these tabs open so we can come back to this. So, yeah, I just want to make sure I don't forget anything important.
+
+You
+18:51:08
+
+And the solutions after the deep dives would be uploaded under the corresponding, uh, items. So after we finish deep dive project one, the video would be here. On their files, you will see their solutions and their chat history.
+
+ByteByte
+18:51:08
+
+And the solutions after, uh, deep dives will be uploaded under the corresponding, uh, items. So after we finish deep dive project one, the video would be here. On their files, you would see their solutions and their chat history.
+
+You
+18:51:14
+
+Um, alright. So that's the course portal.
+
+ByteByte
+18:52:13
+
+Um, alright. So that's the course portal. Um, Before every live session, we would send an announcement So just in case you don't have access to your calendar, you can always see and and and get the, uh, link from announcements. It's also going to be emailed to your registered email, the link. So, again, in case you don't have access to calendar or you want to quickly or you prepare or comfortable to, um, use settings from from this portal. Um, we usually um, send announcements about twenty four hours before the session and also thirty minutes before the session. So that's about an announcements. Um, and that intros, we already went through, um, the intros there, uh, all this, uh, wonderful diverse backgrounds. And then general discussion is where I mentioned that we can ask for, um, post quiz or ideas or resources that do not fit in any of these weekly sessions.
+
+You
+18:52:15
+
+Before every live session, we would send an announcement So just in case you don't have access to your calendar, you can always see and and and get the, uh, link from announcements. It's also going to be emailed to your registered email, the link. So, again, in case you don't have access to calendar or you want to quickly or you prefer or comfortable to, um, use the links from from this portal. Um, we usually, um, send announcement about twenty four hours before decision and also thirty minutes before decision. Session. Um, so that's about the announcements. Um, and their intros, we already went through, um, The intros, they're, uh, all these wonderful diverse backgrounds. And then general discussion is where I mentioned that we can ask or, um, post questions or ideas or resources that do not fit in any of these weekly sessions.
+
+You
+18:52:44
+
+So that's it could be brainstorming ideas. It could be sharing some interesting YouTube videos or or anything like that. Or if you have some generic questions, um, Even if you have logistical questions that you think can help others, you can you can post it here. If this is something very specific or very logistical, which don't think it's going to benefit others, please use email. And then these are the the weekly, um, channels. I see already people that are pretty active.
+
+ByteByte
+18:52:46
+
+So that's it could be brainstorming ideas. It could be sharing some interesting YouTube videos or or anything like that. Or if you have some generic questions, Even if you have logistical questions that you think can help others, you can you can post it here. If this is something very specific, specific or very logistic on which you don't think it's going to benefit others, please use email. Um, and then these are the weekly, um, channels. So I say already people are pretty active.
+
+You
+18:53:00
+
+One more thing now that I saw this question, one more thing about the projects is that most of the all of the projects are, um, designed such you can run them either locally on or on free Google Colab. So by default,
+
+ByteByte
+18:53:42
+
+One more thing now that I saw this question, one more thing about the projects is that most of the all all of the projects are, um, designed such that you can run them either locally on or on free Google Colab. So by default, so by default, you you just to make sure you can't hear me. Right? Okay. There was this error here. Um, so by default, all the projects, they do not require any additional sub subscription, any additional infrastructure. Um, if you have GPUs, if you have more powerful infrastructure, you are free to use them. But by default, those are not required. To complete the projects. So no subscription, no specific uh, hardware or GPU is required. Also, I'm going to run uh, most of these projects in our big live sessions on my laptop. And my laptop is, uh, like, a pretty normal laptop. It's not, like, a very powerful or or or new laptop.
+
+You
+18:54:02
+
+so by default, you you just make sure you can hear me. Right? Okay. There was this, uh, error here. Um, so by default, all the projects they do not require any additional subscription, any additional infrastructure. Um, if you have GPUs, if you have more powerful infrastructure, you are, uh, free to use them. But by default, those are not required to complete the projects. So no subscription, no specific, uh, hardware or GPU is required. Also, I'm going to run, uh, most of these projects in our deep dive sessions on my laptop. And my laptop is, uh, like, pretty normal laptop. It's not like, a very powerful or or or new laptop. So everything would be run on on most laptops. So anyway but week one is basically where you ask all these questions, and then week two, week three is starting to, um, in in future weeks, you would they would appear here. And then capstone project here has been So you can, uh, ask for ideas, teammates, phone teams, connect, and brainstorm an ideas here.
+
+ByteByte
+18:54:05
+
+So everything would be fine on on most laptops. So anyway but big one is basically where you ask all these questions, and then big two big three starting to, um, in in future, VC would they would appear here. And then capstone project here has been so you can, um, ask for ideas, teammates, phone teams, connect, and brainstorm on ideas here.
+
+You
+18:54:09
+
+That's everything about a course portal.
+
+ByteByte
+18:54:37
+
+That's everything about the course portal. One more thing, the videos would be uploaded generally, uh, after a few hours. So it it takes a few hours for the Zoom to, um, provide the recording on the cloud. So once it's provided, I upload it. So you should you can expect on the same day, the video would be uploaded, maybe by a few hours delay. Um, so that's all about the course portal. I can go back to the slides.
+
+You
+18:54:37
+
+One more thing, the videos would be uploaded generally, uh, after a few hours. So it it takes a few hours for the Zoom to, um, uh, provide the the, uh, recording on the cloud. So once it's provided, I upload it. So you should you can expect on the same day the video would be uploaded, maybe by a few hours today. Um, so that's all about the course portal. I can go back to the slides.
+
+ByteByte
+18:54:40
+
+So
+
+You
+18:55:07
+
+So the last part of the um, this intro session is some tips for success. So we go over some commitments, some course policies, and some tips for succeeding in the short term and, um, building for the long term. Um, these tips are just simple, obvious tips tips. They're not like secrets or something, uh, super tricky. They're just obvious. I just want to share since uh, they can be helpful.
+
+You
+18:55:30
+
+So the commitments are, um, so the time commitment be on average, we have seen that the required time commitment is between four to six hours. But I would like to talk more about this, Elizabeth, where where this is coming from.
+
+ByteByte
+18:57:01
+
+the last part of the um, this interest section is some tips for success. So we go over some commitments, some course policies, and some tips for succeeding in the short term and um, building for the long term. Um, these tips are just simple, obvious tips tips. They're not, like, secrets or something, uh, super tricky. Just obvious. I just want to share since, uh, they can be helpful. So the commitments are, um, so the time commitment be on average, we have seen that required time commitment is between four to six hours. But I would like to talk more about this a little bit, where where this is coming from. So each peak has this guided learning, and it's generally around two hours. Like, first week is is is more at three hours, sixty minutes. But it's like, next week is one fifty, two twenty, two So around two hours, let's say, is the guided learning. And then the tier is their live, um, office hour is one hour, so three hours. And then the the the the the Deepgram session is also one hour thirty minutes. So, um, it's 04:30. And the project is the tricky part because it depends on, um, whether you want to do it or not. And if you want to do it, how much you want to put time on it. Um, again, because these are optional. So um, depending on how much time you spend on projects, this number may go, um, higher, um, or it may not higher if you want to skip the projects. Um, also, projects assume some basic understanding of Python. Especially if you want to implement them. Definitely, you need to know how to code in Python. Um, and there are some libraries that are introduced with some leaks. Um, depending on how familiar you are, you may need to do some, uh, additional go to some additional go to some leads to learn more about those So it may usually go higher if you are not familiar with the topic, or if you want to spend more time on the project by switching to different models, try and implementing optional parts, and so on. But on average, I think this is a reasonable estimate.
+
+You
+18:57:01
+
+So each week has this guided learning, and it's generally around two hours. Like, first week is is is more than three hours, sixty minutes. But it's, like, next week is one fifty, two twenty, two So around two hours, let's say, is the guided learning. And then the tier is the live, um, office hours is one hour, so three hours. And then the the the the the deep dive session is also one hour thirty minutes. So, um, it's 04:30. And the project is the tricky part because it depends on, um, whether you want to do it or not. And if you want to do it, how much want to spend time on it. Um, again, because things are optional. So um, depending on how much time we spend on projects, this number may go, um, higher. Or it may not go higher if you want to skip the projects. Um, also, projects has assume some basic understanding of Python, especially if you want to implement them Definitely, you need to know how to code in Python. Um, and there are some libraries that are introduced with some links Um, depending on how familiar you are, you may need to, uh, do some, uh, additional, uh, go to some additional go to some links to learn more about those. So it may usually go higher if you are not familiar with the topic or if you want to spend more time. On the project by switching to different models, trying, uh, implementing optional parts on so on. But on average, I think this is a reasonable estimate.
+
+You
+18:57:14
+
+For the participation the attend attendance is optional because all the sessions will be recorded and uploaded in the course portal so you can, um, later watch them at your home convenience.
+
+ByteByte
+18:57:14
+
+Yep. For the participation the attend attendance is optional. Both decisions will be recorded and uploaded in the course portal so you can, uh, later watch them at your own convenience.
+
+You
+18:57:53
+
+Um, what else? Yeah. So participation is optional. And for the deliverables, there are two generally, two components. One is the capstone project, which I covered, and one is the project templates that are more for you to to practice. Um, these are not going to be graded. There is no grading mechanism. And these are optional, so you can skip doing those. And if you want to do them, there is no, like, a submission process. Um, project templates are for you to get prepared for the next live deep dive session. And capstone is, uh, for you to form teams and build something that you've been, uh, passionate about or you're interested to to build.
+
+ByteByte
+18:57:56
+
+Um, what else? Yep. So participation is optional. And for the deliverables, there are two generally, two companies. One is the capstone project, which I covered, and one is the project templates that are more for you to to practice. Um, these are not going to be graded There is no grading mechanism, and these are optional. So you can skip doing those. And if you want to do them, there is no, like, a submission process. Um, project at templates are for you to get prepared for the next live deep dive session. And caption is, uh, for you to form teams and build something that you've been, um, excited about or you're interested to to build.
+
+You
+18:58:02
+
+So okay. So some course policies.
+
+ByteByte
+18:58:02
+
+So okay. So some course policies.
+
+You
+18:58:26
+
+Again, we have a lot of people with a different backgrounds and expertise. So we are all here to learn. And, um, help each other and respect each other. So please, um, think of this as a AI community that we are here to help each other and, uh, lift each other up.
+
+ByteByte
+18:59:25
+
+Again, we have a lot of people with different backgrounds and expertise so we are all here to learn. And, uh, help each other and respect each other. So please, um, think of this as a AI community that we are here to help other and, uh, lift each other up. Um, AI use is permitted, definitely. Um, you can use AI wherever you think it it fits and helps with your learning experience. I can share what I observed. Work good, but it may be different for different people. Um, in general, my suggestion is that when the project templates are released and you want to work with them, there are very clear instructions in the project Like, even it includes the links that you can go and and look up something or learn about. So it usually helps if you first start with, um, not using AI and with you go over the project template, you figure it out, you you read it and and read some, um, material and links. And then after that, you start using AI. But the this is just some idea that may work or may not work depending on on your situation. But, generally, you can use AI. Also, feel free to ask any questions that you have as soon as you feel blocked on understanding a concept or a topic or a project.
+
+You
+18:59:29
+
+AI use is permitted, definitely, Um, you can use AI wherever you think it it fits and helps with your learning experience. Um, I can share what I observed. Work good, but it may be different for different people. Um, in general, my suggestion is that when the project templates are released and you want to work with them, there are very clear instructions in the project Like, even it includes the links that you can go and and look up something or learn about. So it usually helps if you first start with uh, not using AI and you go over the project template, you figure it out. You you read it and and read some, uh, material and links. And then after that, you start using AI. But again, this is just some idea that we import or may not work depending on on your situation. But, generally, you can use AI. Also, feel free to ask any questions that you have as soon as you feel blocked on understanding a concept or a topic. Or in project. In chat channels, the good thing is that others that may have similar problems, they would
+
+ByteByte
+18:59:42
+
+In chat channels, the good thing is that others that may similar problems, they would they may also learn from your question. And, uh, answers to your question. So always prioritize to ask questions in the in the public channels first and also ask as soon as you are blocked.
+
+You
+18:59:42
+
+they may also learn from your question and the the answers to your question. So always prioritize to ask questions in the in the public channels first and also as as soon as you are blocked.
+
+You
+19:00:00
+
+So that's it. Some tips. Which are obvious, um, to succeed in the short term. First is ask questions as soon as we have a question. No question is a simple or silly question. Just ask, and and all of us here to learn from each other. Engage.
+
+ByteByte
+19:00:00
+
+So that's it. Some tips which are obvious, um, to succeed in the short term. First is ask questions as soon as you have a question. No question is a simple or silly question. Just ask and and all of us here to learn from each other. Um, engage.
+
+You
+19:01:04
+
+So by engage, what I mean is also try to build connections. And, um, also help answering each other's questions. Um, so that can be potentially very valuable because there are a lot of learnings usually in those conversations from what we've observed from the last calls. So this step by step is the content is sequential, and you can benefit a lot from the compounding effect. So as you learn the topics, as you complete the projects, you slowly build on top of your previous learnings. And the knowledge would be accumulated. So, um, if you just follow this step by step, there would be a lot of, um, like, the you can benefit from compounding, uh, effect of learning that way. So another point I want to raise here is that don't get discouraged. Uh, it is part of the learning. And this entire platform, me, others are here. So, um, if something doesn't make sense or it's difficult or you're unblocked, we can unblock each other.
+
+ByteByte
+19:01:04
+
+So by engage, what I mean is also try to build connections and, um, also help answer other's questions. Um, so that can be potentially very valuable because there are a lot of learning usually in those conversations from what we've observed from the last cohorts. So this step by step is the content is sequential, and you can benefit a lot from the compounded effect. So as you learn the topics, as you complete the projects, you will slowly build on top of your previous learnings. And the knowledge will be accumulated. So, um, if you just follow this step by step, there would be a lot of, um, like, uh, you can benefit from compounding, uh, effect of learning that way. So another point I want to raise here is that don't get discouraged. It is part of the learning. And this entire platform, me, others are here. So So, um, if something doesn't make sense or it's difficult or you're unblocked, we can unblock each other.
+
+You
+19:02:10
+
+Use resources. There are a bunch of resources available to you. Uh, one is the community and everyone here. One is me where you can ask your questions, and I can answer Whether it's in our live sessions at the end of each deep dive session, or at the, um, during the office hour sessions. Or in the course portal. Um, also, there are additional resources that are available to you. Um, so one is the access you have to the digital books on BY BYTECO. Some of those books can be generally very helpful in building your foundations. I also included, um, a bunch of topics that are outside the scope of this cohort. But if you are interested interested, I've included a bunch of links and good, um, resources for learning those. So for instance, um, we are not focusing on deployment and serving. Um, for production. But if you are interested to learn about those, I've included some some links at and these links could be a combination of platforms, uh, repos, uh, sometimes YouTube videos or books.
+
+ByteByte
+19:02:38
+
+Um, user resources, there are a bunch of resources available to you. Uh, one is the community and everyone here. One is me where you can ask your questions, and I can answer whether it's in our live sessions at the end of each deep dive session. Or at the, um, during the office hour sessions or in the course portal. Also, there are additional resources that are available to Um, so one is the the access you have to the digital books on by PIPEL. Some of those books can be generally very helpful in building your foundations. I also included, um, a bunch of topics that are outside the scope of this cohort. But if you are interested, I've included a bunch of links and good uh, resources for learning goals. Uh, so for instance, uh, we are not focusing on deployment and serving, um, for production. But if you are interested to learn about those, I've included some some links at and these links could be a combination of platforms, uh, prepos, sometimes YouTube videos or books. So this is basically the, uh, one of the bonuses. Uh, so I try to keep this list updated. So as you know, the whole, uh, field is moving very fast and evolving, and there are lots of great new resources every day. So as I see that there are some good resources, I so try to keep this this updated and add them. Um, in addition, I would also keep sharing resources. Whenever I feel something can be useful, I will share it in the course portal.
+
+You
+19:02:38
+
+So this is basically the one of the bonus tests. Uh, so I try to keep this list updated. So as you know, the whole, uh, field is moving very fast and evolving, and there are lots of great new resources every day. So as I see that there are some good resources, I try to keep this list updated and add them. Um, in addition, I would also keep sharing resources. Whenever I feel something can be useful, I would share it in the cover's portal.
+
+ByteByte
+19:02:55
+
+So, yeah, these are some of the resources that are available to you, and please use them. And collaborate with each other and try to, uh, learn what others think. About, let's say, your capstone project, the ideas you have, your particular implementation for a project, and so on.
+
+You
+19:02:57
+
+So, yeah, these are some of the resources that are available to you, and please use them. And collaborate with each other and try to, uh, learn what others think, uh, about let's say, your capstone project, the ideas you have, your particular implementation for a project, and so
+
+ByteByte
+19:03:54
+
+And finally, tips for, um, bidding for the long term. These are also obvious. Um, build connections. Um, one more particular thing I want to share about these building connections is that, uh, first of all, our community would last after the cohort ends. So we are working on an alumni channel on Discord. Um, it's already added here. Uh, if you go to start here, how everything is organized. I just added this, uh, alumni Discord channel uh, last night. And, um, you can join here. And this is basically the the place where we would stay connected after the course. And, also, we are going to share this with the people from the past cohorts, so they will also join here and also in future. So you can expect this Discord channel would be, uh, growing and growing with more, um, AI professionals.
+
+You
+19:04:01
+
+And finally, tips for, um, building for the long term. These are also obvious. Um, build connections. One more particular thing I want to share about these building connections is that, uh, first of all, our community would last after the cohort ends. So we are working on an alumni channel on Discord. Um, it's already added here. Uh, if you're going to start here, how everything is organized. I just added this, uh, alumni Discord channel uh, last night, and, uh, you can join here. And this is basically the the place where we would stay connected after the course. And, also, we are going to share this with the people from the past cohorts so they would also join here and also in future. So can expect this Discord channel to be, um, growing and growing with more, uh, AI professionals. Um, so feel free to join at this core channel, and I have also the channel open here.
+
+ByteByte
+19:04:02
+
+So feel free to join at Discord channel. And I have also the channel open here.
+
+ByteByte
+19:04:16
+
+So it looks like this. It has, uh, some closed knowledge sharing job board and general. Um, and it would figure out and and and and update or make some modifications. Um, but this is the play. To to stay connected.
+
+You
+19:04:17
+
+So it looks like this. It has, uh, some intros, knowledge sharing job board, and general. Um, and we would figure out and and and keep and update or make some modifications, um, but this is the place to to stay connected.
+
+You
+19:05:30
+
+Um, alright. The other thing is persistence. Um, just keep experimenting and iterating. There would be a lot of failures, I'm sure, um, but progress comes from persistence, not perfection. So, um, just keep doing until it it it works. And finally, think big. And this is more related to the capstone project. You can pick a simple project just to learn the topics. You can build a project that fits well if you are, um, if you are working in an AI team and you think it would help to, at some point, you relate it to your team or your org and bring some value, you can um, come up with a proxy project or something like that that would eventually help. Or you can also, um, treat it as a bigger problem if you've been if there was something that you've been always interested about or building or one that start a company. Um, the capstone project is not necessarily meant to be finished. By the end of this course. Um, during the presentation, you can you can, um, you can present it wherever you are depending on your progress. Um, so it doesn't have to be like a fully working complete project. So the scope is really up to you.
+
+ByteByte
+19:08:26
+
+Um, alright. The other thing is persistence. Um, just keep experimenting and iterating. There would be a lot of failures, I'm sure, um, but, uh, progress comes from persistence, not perfection. So um, just keep doing until it it it works. And finally, think big, and this is more related to the capstone project. Um, you can pick a simple project just to learn the topics. You can build a project that fits well if you are, um, if you are working in an AI team and you think it would help to, at some point, you relate it to your team or your org and bring some value, you can um, come up with a proxy project or something like that that would eventually help. Or you can also, um, treat it as a bigger problem if you've been if there was something that you've been always interested about or building or wanted to start a company. Um, the capstone project has gotten necessarily meant to be finished by the end of this course. Um, During the presentation, you can you can you can present it wherever you are depending on your progress. Um, so it doesn't have to be, like, a fully working complete project. So this scope is really up to you. So, yeah, I think I covered everything. And two more three more slides, One is by net by end of this cohort, you would, um, have completed, uh, five AI prototypes and plus the capstone that you can showcase or extend in future. Because of, um, building those projects, on your own and also together, like, um, you we would we would gain a lot of prototyping skills. And you you would see as we move forward each week, the project becomes easier because we feel more comfortable and we are more aware of all different components and how to connect them. So at some point, it just becomes on uh, okay. What tools do I need and how to connect them to build something? So I've seen that, um, people feel more comfortable, uh, as we move forward on building things. And confidence, I already shared it, uh, after building this uh, and learning all those, uh, foundation topics, um, the expectation is that you would feel more confident in building AI systems. Uh, and, also, you will have access to their communities which I already shared. And finally, let's build together. Um, I have learned a lot from, um, folks in the past cohorts. And I'm sure I would continue learning from all of you. And that's my my, um, an obvious expect expectation that I have Um, so let's just learn from each other, support each other, give us feedback. Um, it's very important we we're able to improve the course a lot. It's just because of the feedback that we've received from all of you. If the and we try to adapt as quickly as possible if if a feedback can be, um, adapted, uh, if if we can adapt fast to a feedback. So, um, please share whatever you think, um, is good for us, for the course, for the cohort to improve, uh, their learning experience. And finally, if you, um, as you learn, feel free to share your learnings, uh, your journey, uh, your, like, interesting things that are being shared here with your network. Uh, and if you would like the course, um, also, um, feel free to share us as well. And, finally, this is my last slide. Um, some questions. Um, in general, you don't need to be a pro at coding, and that's not the expectation. And, also, that's not the the intent of this course. You need to be familiar with Python if you want to do the hands on projects. They are optional. I would complete them anyway in the deep dive session. Um, and explain them. My goal is to keep it high level Um, I just focus on the building blocks, not the low level programming. So in general, you don't probably need to be a pro at coding.
+
+ByteByte
+19:09:03
+
+Um, if you fall behind, you can always watch recordings and ask questions Um, and finally, you can ask you can get help through office hours and chat channels. So I covered everything. Um, before we switch to taking questions, I want to thank you again for for joining. I'm very excited, and I'm also very, um, grateful. For this. And, um, yeah. Happy learning, and I hope you will enjoy the learnings of this week. So for the questions, uh, we usually do this, like, we go over the raise hand, and then I I ask you to unmute. You can unmute yourself and ask a question. And we will continue as long as there are questions.
+
+ByteByte
+19:09:07
+
+Um, alright.
+
+You
+19:09:20
+
+So, yeah, I think I covered everything. And two more three more slides. One is by net by the end of this cohort, you would, um, have completed, uh, five AI prototypes and plus the capstone that you can showcase or extend in future. Um, because of, um, building those projects on your own and also together live, um, you we would we would gain a lot of prototyping skills. And you you would see as we move forward each week, the project becomes um, easier because we feel more comfortable and we are more aware of all different components and how to connect them. So at some point, it just becomes on um, okay. What tools do I need and how to connect them to build something? So uh, I've seen that, um, people feel more comfortable, um, as we move forward on building things. And confidence, I already shared it, uh, after building this uh, and learning all those, uh, foundation topics, um, the expectation is that you would feel more confident in building AI systems. Uh, and also you would have access to their coming to speech right already shipped. And finally, let's build together Um, I have learned a lot from, um, folks in the past cohorts, and I'm sure I will continue learning from all of you. And that's my my, um, an obvious effect expectation that I have. Um, so let's just learn from each other, support each other, give us feedback, Um, it's very important we we are able to improve their course a lot. And it's just because of the feedback that we've received from all of you. If the and we try to adapt as quickly as possible if if a feedback can be, uh, adapted, uh, if if we can adapt fast to the feedback. So, um, please share whatever you think, uh, is good for us, for the course, for the cohort to improve. Uh, their learning experience. Um, and finally, if you as you learn, feel free to share your learnings, uh, your journey uh, your, like, interesting things that are being shared here with your network. Um, and if you would like the course, um, also, um, feel free to share us as well. And finally, this is my last slide. Some questions. Um, in general, you don't need to be a pro at coding, and that's not the expectation. And, also, that's not the the intent of this course. You need to be familiar with Python if you want to do the hands on projects. They are optional. I would complete them anyway in the deep dive session. Um, and explain them. My goal is to keep it high level um, and just focus on the building blocks, not the low level programming. So in general, you don't probably need to be a pro at coding. Um, if you fall behind, you can always watch recordings and ask questions. Um, and finally, you can ask You can get help through office hours and chat channels. Um, so I covered everything. Um, before we switch to taking questions, I want to thank you again for for joining. I'm very excited, and I'm also very, uh, grateful for this. And um, yeah, happy learning, and I hope you enjoy the learnings of this week. So for the questions, uh, we usually do this. Like, we go over the raised hands, and then I I ask you to unmute. You can unmute yourself and ask a question, and we would continue as long as there are questions. Um, alright. Let me change this. Okay. Let's start from the questions. Thanks again for all the um, reactions.
+
+ByteByte
+19:09:21
+
+Change this. Okay. Let's start from the questions. Thanks again for all the um, reactions.
+
+ByteByte
+19:09:25
+
+The first question, Imran, please go ahead.
+
+ByteByte
+19:10:50
+
+Yeah. Hi, Lee. Thanks for this session. Like, I had been trying to understand, like, AI for a while, and this actually is a really good uh, what is it, path to understand and learn this. I have a quick question around, like, the programming type. Right? Like, so I have worked in Java in the past. So, like, can I do any of these projects in Java? Like, does it have to be Python? Um, it's it's probably not you're going to have a very, very difficult time if you want to do these projects in a different language. Um, and that's mostly because most of the AI take a stack are built around, um, Python and Python. Like, most tools or libraries that you want to use, say, a usually start with having or offering a really good Python package. So I don't have any expertise to be honest, in Java. I don't even know if that would be a possibility or not. But in general, I I strongly encourage you to just stick to Python. That's that's mostly the way to work especially for bringing their prototypes. And the copay, hon, uh, I really like it very basic level of Python I'm assuming? Like, if I do, like, a any Udemy course, is that sufficient, or do I need to have, like, practical hands on? No. It should it should be sufficient. Again, it depends on, like, to what extent. I mean, first of all, so I I think I reset somewhere the things that might help you to refresh your
+
+You
+19:10:51
+
+The first question Imran, please go ahead. Yeah. Hi. Thanks for this session. Like, I've been trying to understand, like, AI for a while, and this actually gives a really good, uh, what you say, path to understand and learn this. I have a quick question around, like, the programming type. Right? Like, so I have worked in Java in the past. So like, can I do any of these projects in Java, or, like, does it have to be by funding? Um, it's it's probably you're going to have a very, very difficult time if you want to do this projects in a different language. Um, and that's mostly because most of the AI tech stack are built around, uh, Python and Python. Like, most tools or libraries that you want to use, they they usually start with having or offering a really good Python package. So I don't have any expertise, to be honest, in Java. I don't even know if that would be a possibility or not. But in general, I I strongly encourage you to just stick to Python. That's that's mostly the way to go, especially for building the prototypes. Mhmm. And, Nick, for Python, uh, I mean, like, is there a basic level of Python understanding? Like, if I do, like, any Udemy course, is that sufficient? Or we need to have, like, practical hands on No. It should it should be sufficient. Again, it depends on, like, to what extent. I mean, first of all, so I I think I listed somewhere the things that might help you to refresh your
+
+You
+19:11:08
+
+Sorry. One second. Let's see if I can find something. There's some, uh, uh, I have some resources somewhere.
+
+ByteByte
+19:11:09
+
+Sorry. One second. I see if I can find something. There's some, uh, I have some resources on there.
+
+ByteByte
+19:13:11
+
+If you have any recommendation for a course which would be, like, better for Python, like, I think that will also help. Yeah. Definitely. So, uh, um, um, yeah. Also, in the repo, there are some readings and tools here. I don't think Python is particularly listed here. But in general, I can share some resource for Python. Um, please message me on the course portal. And I would share those. It helps if you if you want to work on the hands on project. It it is, um, I think it's crucial to know how Python like, the basics of Python. But depending on how deep you want to go into it and implement, then that that, um, that depends. So, um, for projects, I would say you don't need probably a a, um, advanced Python, uh, understanding. Because first of all, if you see the projects and fewer projects would be even simpler than the first project in terms of um, like, the actual loaded programming. Um, you can see most of your implementations are a few lines of code. So as long as you know the basics, like, least dictionaries, how like, the Python syntax and things like that, you should be good. The rest is logic and some, uh, lookups, uh, online. So for example, you know, in TikTok and TikTok and, um, like, here, there are some, um, mix for you to see. And the implementations are usually, like, one or two lines of code. Um, so the focus again is not on, like, implementing something like 100 lines or or something like that. It's just to understand what is the capability that PyTorch, for instance, provides, and what is that one line of code that does the job. And same goes for the token. And, again, this week is more overwhelming and lower level. Starting week two, things are more happening at the library level. So you need to just search the library and understand what is there single or two lines of code. Um, so, for example, just to give you a sense, um, let's say we want to use a
+
+You
+19:13:12
+
+Yeah. If you have any recommendation for a course which would be better for Python, I think that would also help. Yep. Definitely. So, uh, uh, yeah. Also, in the report, there are some readings and tools here. I don't think Python is particularly listed here. In general, I can share some resources for Python. Um, please message me on the course portal, and I would share those. It helps if you if you want to work on the hands on project It it is, um, I think it's crucial to know how Python like, the basics of Python. But depending on how deep you want to go into it and implement, then that that that depends. So, um, for projects, I would say you don't need probably a a a advanced Python, uh, understanding. Because first of all, if you see the projects and future projects would be even simpler than the first project in terms of uh, like, the actual low level program. Um, you can see most of your implementations are a few lines of code. So as long as you know the basics, like list, dictionaries, how like, Python syntax, and things like that, you should be good. The rest is logic and some uh, lookups, uh, online. So for example, you know, in TikTok and TikTok, um, like, here, there are some, um, links for you to see and the implementations are usually, like, one or two lines of code. Um, so the focus again is not on, like, implementing something, like, 100 lines or or something like that. It's just to understand what is the capability that PyTorch, for instance, provides, and what is that one line of code that does the job. Um, and same goes for TikTok. And, again, this week is more overwhelming and lower level, starting week two. Things are more happening at a library level. So you need to just search the library and understand what is the single or two lines of code So for example, just to give you a sense, um, let's say we want to use a, um,
+
+You
+19:14:02
+
+um, three model, um, hugging face. So I don't even know what is the exact signature but I know that I have to come here, press this, depending on what engine I want to use. Let's say, I want to use transformers. We would do this as part of the deep dives. But here is the code. So I simply just copy paste it, and all all I need to know is to understand it so I know what is going on here and here and here. Uh, and same goes for here. So a lot of these things are just online lookups and, um, understanding and being able to read and just connecting these pieces. So my suggestion would be just to make sure you understand the basics of Python. Meaning that you can you feel comfortable reading something like You don't have to know the names, but you need to understand what is like, how imports what is import, like, how how like, to build a dictionary or things like that.
+
+You
+19:14:07
+
+Okay. Thank you. Sure.
+
+ByteByte
+19:14:08
+
+QAN three model on hiding face. So I don't even know what is the exact signature, but I know that I have to come here press this, depending on what engine I want to use. So let's say, I want to use transformers. We would do this as part of the deep tags. But here is the code. So I simply just copy paste it, and all all I need to know is to understand it. So I know what is going on here and here and here. And same goes for here. So a lot of these things are just under the cups and um, understanding and being able to read and just connecting these pieces. So my suggestion would be just to make sure you understand the basics Python. Meaning that you can if you're comfortable reading some like this, you don't have to know the names, but you need to understand what is like, how import what is import, like, how how like, to build a dictionary or things like that. Okay. Thank you. Sure.
+
+ByteByte
+19:14:25
+
+Um, next question, uh, Ravi. Yeah. Hi. You mentioned something about some additional reading content on byte byte go. Um, I'm a little confused about bite bite go in general.
+
+ByteByte
+19:16:05
+
+Because every time I go to Bite Bite Go, I just see something like system design interview, behavioral interview. So, like, what exact what content are you referring to? Sure. Um, so whatever we're saying, especially if you are if you are focused on the edit part of it. Um, so so we have, um, these two books, and these two books, they titled machine learning, um, system design interview and generative AI system design interview. Uh, while they are titled they are generally very helpful to build your foundation in general, to understand how how systems how to build AI systems. Uh, and both of these are provided as part of the bytecode, um, in the digital format. So, um, once you log in, you would have access to the digital format of all the chapters of these books. And many of these can be quite helpful, especially the Gen I o Gen AI one if you are interested to learn deeper, um, that can be helpful. So can you help me do you if you go back to the website, what do I search for to find that book? Um, so you once you log in, um, you would have access to to them. So if if you have any difficulties accessing, you can you can email or or share like, a screenshot, and then we can, um, Teresa can can respond. Okay. Yep. But once you log in, you should have access to it. To all the, uh, digital formats of the books. It's just not easy to like, none of those are linkable. That's why, like, if there's a link that takes me directly to the book, that's great. But Sure. I can, yeah, I can check with with Tersa to see if that's, uh, also a link is available, and then I can share it with you. Okay. Thank you. Yep. Sure.
+
+You
+19:16:05
+
+Next question, uh, Rafi. Yeah. Hi. You mentioned something about some additional meeting content on ByteDryGo. Um, I'm a little confused about ByteDide Go in general. Because every time I go to Bite Bite Go, I just see something like system design interview, behavioral interviews. So, like, what exact what teach your content are you referring to? Sure. Um, so what I was referring to, especially if you are the if you're focused on the AI part of it, um, so so we have, um, these two books, and these two books they're titled machine learning, um, system design interview and generative AI system design interview. Uh, while they are titled interview, they are generally very helpful build your foundation in general, to understand how how systems how to build AI systems. Um, and both of these are provided as part of the BYJETCO, um, the digital format. So, um, once you log in, you would have access to the digital format of all the chapters of these books. Uh, and many of these can be quite helpful. Especially the Gen I Gen AI one, if you are interested to learn deeper um, that can be helpful. So can you help me the you you go back to the website, what do I search for to find that book? Um, so you once you log in, um, you would have access to to them. Um, so if if you have any difficulties accessing, you can you can email or or share, like, screenshot, and then we can, um, Teresa can can respond. Okay. Yeah. But once you log in, you should have access to to all the, uh, digital formats of the books. It's just not easy to like, none of those are linkable. That's not, like, if there's a link that takes me directly to the book, that's great. But Trouble. I can, yeah, I can check with with Theresa to see if that's also a link is available, and then I can share it with you. Okay. Thank you. Yep. Sure.
+
+You
+19:16:15
+
+Uh, Vijay? Yeah. Hey. We just spoke to the time center.
+
+You
+19:18:35
+
+We just spoke to the capstone project. I know it's a six weeks time. We have some time. But I if I want to keep thinking about uh, how my calls should look like, any previous exam would help me. So those can be provided upfront starting today instead of the last week. I can go refer them to just get a fair idea of how can I build something new out of uh, out out of my thought process? Yeah. Yeah. Of course. I mean, so in a few days, um, probably later this week, or maybe next Saturday, we generally, um, uh, announce and share a PDF with more details about the stone project, how to do it, where to start. And there there are generally some links Um, and one of the links is, uh, the sample projects from the previous cohorts. So you can get some idea about some possibilities that that people have built or some ideas that people have, um, built around. So definitely, we're not gonna debate until the last week. It's going to be either this week or or the next Saturday. And what other question? So I am part particularly from a security domain. I want to do something beyond the security domain. I think if I want to start exploring a product idea and if you or anyone is in group, I think I can start building a general discussion starter about it. Is it? Sorry. Can you repeat your last part of your question? So I want to do something around the security space. Cyber security space, uh, with respect to Capstone project. For now, I want to share my thought process get some feedback I'll get some additional feedback. I think general discussion is the way to do it. Yes. Yes. Exactly. So if general discussion is generally for, like, a place for questions where you don't know where else to put it. Um, so anything that doesn't fit in any of the weekly content, it's not in particular about one of the weekly contents, you can just share it in general. And, you know, there is not a strict kind of enforcement on these things. It's just for all of us to fail to to be able to find content easier. So, you know, and keep everything organized. So, um, if you are unsure about something, it's fine. They're very positive. Um, but I would say if it's about capstone project, you can post it on capstone. If it's about particular weekly topics, you can post there. Otherwise, you can post in general discussion. Also, if you have some interesting things to share, like reads or YouTube videos or whatever, you can share them in the in the general channel or or on Discord. There is an a knowledge sharing.
+
+ByteByte
+19:18:38
+
+Um, Vijay? Yeah. Hey. With respect to the thanks, Ali. With respect to the capstone project, I know it's a six weeks time. We have some tight time. But I if I want to keep thinking about, uh, how my policy should look like, Any previous examples would help me. So if those can be provided up and starting today instead of the last week, I can go refer them just get a fair idea of how can I build something new out of, um, out out of my thought process? Yeah. Yeah. Of course. I mean, so in a few days, um, probably later this week or maybe next Saturday, we generally, um, announce and share a PDF with more details about the capstone project, how to do it, where to start. And there there are generally some links And one of the links is, uh, the sample projects from the previous cohorts. So you can get some idea about some possibilities that that people have built or or some ideas that people have, um, built on. So definitely, you're not gonna be delayed until the last week. It's going to be either this week or or the next Saturday. And one other question, Nick. So I am part particularly from the security domain. I want to do something around the security domain. I think if I want to start exploring a thought idea with you or anyone that's in the group, I think I can start doing them to general discussion start up with it. Is it? Sorry. Can you repeat your last part of the question? So I wanna to do something around the security space, type of entry space. Uh, with respect to capstone project. Mhmm. Even though I I want to share my thought process and get some feedback and get some additional feedback. I think general discussion is the way to go, is it? Yes. Yes. Exactly. So if general discussion is generally for, like, a place for question where you don't know where else to put it. Um, so anything that doesn't fit in any of the weekly content is not in particular about one of the weekly contents, you can just share it in general. And, you know, there is not a strict kind of enforcement on these things. It's just for all of us to fail to to be able to find content easier. So and I keep everything organized. So um, if you are unsure about something, it's fine. They're very positive. Um, but I would say if it's about capstone project, you can post it on capstone. If it's about particular weekly topics, you can post there. Otherwise, you can post in general discussion. Also, if you have some interesting things to share, like reads or YouTube videos or whatever, you can share them in the in the general channel or or on Discord. There is an knowledge sharing. Okay. Thanks.
+
+You
+19:18:43
+
+So next question, uh,
+
+ByteByte
+19:18:43
+
+So next question,
+
+You
+19:18:47
+
+Um,
+
+ByteByte
+19:19:38
+
+Yeah. So, uh, hello? Can you hear me? Yes. Okay. Uh, my question was about the capstone project. I read somewhere that, uh, we can email or contact, um, you know, instructor at the course or to ask for advice, uh, or to get guidance. Is that um, did I rate it wrong? No. No. Sure. Um, you can always, um, get feedback. Uh, if about Capstone projects. So we have a channel about, um, Capstone. Right. So you can always post your questions or or, um, ideas or if you need feedback from me or also other peers, um, you can post it here. In addition, we have also a lot of, um, usually, we have good we spend good amount of the office hours on, uh,
+
+ByteByte
+19:19:52
+
+those kind of conversations for, you know, project capsule. Um, so, yep, you can you can get feedback, go over your project during the office hour, or you can post it in
+
+You
+19:19:54
+
+Yeah. So, uh, hello. Can you hear me? Yes. Okay. Uh, my question was about the cap stone project. I read somewhere that, uh, we can email or contact, uh, you know, instructor at the course or to ask for advice, uh, or to get guidance. Is that did I read it wrong? No. No. Sure. Um, you can always, um, get feedback. Uh, if about capstone projects. So we have a channel about, um, capstone. Right. So you can always post your questions or or, um, ideas or if you need feedback from me or also other, uh, peers, um, we can post it here. In addition, we have also a lot of, um, usually we have good we spend good amount of the office hours on, uh, those kind of conversations for, you know, project capsule. Um, so, yeah, you can you can get feedback, go over your project during the office hour, or you can post it in capstone project, uh, channel.
+
+ByteByte
+19:20:33
+
+Does that answer the question? Yeah. It does, actually. And the second I I did have a second question. The, uh, transcript for the, uh, video uh, on Otter stops at minute thirty. Um, is that is the transcript going to be made available? At all? Or Or so okay. That's yeah. That's I wanted to cover this. I forgot. Thank Thank you for reminding. So I I so your question is about the transcript of the, um, the the meetings. The the live sessions or the guided learnings.
+
+You
+19:20:35
+
+Does that answer the question? I mean Yeah. It does, actually. And the second I I did have a second question. Um, the, uh, transcript for the uh, video, uh, on Otter stops at minute thirty. Um, is that is the transcript going gonna be made available at all? Or Or so okay. That's yeah. That's I wanted to cover this. I forgot. Thank you for reminding. So I I so your question is about the transcript of the the meetings, the the live sessions, or the guided learnings?
+
+ByteByte
+19:21:14
+
+Sorry. I think I have to, uh, ask. Yes. The live sessions. The live sessions. Um, so when I upload the live sessions, um, the platform would automatically support, um, auto captioning. So you would see those anyway. Um, but also one thing one more thing I wanted to share. I actually forgot this now that you asked this question. I enabled auto captioning in general for on the on the course platform. So all the live sessions when when they are uploaded, um, and, um, office hours. As well as the guided learning, it's already enabled. Um, the platform has also
+
+ByteByte
+19:21:45
+
+limit on on on some videos. So if the video is beyond the certain duration, it does not support auto captioning. So, um, for example, big one is is very long. The content So you may not see the auto captioning of the, uh, guided learning. But I know that for shorter weeks, like big two definitely has auto captioning. So just want to know you to know that auto captioning is on and enabled by default. Just for some videos, if they are very long, it's not supported. By the platform itself.
+
+You
+19:21:45
+
+Sorry. I think I have to go, uh, I'm Yes. The live sessions. The live sessions. Um, so when I upload the live sessions, um, they're platform would automatically support, um, auto captioning. So you would see those anyway. Um, but also one thing one more thing I wanted to share. I actually forgot this now that you asked this question. Uh, I enabled auto captioning in general for on the on the course platform. So all the live sessions when when they are uploaded, um, and, um, office hours, as well as the guided learning, It's already enabled. Um, the platform has also a limit on on on some videos. So if the video is beyond a certain duration, it does not support auto captioning. So, um, for example, big one is is very long, the content. So you may not see the auto captioning of the, uh, guided learning. But I know that for shorter weeks, like big two definitely has auto captioning. So just want to know you to know that auto captioning is on and enabled by default. Just for some videos, if they are very long, it's not supported by the platform itself.
+
+You
+19:21:50
+
+Uh, Serum.
+
+ByteByte
+19:21:51
+
+Uh, Sarah?
+
+ByteByte
+19:22:42
+
+Thank you. Uh, so I have question, um, maybe it's regarding, um, you know, job interview, recreation, and the concepts that are covered in this course. Uh, is there more yeah. Line you know, with, uh, with, you know, kind of forbat any interviews in the future. Uh, if the concept cover is sufficient, uh, from this course or if there's something more that would recommend, uh, outside the course. Mhmm. So, um, okay. That's a that's a great question. First of all, it's very, um, it's it's very difficult in general to say that, hey. This content is what all you need for for getting, uh, guaranteed uh, job or or interview.
+
+ByteByte
+19:24:14
+
+What I saw and observed from others is that a lot of times for many, um, engineering or applied air roads, many of these topics are among those that are asked during the interview. But it is it also depends on the role itself. For example, if you are looking into infrastructure roles or security roles, um, you may not find, uh, many of these topics useful for interviews. Or if you are focused on on you have a very, like, specific expertise or the goal that the company is is, uh, looking for, Um, so if that's not part of the curriculum, then probably, it's not going to be aligned for interviews. But for most broad, uh, generic AI roles, uh, machine learning roles, like, whether they are advertised as applied engineers machine learning engineers or even researchers. Um, many of the topics covered in the guided learning can be quite useful in general. And also, um, the chapters in the machine learning books. Um, those can be also very helpful. So in addition to that, I will try to also create a, uh, because many of, uh, not many, but some of you may be, um, looking for, um, interview or expecting interviews or switching jobs. Uh, I would try to create a list of, um, links and resources that might be help you, um, if you are prepared for interviews. I I yeah. I promise to do it. I just don't know when, but I would do it soon before before the course meets.
+
+You
+19:24:14
+
+Thank you. Uh, so I have question mainly regarding, um, you know, job interview, regression, and the concepts that are covered in this course. Uh, is there mostly aligned, uh, you know, with the, you know, for rattling interviews in the future. If if the concept cover is sufficient, um, from this course or if there's something more that would recommend uh, outside the course. Mhmm. So, um, okay. That's a that's a great question. Um, first of all, it's very, um, it's it's very difficult in general to say that, hey. This content is what all you need for for getting, uh, a guaranteed, uh, you know, job or or interview. What I saw and observed from others is that a lot of times for many, um, engineering or applied AI roles, many of these topics are among those that are asked during the interview. But it is it also depends on the role itself. For example, if you are looking into infrastructure roles or security roles, um, you may not find, uh, many of these topics useful for your interview. Or if you are focused on on you have a very, like, specific expertise or the role that the company is is, uh, looking for, So if that's not part of the curriculum, then probably it's not going to be aligned for interviews. But for most broad, um, generic AI roles, um, machine learning roles, um, like, whether they are advertised as applied engineers or learning engineers or even researchers. Um, many of the topics covered in the guided learning can be quite useful in general. And also, um, the chapters in the machine learning books. Uh, those can be also very helpful. So in addition to that, I will try to also create a uh, because many of uh, not many, but some of you may be, um, looking for, um, interview or expecting interviews or switching jobs. I would try to create a a list of, um, links and resources that might be help you, uh, if you are preparing for interviews. I I yeah. I promise to do it. I just don't know when, but I would do it soon before before the course ends.
+
+You
+19:24:21
+
+So our next question, um, manage.
+
+ByteByte
+19:24:21
+
+So our next question um, manage.
+
+ByteByte
+19:25:32
+
+Hi. Yeah. Hi, everyone. Uh, thanks, Ali. For all the info so far, and looking forward to learning with you all. Um, basically, I have two questions. One, I mean, this course is about generative AI. As we go through this guided learning, do you also point out where a traditional ML or traditional, you know, machine learning would be appropriate versus using using, uh, Gen AI for scenarios? Or is that uh, are you are we gonna be able to build that intuition Um, that's the the the first question. And then the second one is, there are different pieces here. Right? You have rags, Uh, you have, uh, agent take uh, agents. Um, so do you also sort of as we go through this, when to reach for which, uh, particular option? Uh, and how to decide that. Um, I'm assuming we are going to sort of build that intuition over the next six weeks or so. Is that fair to assume? Yes. Yes. That's definitely fair to assume. Um, regarding the first part of your question,
+
+You
+19:25:32
+
+Hi. Hi, everyone. Uh, thanks, Ali, for all the info so far, and looking forward to learning with you all. Um, basically, I have two questions. One, I mean, this course is about generative AI. As we go through this guided learning, do you also point out where a traditional ML or traditional, you know, machine learning would be appropriate versus using, uh, Gen AI for for scenarios? Or is that, uh, are you are we gonna be able to build that intuition? Um, that's the the the first question. And then the second one is, there are different pieces here. Right? You have RAC. Uh, you have, um, agent take, uh, agents, um, do you also sort of, as we go through this, when to reach for which, uh, particular option? Uh, and how to decide that. Um, I'm assuming we are gonna sort of build that intuition over the next six weeks or so. Is that fair to assume? Yes. Yes. That's definitely fair to assume. Um, regarding the first part of your question, um,
+
+You
+19:25:45
+
+can you remind me what what I usually stop after the first question so I don't forget the first question. If you just say a keyword, I would I would remember what was it about. Uh, you are you are mute.
+
+ByteByte
+19:25:47
+
+can you remind me what was I usually stop after the first question so I don't forget the first question. If you just say a keyword, I would I would remember what what is it about. Uh, you are you are mute.
+
+ByteByte
+19:25:58
+
+Um, manage your your meeting.
+
+You
+19:25:58
+
+Um, manage your your mute.
+
+ByteByte
+19:26:51
+
+Now you are you are good. Now I can hear you. Yeah. I think it wasn't allowing me to mute. For some reason. Oh, okay. Now I remember. It was traditional. Yeah. So that's a that's a good question. I mean, there two ways you can think of traditional ML versus, uh, more modern or, uh, recent ML. One is on nonjali and one is JAI. Um, JAI way you can think of it is, for example, when you think of image generation. Right? Traditional is, like, what is VAEs and, um, we can, to some extent, now say GANS are more traditional image generation techniques. So, yes, they are covered in the guided learning. Not in the projects. Because in the projects, the purpose is just to use whatever is there is best and is more most, uh, typical in building real systems.
+
+ByteByte
+19:28:22
+
+So to answer your question, for general topics, yes. For most of these, we try to go back from what was initially proposed and traditional techniques and then we would switch to more advanced, uh, techniques slowly. For example, the other night, we would just start with GPT two, and then we would watch you over how the whole thing evolved from something very simple and silly like GPT two to something that we see today. So I would say this is kind of, um, like a traditional versus non non traditional. Outside of Gen AI, uh, for example, if you are referring to traditional ML as, like, decision trees or things like that, those are not covered. Um, because the whole, um, focus of the course are again, mostly on things that we need to know in order to build uh, the popular AI applications. Uh, and most of these days, AI application and start ups are based on Gen AI. So those are more considered non Gen AI. Even with that, there are there are certain topics that we cover on the traditional, um, in general, traditional, um, machine learning. So for example, in retrieval, for rats, we talk about nearest neighbor and approximate nearest neighbor. So nearest some of those techniques are are kind of we can think of those traditional machine learning, um, techniques. There are less machine learning. It's not like a machine learning, but these are additional components that usually um, complements machine learning systems. Yeah, I hope that answers your question.
+
+You
+19:28:31
+
+Now you're you're good. Now I can hear you. Yeah. I think it was on a line with you on mute. For some reason. Oh, okay. Now I remember. It was traditional. Versus Genesys. So that's a that's a good question. I mean, there are two ways you can think of traditional ML versus, uh, more modern or, uh, recent ML. One is on non JNA and one is JNA. Gen AI, the way you can think of it is, for example, when you think of image generation. Right? Traditional is like what is VAEs and, um, we can, to some extent, now say GANS are more traditional image generation techniques. Uh, so, yes, they are covered in the guided learning, not in the projects Because in the projects, the purpose is just to use whatever is there, is best and is more most, uh, typical in building real systems. So to answer your questions, for general topics, yes. For most of these, we try to go back from what was initially proposed in traditional techniques, and then we would switch to more advanced uh, techniques slowly. For example, in Dell and then we would just start with GPT two, and then we would watch you over how the whole thing evolved from something very simple and silly like g p t two to something that we see today. So I would say this is kind of um, like a traditional versus non non traditional. Um, outside of Gen AI, uh, for example, if you are referring to traditional ML as, like, um, decision trees or things like that, Those are not covered, um, because the whole, um, focus of the course are, again, mostly on things that we need to know in order to build the popular AI applications. Uh, and most of these days, application and start ups are based on Gen AI. So those are more considered non Jynae. Even with that, there there is certain topics that we cover on the traditional, um, in general, traditional machine learning. So for example, in retrieval, for rats, we talk about nearest neighbor and approximate nearest neighbor. Um, so nearest neighbor, some of those techniques are are kind of you can think of those as traditional machine learning, um, techniques. There is machine learning. It's not like a machine learning, but these are additional components that usually um, complements machine learning systems. Um, so, yeah, I hope that answers your question. Yeah. That answers I I will follow-up if I have more question. Thank you. Sure.
+
+ByteByte
+19:28:32
+
+Yeah. That that answers. I will follow-up if I have more question. Thank you. Sure.
+
+You
+19:28:36
+
+Um, next question, um, and Deepan.
+
+ByteByte
+19:28:36
+
+Um, next question. Um, and Dipan?
+
+You
+19:28:56
+
+Uh, I had a couple of questions. Uh, regarding the labs, uh, will we continue to continue to have access to the lab environment here after the six weeks uh, say,
+
+You
+19:30:37
+
+or that someone will be totally uh, with our local by developing, uh, few things in the local itself for it is via environment, something like that. Mhmm. So yeah, that's a good question. Uh, to all the content, you would have continue your access even after the cohort ends. So the guided learning and all those in fact, the course platform, you will have full access to it. Um, so that means you have access to all these prerecord like, recordings. As well as the prerecorded videos. Um, you would also have access to all the labs for, like, projects. Um, and every everything that we basically share. For example, you would have access to the list of all the demos and presentations that you would do at Capstone, including all the district source courses and anything that people share with each other. Um, you would have access to Discord, um, after the course. And then one more thing. So the only thing is that, um, the codes right now would be released. The templates will be released on GitHub. And the solutions would be uploaded in your course portal. Um, after the cohort ends, um, the the projects would also be uploaded in the course portal. And, uh, be removed from Git. So that's the only thing, which is not gonna change the learning experience because, uh, those projects would be either run locally or on collab. So it just doesn't matter. And before we remove them from repo, you can also fork in so you can have access them to on your own, uh, digital. That's the only thing, but in general, you would have access to everything that is provided throughout this course. Even after the COVID hits. Oh, okay. Got it. Uh, just one more question. Like, regarding the mister Sujit Sey,
+
+ByteByte
+19:30:53
+
+Hi, Uh, so there's a couple of questions. Regarding the labs, uh, we will be going to continue to have access to the lab environment even after the six weeks. Uh, say, or bands will be totally, uh, with the local by developing a few things in the local itself, or it is via environment. So So, yeah, that's a good question. Um, to all the content, you would have continue your access even after the cohort ends. So the guided learning and all those things like, the course platform, we would have full access to it. Um, so that means you have access to all these prerecorded recordings as well as, uh, prerecorded videos. Um, you would also have access to all the apps for, like, projects. Um, and every everything that we basically share. For example, you would have access to the list of all the demos and presentations that you would do at Capstone, including all the history post source courses, and anything that people share with each other. Um, you would have access to Discord. After the course. And then one more thing, So the only thing is that, um, the codes right now would be released. The templates would be released on GitHub. And the solutions will be uploaded in your course portal. Um, after the cohort ends, um, the the projects would also be uploaded in the course portal and, uh, be removed from it. But that's the only thing, which is not gonna change the the learning experience because uh, those projects would be either run locally or on collab. So it it just doesn't matter. And before we remove them from repo, you can also fork them so you can have uh, access them to on your own, um, you know, git That's the only thing, but in general, you would have access to everything that is provided throughout this course. Even after the COVID hits. Oh, okay. Got it. Uh, just one more question. Like, regarding the let's say, uh, we are, uh, most of them, they are from the working professional. Right? So, uh, if we use the live session, Uh, yeah. I understood that that the recording will be available But is there any any possibility to attend the same session? Uh, likely in another batch if needed?
+
+You
+19:30:55
+
+we are most of them are from the working professional. Right? So uh, if you visualize this and, uh, yeah, I understood that that the recording will be available. What is the any possible to attend the same session, uh, lively in another batch if needed?
+
+You
+19:32:00
+
+So the just to make sure I understand it, so the question is, um, after we have the live sessions and then there are recordings and you watch recording, then you have some questions, then we have more sessions? Yeah. What are those questions? Yeah. First of all, the office hours are weekly. Um, so every week, have office hour, and in the office hour, you can ask whatever questions you have from all the past projects. Alright. So I will send you an email on the course portal. So anytime you have a question and so you're you're blocked on something or you watch some recording, you have some confusions, you can post it on the course portal, and then I would respond to them. Also, at the very end of each deep dive session, we would also spend time on questions. Um, so you can ask your question from previous weeks if you ever uh, joined one of the live sessions. But in general, if you cannot join any of the live sessions, if that's your question, then I think the best the best day is to, um, post your questions in the course portal, and I would answer them. Uh, so Okay. Sure. Sure. Yeah. Thank you. Yeah. Of course. Thanks.
+
+ByteByte
+19:32:02
+
+Uh, so the just to make sure I understand it. So the question is, um, after we have the live sessions and then the recordings, and it was recording and you have some questions, can you have more sessions for those questions? First of all, the office hours are weekly. Um, so every week, have office hour, and in the office hour, you can ask whatever questions you have from all the past projects. Alright. So I can send them on the course portal. So anytime you have a question or you're you're locked on something or you want some recording, you have some confusions, you can post it on the course portal, and then I will respond to them. Also, at the very end of each deep dive session, we would also spend time on questions. Um, so you can ask your question from previous weeks if you ever uh, joined one of the live sessions. But in general, if you cannot join any of the live sessions, if that's your question, then I think the best the best way is to, um, your questions in the course portal, and I would answer them, um, soon. Okay. Yeah. Yeah. Yeah. Thank you. Yeah. Of course. Thanks. Tom?
+
+ByteByte
+19:32:15
+
+Tom, we cannot hear you. Yeah. Hey. Uh, hey,
+
+You
+19:32:26
+
+Tom, you can just give me a minute. Uh, hey, Arlene. Um, Um, I just want to share uh, what kind of tools and environment we need for to be the the, um, AI and chatbots and, um, others, uh, AI add?
+
+ByteByte
+19:32:26
+
+I just wanted to check. So, uh, what kind of tools and environment we need for to be the, um, AI engine valves and, um, others, uh, AI end?
+
+You
+19:34:07
+
+And, mhmm, and, um, uh, yeah. So that that's the question. Yeah. But the question is what kind of tools you need for Yeah. Yeah. No. MRR is Yeah. Yeah. Projects. Right? Yep. Project. So we usually provide, uh, setup instructions. Um, so we are so if, for instance, if you go here, there are some overview of the projects. Uh, like, these are the projects, um, and this is the structure. Um, if you found some typos, please let me know. I can fix them. Or if there are general in general, there are any issues, please send the PR or let me know so I can fix it. Um, yeah. But but, basically, um, here are the steps and the tools you may need or you can consider using For example, for our ID, these are some examples that you can use. I actually used to use Versus Code and Tercher, uh, in the past course, and then um, in one session, I I started using anti gravity by Google, and then I logged it. So I just continue using it. But it just doesn't matter. I mean, you whatever you feel most most comfortable Um, and then most of these, um, projects are going to be run either on Google Colab, which you basically don't need any kind of environment setup. Uh, you can just follow an example is the project one. You can run it on Google Colab. Um, Or you can run them run them locally. And if the project, you should run it locally. It comes with an environment that you handle. So for consistency purposes. So between all the versions, of dependencies, required dependencies, so you can just um, run the command provided, um, to up your environment on your local machine.
+
+ByteByte
+19:34:07
+
+And and, um, uh, yeah. So that that's the question. Yeah. But the question is what kind of tools you need for Yeah. No. MRM is Yeah. Yeah. Projects. Right? Yep. There's a project. So we usually provide an, um, setup instructions. Mhmm. So we are so if, for instance, if you go here, there's some overview of the projects. Uh, like, these are the projects, um, and this is the structure. Um, if you found some typos, please let me know. I can fix them. Or if there are general in general, there are any issues, please send the PR so I can fix it. Yeah. But but, basically, um, here are the steps and the tools you may need or you can consider using For example, for ID, these are some examples that you can use. I actually used to use Versus Code and Tensor, uh, in the past course. And then um, in one session, I I started using anti gravity by Google, and then I dropped it. So I just continued using it. But it just doesn't matter. I mean, you whatever you feel most most comfortable. Um, and then most of these, um, projects are going to be run either on Google called app, which you basically don't need any kind of environment setup. Uh, you can just follow. An example is a project one. You can run it on Google Colab. Or you can run them run them locally. And if the project you should run locally, it comes with an environment that Yan alpha. So for consistency purposes. So we pin all the versions of dependencies required dependencies. So we can just, um, run the command provided um, to set up your environment on your cloud machine.
+
+ByteByte
+19:35:52
+
+Um, do we do we need to write any complex algorithms, um, and it's, um, complex codings to, uh, yeah, yeah, for the projects. So most of the projects, if you think of them, um, like, the final delivery can be assumed a complex system. But since we are working and and focusing on each component, like, one by one, and many of those components, especially from week two or even maybe week three, are relying on tools and libraries that make life easier. Like, we use a lama um, just to use, uh, just to download pool and use their best uh, elements out there with just one line of code or two lines of code. Uh, so the the implementation logic or complexity is not going to be high. Um, so once you know all different pieces and how you connect them, the actual implementation And, again, in the projects, we have these, like, number of lines that are required if you want to practice them. They're usually less than 10 lines. So, um, implementation wise, it's not too complex. So that means it's, um, it's prepaid. Prepaid, and we just need to add some, um, line of the codings. So Yeah. Definitely. There so, yeah, if I could are are designed and prepared, Sashat. It just, uh, give you, like, uh, a direction. So you don't have to, um, start from a scratch. So, for example, here, you can see that some parts that are left, um, are already implemented for you, and the key parts are left for you to implement. Um, so yeah. This is yep. Yeah. Sure. Thank you. Yeah. Thanks, brother Chris. Uh, next question. Uh, can can you turn?
+
+You
+19:35:54
+
+Um, do we do we need to write any complex algorithms, um, any, um, complex codings to, uh, yeah, for the projects. So most of the projects, if you think of them, like, the final delivery can be assumed a complex system. But since we are working and and focusing on each component, like, one by one, and many of those components, especially from week two or even maybe week three, are relying on tools and libraries that make life easier. Like, we use Ollama um, just to use, uh, just to download pool and use their best uh, LMS out there. It's just one line of code or two lines of code. Um, so the the implementation logic or complexity is not going to be high. Uh, so once you know all different pieces and how you connect them, the actual implementation and again, in the projects, we have this, like, number of lines that are required if you want to practice them. They're usually less than 10 lines. So, um, implementation wise, it's not too complex. So the domain says, um, it's prepaid prepaid, and we just need to add some, um, line of the code in. So Yeah. Definitely. There so, yeah, the projects are are designed and prepared. So, Shadi, it just, uh, give you, like, uh, a direction. So you don't have to, um, start from scratch. So for example, here you can see that some parts that are list, um, are already implemented for you, and the key parts are for you to implement. Um, so yeah. Yeah. Sure. Thank you. Yeah. Thanks for the course. Uh, next question. Uh, can can Deepa?
+
+You
+19:36:09
+
+No. Sorry. I, uh, okay. Sorry. Uh, I already Oh, okay. Yeah. No problem. Sorry. I saw your hand was missed. Yeah. Next question. Uh, Kunal?
+
+ByteByte
+19:39:06
+
+No. Sorry. I okay. Sorry. I already Oh, okay. Yeah. No problem. Sorry. I saw your hand was pissed. Yeah. Next question. Uh, Kunal. Hi, Ed. Yeah. I see, you know, my question is, there's a lot of content you provided on the data lab, you know, in the in the AI ready list. And, uh, is it is it required to read the material before you watch your video? Or, you know, I'm just asking about the lesson one. I see, you know, in the pre training data, you know, there's a lot of articles there. What is required before we start watching, you know, your your this target one? Sure. So nothing is required in general. At least that was the purpose of the guided learning video. So they start from from from scratch. Um, so everything you should learn, you would learn as as you watch them. These are just for you if you are for two reasons. One is if you want to learn something that is not going to be covered in the curriculum, example, if you are interested in security, I think I have the security or, like, guard guardleys. Or, basically, if you want to something learn something in deeper, or if you want to something that is outside the scope of the current query. Criteria. Yeah. You can go to this and and learn, uh, from those links. But in order to follow the course and learn, you don't have to go through any of those links. You can just watch the guided learning. And the best flow that works well is you start from the guided learning, then you go over the project template. Then in the live office hour, you ask your question on Wednesday about the guided learning and project template. And then finally, you watch or attend the live um, like, live, um, session. So this this order would works probably best. Okay. I have another question here, uh, based on what you said. What I I come come coming new to AI. What would it take, you know, to get me to from, you know, like a beginner I'm not asking any, uh, terms of attending an interview. My question is what they what would it take for me to get from a beginning to say, uh, seasoned or experienced, uh, AI programmer? So that's a good question. I think it has two parts. Um, one part is you learn what you need to know to be considered there, like, a seasoned or senior, um, AI engineer. And the other part is you you build where you you do hands on work. So I think in terms of learning, I would say the guided learnings are probably pretty good to start. Uh, To the best of my knowledge, these are, uh, mostly all you need to learn to build some of the best or most advanced systems out there. Um, the rest is just about the infrastructure. Scaling. Um, in terms of that that pew like, actual knowledge, it should be good enough, um, to be to consider yourself as someone who knows most of these topics that, um,
+
+You
+19:39:06
+
+Yeah. I see, you know, my question is, there's a lot of content being provided on the Datalab, you know. In the in the AI meeting list. And, uh, is it is it required to read the material before you watch your video or, you know I'm just asking about the lesson one. I see, you know, in the pre training data, you know, there's a lot of articles there. What is required before we start watching, you know, your Oh, I see. One. Sure. So nothing is required in general. At least that was the purpose of the guided learning video. So they start from from from scratch. Um, so everything you should learn, you would learn as as you watch them. These are just for you if you are for two reasons. One is if you want to learn something that is not going to be covered in the curriculum, example, if you are interested in security, I think I have it security or, like, guard guardleys. Or, basically, if you want to something learn something in deeper, or if you want to something that is outside the scope of the current card criteria. Then you can go to this and and learn, uh, from those links. But in order to follow the course and learn, you don't have to go through any of those links. You can just watch the guided learning. And the best flow that works well is you start from the guided learning. Then you go over the project template. Then in the live office hour, you ask your questions on Wednesday about the guided learning and project template. And then finally, you watch or attend the live um, like, live, um, say, so this this order would works probably best. Okay. I have another question here, uh, based on what you said. What I'm I'm con coming new to AI. What would it take, you know, to get me to from, you know, like, a beginner? I'm not asking any terms of attending an interview and pop up, similar interview. Question is what what would it take for me to get from a beginner to say, uh, seasoned or experienced AI programming? So that's a good question. And I think it has two parts. Um, one part is you learn what you need to know to be considered, like, a seasoned or senior, uh, AI engineer. And the other part is you you build or you you you do hands on one. So I think in terms of learning, I would say the guided learnings are probably pretty good to start. Uh, To the best of my knowledge, these are, uh, mostly all you need to learn to build some of the best or most advanced systems out there. Um, the rest is just about the infrastructure. Scaling, um, in terms of the the pure like, actual knowledge it should be good enough, um, to be to consider yourself as someone who knows most of these topics that
+
+You
+19:39:40
+
+Welcome to week one. In this week, we'll learn about L and M foundations. And learning this topic is quite important because a lot of advanced applications and use cases these days for example, agents, presenting models, writing code flash platforms, productivity tools, and many many other examples are all built on top of
+
