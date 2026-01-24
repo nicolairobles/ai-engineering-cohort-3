@@ -1,0 +1,869 @@
+ByteByte
+01:13:05
+
+Vector to a linear transformation to a vector of length 50,000. Right? And now those 50,000 numbers, they're still not probability They are just budgets, raw raw numbers. After this linear, there is usually a soft max layer that exactly does this. It it transforms those numbers into a probability distribution. Basically, all it does is make sure that the the the sum of all these numbers um, like, all those numbers in the vector, they sum up to one. But these two these two these two layers just take the job. Going from disembedding into an actual probability distribution. I see. So the size of the probability vector is going to be the size of your vocabulary then? Most of the Yes. It has. It must be yeah. It must be, um, exactly equal to the, um, size of the vocabulary. Got it. And in this case, because you had three output nodes, you only looked at the last one. The Yeah. So that's always the case. We All these, um, only keep used in, like, the um, rightmost vector to so we use that vector to predict the next token. Um, and the reason for that is, like, internals of, um, multi multi head attention and self attention. The way that it works in decoder only transformer is that inside the self attention layers, each token looks at its previous tokens. Not it doesn't look at future. Uh, and because of that, this embedding has, um, generally, a very good idea of about the entire sequence. The entire input sequence. Um, because in the self attention layers, it was able to look back. Um, so that's why this one, has probably the the whole, uh, context inside it. And it's it's being used to get the next token. Got it. And then once you get the probability distribution of the vector, from the vocabulary let's say you get one word How do you convert that into an ID again, token ID?
+
+ByteByte
+01:14:07
+
+So that's that's another good question. So let's take here. Right? Um, this is uh, let's say we have five vocabulary in this case. So that's why we are getting five number. And these are probabilities. Now here, the index of the highest probability is, uh, zero one two So, basically, what this whole, uh, what this element is saying is that if input is I hope you are, the next token is very likely to be, um, the token with ID two. Now this token with ID two, we can go back to the, um, um, tokenizer's vocabulary and see, uh, what it maps to. And then from there, you can see ID, uh, tube. Maps to something. Like, uh, in this case, maps to well, for instance. Okay. So this vector is actually going to be the vocabulary size, not five. It's it's exactly. Exactly. It's it's final always the final output of the transformer must be equal to the vocabulary size of the tokenizer.
+
+ByteByte
+01:15:02
+
+Okay. I see. Um, and I have second question, uh, related. So this this this is clear to me, so thank you very much. If you go back to the playground, and go to 2.1, the single linear layer. Mhmm. What I did there was um, I wrote this I've filled out this code. I'm gonna copy my code into the chat. Mhmm. My only problem is when I'm out outputting the weights, my weight tensor is two by three instead of three by two. And I don't know why that is happening. So where is Chad here? Okay. Paste my my output in chat. Okay. If you look at if you literally, like, copy and paste to that in this section,
+
+You
+01:15:03
+
+This vector through a linear transformation to a vector of net 50,000. Right? And now those 50,000 numbers, they're still not probability. They are just budgets, raw raw numbers. After this linear, there is usually a softmax layer that exactly does this. It it transforms those numbers into a probability distribution. Basically, all it does is it makes sure that the the the sum of all these numbers uh, like, all those numbers in the vector is the sum of the one. So but these two these two these two layers just take the job. Going from this embedded into an actual probability distribution. I see. So the size of the probability vector is going to be the size of your vocabulary then? Most of the time? It has it must be yeah. It must be, um, exactly equal to the, uh, size of the vocabulary. Got it. And in this case, because you had three output nodes, you only looked at the last one. The Yeah. So that's always the case. We always, um, only keep using, like, rightmost vector to so we use that vector to predict the next token. Um, and the reason for that is, like, internals of, um, multi multi head attention and self attention debate that it works in decoder only transformers is that inside the self attention layers, each token looks at its previous tokens. Not it doesn't look at future. Um, and because of that, is embedding has, uh, generally, a very good idea of about the entire sequence. The entire input sequence. Uh, because in the same attention layers, it was able to look back. Um, so that's why this one, um, has probably the the whole, uh, context inside it. And it's it's being used to get the next token. Got it. And then once you get the probability distribution of the vector, from the vocabulary, let's say you get one word How do you convert that into an ID again, token ID? Um, okay. So that's that's another good question. So let's say here. Right? Uh, this is uh, let's say we have five vocabulary in this case. So that's why we are getting five nouns. And these are probabilities. Now here, the index of the highest probability is zero one two. So, basically, what this whole, uh, what this element is saying is that if the input is I hope you are, the next token is very likely to be, um, the token with ID two. Now this token with ID two, we can go back to the, um, tokenizer's vocabulary and see, uh, what it maps to. And then from there, you can see ID, uh, two. Maps to something. Right? In this case, maps to wealth, for instance. Okay. So this vector is actually going to be the vocabulary size, not five. It it should it exactly. Exactly. It's it's final always the final output of the transformer must be equal to the vocabulary size of the tokenizer. Got it. Okay. I see. Um, and I have second question related so this this this is clear to me, so thank you very much. If you go back to the playground, and go to 2.1, the single linear layer. Mhmm. What I did then was um, I built this I've filled out this code. I'm gonna copy my code into the chat. Mhmm. Uh, my only problem is when I'm outputting the weights, my weight tensor is two by three instead of three by two. And I don't know why that is happening. So where is Chad here? Okay. I'm a paste my my output in chat. Okay. If you look at if you literally, like, copy and paste to that in this section,
+
+ByteByte
+01:15:10
+
+Yep. Give me one second. I'm using the mirror screen.
+
+You
+01:15:11
+
+Yep. Give me one second. I'm using the mirror screen.
+
+ByteByte
+01:15:26
+
+Okay. This is your your call.
+
+You
+01:15:27
+
+Okay. This is your your call. Correct. Correct.
+
+You
+01:15:42
+
+Um, so what is the question? When print weights gets outputted, that line, does the third last line Mhmm. A tensor is of size two by three instead of three by two.
+
+ByteByte
+01:15:42
+
+Um, so what is the question? When print weights gets outputted, that line, does the third last line. Mhmm. Our tensor is of size two by three instead of three by two.
+
+ByteByte
+01:16:11
+
+So here, you are creating this random tensor of size in features, which is three. By two. By two. But my tensor ends up becoming two by three. So I don't know why. Um, Yeah. Let me get back to you on this. I can run it on my side, um, and and figure out. That's it. Yeah. Thank you. That's it. Okay. Yeah. Sure.
+
+You
+01:16:11
+
+Um, so here, you are creating this random tensor of size in features, which is three by two. By two. But my ten seconds are becoming two by three. So I don't know why. Um, Yeah. Let me get back to you on this. I can write it on my side, um, and and figure out. Okay? That's it. Yeah. Thank you. That's it. Okay. Yeah. Sure.
+
+You
+01:16:15
+
+Um, next question.
+
+ByteByte
+01:16:15
+
+Um, next question.
+
+You
+01:16:25
+
+Um, Mitchell, I don't know if the issue is is fixed on your side or not. Do you wanna try? If not, you can also post your, uh, question in the chat, and I can cover it.
+
+ByteByte
+01:16:25
+
+Um, Mitchell, I don't know if the issue is is fixed on your side or not. Do you wanna try if not, you can also post your, uh, question in the chat, and I can cover it.
+
+ByteByte
+01:16:37
+
+It's not. Okay. Do you wanna, uh, post it in the chat? I don't know if you've posted or not. Um, but if you post it in the chat, I can I can reply?
+
+You
+01:16:38
+
+It's not. Okay. Do you wanna, uh, post it in the chat? I don't know if you've posted or not. Uh, but if you post it in the chat, I can I can reply?
+
+You
+01:16:51
+
+Will you be providing your oh, yes. The content the content is already uploaded. So if you go to
+
+ByteByte
+01:16:51
+
+Will you be providing your oh, yes. The content the content is already uploaded. So if you go to
+
+ByteByte
+01:17:05
+
+so for, um, so in the guided learning, for example, they're learning foundations. On their files, you would see the the the file. So you can download this and open this in your own session.
+
+You
+01:17:06
+
+so for, um, in the guided learning, for example, the LMM foundations, under files, you would see the, uh, the file. So you can download this and open this in your own session.
+
+ByteByte
+01:17:10
+
+Alright. Great. Um, next question, uh, Vijay.
+
+You
+01:17:10
+
+Alright. Great. Um, next question.
+
+You
+01:17:12
+
+Vijay.
+
+ByteByte
+01:17:31
+
+Um, Yeah. I want to understand what is temperature, uh, because, uh, it's used to, uh, many places. Yeah. That's a really good question. And temporary is very important. Let me let me bring it here. So
+
+You
+01:18:12
+
+Um, Yeah. I want to understand what is temperature. Uh, because Uh, it's used, uh, many places. Yeah. That's a really good question, and temperature is very important. Let me let me bring it here. So before I talk about temporary temperature, let's understand how these probabilities are um, picked. Um, so we go over this in the text generation in the lecture that there are different algorithms, and, um, the simplest way is just a greedy algorithm, which would pick the highest probability the token with the highest probability. But there are also other algorithms with with that which introduces some randomness. Uh, these are the algorithms these are discussed in guided learning. Now what is temperature? So the output of the neural network is some probability distribution. Right?
+
+ByteByte
+01:18:12
+
+before I talk about temperature, let's understand how these probabilities are uh, picked. Um, so we go over this in the text generation in the lecture that there are different algorithms, and, um, the simplest way is just a greedy algorithm which we picked the highest probability. They told me the highest probability. But there are also other algorithms which which that which introduces some randomness. Uh, these are the algorithms. These are discussed in the guided learning. Now what is temperature? So the output of the neural network is some right?
+
+You
+01:18:58
+
+If we always pick the highest probability, it means that there is no randomness. So everything is very consistent and deterministic. It can be good in some use cases, which we need, um, consistency. Like, let's say, language translation or machine translation. But it may not be good in certain other users. So it's not always good to pick the highest probability For example, when we want more innovation or more, um, like, in creative writing. In those cases, we occasionally want to also try the second most probably or third most probably the tokens every once in a while so that they it it leads to different, uh, generations. Now the temperature is basically, uh, enough. It it gives us flexibility to play around with the with the probability distribution.
+
+ByteByte
+01:18:59
+
+If we always pick the highest probability it means that there is no randomness. So everything is very consistent and deterministic. Which can be good in some use cases, which we need, um, consistency. Like, let's say, language translation or machine translation. But it may not be good in certain other use cases. So it's not always good to pick the highest probability token. For example, when we want more innovation or more, um, like, in creative writing. In those cases, we occasionally want to also try the second most popular or third most probable tokens every once in a while so that it it it leads to different, uh, generations. Now the temperature is basically, uh, enough. It it gives us flexibility to play around with the with the probability distribution.
+
+You
+01:19:19
+
+Then the temperature is one. We are going to use the whatever the, uh, probability distribution is. Um, when the temperature is higher, it's it's basically a number, and it we modify the formula a little bit. Instead of let me, um, see if I can find a quick visual.
+
+ByteByte
+01:19:19
+
+When the temperature is one, we are going to use the whatever the, uh, probability distribution is. Um, when the temperature is higher, it's it's basically a number and it we modify the formula a little bit. Instead, let me, um, see if I can find that with visual.
+
+ByteByte
+01:19:37
+
+Great. So so this is the soft microphone. Soft max formula. So whatever the neural network, uh, outputs, those are the the raw logics like z I here.
+
+You
+01:19:38
+
+Great. So so this is the soft max form soft max formula. So whatever the neural network, uh, outputs, those are the the raw logits like z I here.
+
+You
+01:19:44
+
+Is it busy or it's too small? And we can't click?
+
+ByteByte
+01:19:46
+
+Is it visible or it's too small? Immediately, quick.
+
+ByteByte
+01:19:49
+
+Okay.
+
+ByteByte
+01:22:28
+
+So this is the, uh, normal formula to the sub max formula. So this is how we go from raw numbers to probabilities. So if you just exponentiate all those logics and then divide it by sum of those exponentiate exponentiated logics, uh, you probabilities. And the probability, they can look like something like this. So we have different token IDs and different probabilities. Now temperature simply divides these digits by by the value of temperature. So when t is one, is the same softmax without temperature. Because if you divide all these z I values with one, it's the same formula. So it's going to be you end up with the same probability distribution. Now when t is more than one, um, you're so this probability distribution is going to be flattened. Right? So what's flattening means is that it becomes more likely that you try some other, um, tokens. For example, if you flatten this a little bit, it may become more likely to choose token seven. Not always choosing token nine. So it is basically it so temperature basically gives you different flexibility to, uh, flatten the probability distribution or to, um, sharpen in any manner of use case. In general, when you want more, um, consistency, you use, uh, lower temperature so that you make the distribution sharper. So then you it it is basically more likely that the token with highest probability would be picked. When you want more creativeness or or innovation, you, um, you use higher temperature so that the distribution becomes flatter. So all these um, tokens become more likely to be picked. So here, for example, if you see for use cases which requires more consistency consistency, the temperature is usually very low. For example, for code generation, the we don't want to occasionally try, uh, third or fourth uh, highest probability tokens. We almost always want to use whatever the model believes is the most likely token, uh, if if the probability is very high. So because of that, we use temperature 0.2 or or something very small so that it flattens whatever the probability it sharps. It it makes it, um, like, sharper. Whereas for creating writing, it's it's less as strict. Um, so yeah, this is something it is also a hyperparameter. So in companies, AI labs typically run with this to figure out what works best based on their use case. But, yeah, it's just it's just a parameter that modifies the actual softmax formulation.
+
+You
+01:22:28
+
+Okay. So this is the the normal formula to the softmax formula. So this is how we go from raw numbers to probabilities. So if you just exponentiate all those logics and then divide it by the sum of those exponentiated budgets, uh, you would get a different problem. And the probability can look like something like this. We have different token IDs and different probabilities. Now temperature simply divides these budgets by by the value of temperature. So when t is one, it is the same softmax without Because if you divide all these z I values with one, it's the same formula. So it's going to be you end up with the same probability distribution. Now when t is more than one, um, your so this probability distribution is going to be flattened. Right? So what flattening means is that it becomes more likely that you try some other, um, tokens. For example, if you flatten this a little bit, it may become more likely to choose token seven, uh, not always choosing token nine. So it is basically it so temperature basically gives you the flexibility to uh, flatten the probability distribution or to, um, sharpen it. Depending on your use case. In general, when you want more, uh, consistency, you use, uh, lower temperature so that you make the distribution sharper. So then you it it is basically more likely that the token with highest probability would be picked. When you want more creativeness or or innovation, you, um, you use higher temperature so that the distribution becomes flatter. So all these um, tokens become more likely to be picked. Here, for example, if you see for use cases which requires more consistency, the temperature is usually very low. For example, for code generation, we we don't want to occasionally try, uh, third or fourth uh, highest probability tokens. We almost always want to use whatever the model believes is the most likely token, uh, if if the probability is very high. So because of that, we use temperature 0.2 or or something very small so that it flattens whatever the probability say, it, um, it sharps. It it makes it, um, like, sharper. Whereas for creative writing, it's it's less necessary. So, yeah, this is something it is also a hyperparameter. So in companies, AI labs typically play around with this to figure out what works best based on the use case. Um, but, yeah, it's just it's just a parameter that modifies the actual actual softmax formulation.
+
+You
+01:23:22
+
+Alright. Before I go to the next question, I I I see there in the there is a question. Is there a maximum value of temperature? Um, theoretically, no. You can just, um, use any temperature. But experimentally, anything more than two is is basically making the distribution too flat that um, it becomes like a random, um, thing. So um, I think there is, um, I think most APIs limit it to some number. Like, the max is 1.6, 1.7. Because anything above that is just making the probability distribution very flat. Um, just to make sure, what is the max temperature value in an AI API search to website. And around.
+
+ByteByte
+01:23:23
+
+Alright. Before I go to next question, I I I see there in the chat, there is a question. Is there a maximum value of temperature? Um, theoretically, no. You can just, um, use any temperature. But experimentally, anything more than two is is basically making the distribution too flat that, um, it becomes like a random, um, thing. So, um, I think there is um, I think most APIs limit it to some number, like the max is 1.6, 1.7. Because anything of that, is just making the probability distribution very flat. Um, just to make sure, what is the max temperature value in an AI API? Search to website and.
+
+ByteByte
+01:23:40
+
+Just to make sure that, um, I was right on the numbers. I think it should be around, um, okay. It says between zero to two. So, basically, you cannot use anything more than two just because it doesn't make sense if you if you go more than two.
+
+You
+01:23:40
+
+Just to make sure that, um, I was right on the numbers. I think it should be around, um, um, okay. It says between zero to two. So, basically, you cannot use anything more than two just because it doesn't make sense if you if you go more than two.
+
+ByteByte
+01:23:48
+
+I think it was lower. It was 1.6 or something, but now it says from their website, it says it's, um, it's true.
+
+You
+01:23:48
+
+I think it was lower. It was 1.6 or something. But now it says from their website, it says it's, um, it's two.
+
+ByteByte
+01:23:56
+
+Yeah. But anyway,
+
+You
+01:24:02
+
+Yep. But, anyway, um, okay. Any other questions? I see some raised hands, but I think we we covered those. I don't know if you have more questions.
+
+You
+01:25:14
+
+Um, uh, Raskar, do you have questions or your your hand was just I don't have questions. Sorry. Okay. No worries. Uh, same, I think, for, uh, Sam. But just to confirm, Sam, do you have questions? Yes. Yes. I do. Uh, if you look at the transformer section, my question was with model.h, do you get all the hidden layers, or you have to go model.transformer.h of zero, which will give you the hidden first layer first block. Oh, it all depends on how the architecture was created. So when you implement in PyTorch, there are different ways. You can you can just have these layers or some of those those layers, you can just put them in a in a list or module list. Um, so I would say the best way to figure out for each of these models is just print to see what it's going to be printed. For GPT two, for example, when you load it here, if you just print it, you can see um, like, every single layer and all its children. So I think I don't remember on top of my head the If you go to 2.1 and you you take the line that I just pasted in chat, Uh-huh.
+
+ByteByte
+01:25:16
+
+okay. Any other questions? I see some raise hands, but I think we we covered those. I don't know if you have more questions. Um, Pascal, do you have questions or your your hand was just I don't have questions. Sorry. Okay. No worries. Uh, and same, I think, for, uh, some. But just to confirm, some, do you have questions? Yes. Yes. I do. Uh, if you look at the transformer section, my question was, with model.h, do you get all the hidden layers, or do you have to go model.transformer.h of zero, which will give you the hidden first layer, first block. Oh, it all depends on how the architecture was created. When you implement in PyTorch, there are different ways. You can you can just have these layers or some of those those layers, you can just put them in a in a list or module list. Um, so I would say the best way to figure out for each of these models is just to print to see what it's going to be printed. Um, for g p p two, for example, you load it here. If you just print it, you can see, um, like, every single layer. And all its children. Uh, so I think I don't remember on top of my head if, um, If you go to 2.1 and you, uh, you take the line that I just pasted in chat Uh-huh.
+
+You
+01:26:06
+
+Yeah. I know. Like, the yeah. Uploading. If we just click on to yeah. If you if we just, um, initialize the model, then are we supposed to call model transformer then the first block, or is it just model dot h block? How would we know that? Oh, so the block so the way that you to know that is you have to just print the model. Uh, that's that's usually the best way. So you initialize the model, like the exact quote that you shared, and then write, like, the line after that, you can just print the model. And once you print it, you can see all the layers and their names. I think there is a module list and within each module list, there is, uh, which is called block. So each block has also MLP and attention.
+
+ByteByte
+01:26:08
+
+Yeah. I know. Like, the yeah. Yeah. Uploading. If we just we want to yeah. If you if we just, um, initialize the model, then are we supposed to go model transformer then the first block, or is it just model.block? How would we know that? Oh, so the block so the way that you have to know that is you have to just print the model. Uh, that's that's usually the best way. So you initialize the model, like the exact quote that you shared, and then write like, the line after that, you can just print them out. And once you print it, you can see all the layers and their names. I think there is a module list and within each module list, there is, um, which is called block. So each block has also email and attention.
+
+You
+01:27:55
+
+Does it help? I I can also for this particular one, I can also show it in the deep dive on Saturday. I once we load the model, we can we would investigate and we would explore all these modules and children. Yeah. Okay. But, basically, the best way is just to predict Uh, so the same code that you have next line, just print the model, and you would see all the all the, uh, layers. Right. What happened was I went model is broad transformer. And h of zero as well as model dot h of zero, and I pretty much see the same thing. So that's why I was confused. Let me also look into this, and I'll get back to you. But this only happens if the model has both of these layers. One layer named transformer, one one layer named uh, name h. So you can think of here, for example, if you set this transformer transformer equal something, and then you have also edge. So that's the only way that both of those would show up. Um, but let me load it after this session. And then my message. Okay. And then output logics. Can you talk about the Logics? Just Oh, yeah. So the logics are just raw scores. These are the logics, uh, the output. Not that so not this is this is a simplification. The output of this linear, whatever is they are, it's it's called budgets. It means that there are some numbers, but those numbers are not cannot be interpreted as probabilities. It's just raw, uh, numbers. And you have to send them through softmax then? Yes. You have to send them through softmax. So that they become probabilities. I see. I see. So before the Softmax, they were called digits. After Softmax, they can be they're usually called probabilities.
+
+ByteByte
+01:27:55
+
+Does it help? I I can also, for this particular I can also show it in the deep dive on Saturday. I once we load the model, we can we would image and we would explore all these modules and children. Yeah. Okay. But, basically, the best day is just to print it. So the same code that you have next time, just print the model, and you would see all the all the, uh, layers. Right. What happened was I even model it brought transformer and h of zero as well as model dot h of zero, and I pretty much see the same thing. So that's why I was confused. Let me also look into this, and I'll get back to you. But this only happens if the model has both of these layers. Uh, one layer name transformer, one one layer name, uh, name pitch. So you can think of here, for example, if set this transformer, like, transformer equals something and then you have also h. So that's the only way that both of those would But let me load it after this session, um, and then by message. Okay. And then output logics. Can you talk about the logics? Just Oh, yeah. So the logits are just raw scores. These are the logics, um, the output. Not that so not this is this is a simplification. Um, so the output of this linear, whatever it they are, it's it's called logics. It means that there are some numbers but those numbers are not cannot be interpreted as probabilities. It's just raw, uh, numbers. I know. Send them through softmax then? Yes. You have to send them through softmax so that they become probabilities. I see. I see. So before the softmax, they were called budget. After softmax, they can be they're usually called, uh, probabilities.
+
+ByteByte
+01:27:59
+
+Got it.
+
+You
+01:28:00
+
+Got it.
+
+ByteByte
+01:28:09
+
+Okay. Next question. Uh, Kunal.
+
+You
+01:28:10
+
+Okay. Next question. Uh, Kunal.
+
+You
+01:31:51
+
+Can you explain, uh, you know, I had a really hard time on the understanding what are actually transformers. I do understand what is neural network. I do understand that, uh, you know, the linear layer, but I do not understand what is actually a transformer. I'm I'm trying to understand from, like, a theoretical perspective. I haven't started digging into the code yet. Mhmm. Sure. So, um, transforming is just uh, I also saw your question. I it's good that you write this up so we can talk more about the architecture. Also, after this meeting, I can share a list of, um, videos and resources for Transformer. I did this in the last uh, cohort, and those links were helpful. But for now, um, basically, transformer is just a neural network. It's just a unique way of putting some of these layers together. Like, neural network are just anything, any of these layers, you can you can just combine them however you want. Um, it can be linear layer, and it could be any other layers like convolution layers, normalization layers, and all those things. So but if you combine these layers in a very unique way, it is it becomes transformed. And that's what what actually this transformer paper was initially why it became so successful. So important. Attention is all you need. Basically, all they're doing is that they are suggesting a very unique way of to come, uh, a unique way of combining these layers that, um, once combined, it works very well on especially on certain tasks like like sequential task for token generation. Now, um, this is regarding the first part of your question. So transformer is just a neural network. It's just the layers that are picked and combined are in a very unique Now in the original paper, transformer architecture was used for machine transmission. So that's why we are seeing two towers here. On the left, there's there's some input in the original, um, language, and then it goes over here and then, um, also then at some point, it goes to here. And then this side, uh, right side is responsible to decode and predict the tokens in the target language. So this architecture, it's called transformer, and then it used for machine translation to convert some uh, sentences from source language to target language. Now later on, this architecture was modified. They realized that if we take only the right side, it can be very uh, powerful to learn the statistics within sentences and predict the next tokens. So and then they called it decoder only transform. So, basically, if you drop the left side and only keep here, um, you can use these layers, um, the way the way that they put together to train it on Internet data on lots of text, And then after training, the the learn weights inside each of these layers, um, they basically allow the model to predict the next tokens. Based on whatever the inputs are. Now I can talk more about the layers itself. Basically, the architecture is is also very simple. It has blocks These are called transformer blocks. So you see this n n times. So they just it's just a stack of these transformer blocks. So you can you can imagine, uh, n n blocks just stacked. So that is transformer block. And each transformer block has simply
+
+ByteByte
+01:31:59
+
+Can you explain, uh, you know, I had a really hard time understanding what are actually transformers. I do understand what is neural network. I do understand that, uh, you know, the linear layer, but I do not understand understand what is actually a transformer. I'm I'm to understand from, like, a theoretical perspective. Uh, I won't started digging into the code yet. So Sure. So, um, transform it is just, uh, I also your question. I it's good that you, um, write this up so we can talk more about the architecture. Um, also, I this meeting, I can share a list of, um, videos and resources for transformer. I did this in the last uh, cohort, and those links were helpful. But for now, um, basically, transformer is just a neural network. It's just a unique way of putting some of these layers together. Like, neural network are just anything, any of these layers, you can you can just however you want. Um, it can be linear layer, and there could be any other layers like convolution layers, normalization layers, and all those things. So but if you combine these layers in a very unique way, it is it becomes transform. And that's what what actually this transformer paper was initially, and why it became so such a um, so important. Attention is all you need. Basically, all they're doing is that they are suggesting a very unique way of to combat uh, a unique way of combining these layers that um, once combined, it works very well on especially on certain tasks like like sequential task for token generation. Now, um, this is regarding the first part of your question. So transformer is just a neural network. It's just the layers that are picked and combined are in a very unique way. Now in the original paper, the transformer architecture was used for machine translation. So that's why we are seeing two towers here. On the left, there's there's some input in the original language. And then it goes over here. And then, um, also, then at some point, it goes to here. And then this site, the right side, is responsible to decode and predict the tokens in the target language. So this architecture, it's called transformer, and then it used for machine translation to convert some, uh, sentences from source language to target language. Now later on, this architecture was modified. They realized that if we take only the right side, it can be very uh, powerful to learn the statistics within sentences and predict the next tokens. So and then they call it decoder only transformer. So basically, if you drop the left side and only keep here, um, you can use these layers, um, the way the way that they put together to train it on Internet data and lots of text. And then after training, the the learn weights inside each of these layers, um, they basically allow their model to predict the next tokens. Based on whatever the inputs are. Now I can talk more about the layers itself. Basically, the architecture is is also very simple. It has blocks These are called transformer blocks. So you see this n n times. So they just it's just a stack of these transformer blocks. So you can you can imagine, uh, an n blocks just stacked. So that is transformer block. And each transformer block has simply, um, um, um, multi hit attention. Some normalization, and feed forward network.
+
+You
+01:32:00
+
+um, multi hit attention, some normalization, and feed forward network.
+
+You
+01:32:23
+
+So that's that's mostly the architecture. Feedforward has also some linear layers inside it, so I think they have this somewhere. Maybe they don't have a visual, but feedforward is just two linear layers. Combined. And then multi head attention is also a linear layer. It's just some linear layers.
+
+ByteByte
+01:32:23
+
+So that's that's mostly the architecture. Feed forward has also some linear layers inside it. So I have this somewhere. Maybe they don't have a visual, but feed forward is just two linear layers combined. And then multi head attention is also a linear layer. It's just some linear layers.
+
+You
+01:33:05
+
+Just formula that differently. So if you are interested, I suggest you read this, and also I can share some YouTube videos to understand how market at In China, in general, self attention works. But you can see these are mostly linear layers. So we have three linear layers here, um, that converts, transforms these inputs, which are just numbers, to something. And then here, they it, um, so here is basically this, like, just a bunch of matrix multiplication as softmax. That's mostly I mean, these are all the layers that are in transformers. Sorry. Go ahead. Sure. I can go over this, uh, you know, that attention paper. But my follow-up question here is,
+
+ByteByte
+01:33:20
+
+Just formulated differently. So if you're interested, I suggest you read this. And, also, I can share some YouTube videos to understand how multitasking channel. In general, Steph, attention works. But you can see these are mostly linear layers. So we have three linear layers here, um, that converts, transforms these inputs, which are just numbers to something And then here, they it, um, so here is basically this, like, just a bunch of matrix multiplication as softmax. That's mostly I mean, these are all the layers that are in transformers. Sorry. Go ahead. Sure. I can go over this, uh, you know, that attention paper. But my follow-up question here is is it required for somebody who is just coding and is not doing research to know and deep dive into this level? Um, I would say it is not necessary to be a
+
+You
+01:36:15
+
+is it required for somebody who is just coding and is not doing research to know and deep dive into this level? Um, I would say it is not necessary to be able to fully address understand or, um, fully understand or to implement it. But I think it's good. It can help a lot to understand, like, the real magic of Element. Because, like, the real magic of element is transformer, and the transformer is just knowing that transformer is a neural network with a bunch of layers and these layers are mostly, uh, self attention and feed forward network. I think that's that's what you mostly need to know just to, um, know enough so that you can continue building on, uh, on top of transformers. Probably, you don't need to go, um, deeper unless you are interested or you are in research. In research, as you mentioned. Um, so yeah. I hope that answers the question. Yeah. So we we can say that this can be, like, a black box Right? You can you can fix a certain input to it and you get some, uh, feed forward or whatever output out of it. And and then everything can stay black box inside the transformer. Yeah. Yeah. You can you can definitely think of it that way. Um, Yeah. It's just a very simple black box. So that's, I think, the my my main point. It's just sequence of, like, a stack of layers, and those layers are at their core, they're just linear transformation. So I think that's that's mostly the the the the the depth that you may need to know. That that transformer is just a bunch of layers, and mostly at their core, they are linear layers. So it's just a linear transformation. And by applying these linear transformations to some input, at the very end, you get bunch of tokens. And then the last one is if it's basically apply softmax, you get probabilities for the next token. Um, that's how most LLMs work, and that's how the initial version of Chachi GPT was able to predict tokens. Um, it's basically at the at the at the very core, it's just a next token prediction. Um, whatever your queries, it becomes the the input sequence, and then the model iteratively just generate probability distribution, picks the next token, append the token to the input, and and just keep repeating this process until your final response is generated. Um, but, yeah, definitely, you don't need to know all the details. Yeah. Like a simple example that, uh, you can share. Yeah. Know, I'm looking for a very simple algorithm. Right? Let's say I have, like, a vocabulary of, say, 10 tokens and I feed, say, two tokens, two input, uh, words to it. And I'm expecting out of the 10, you know, to get the third third word. So is that, like, a simple logo you can share, you know, to understand how actually the transformer layer or how the neural network is actually behaving internally to, uh, figure out, you know, what's the third, uh, what coming into the sequence? Um, Yeah. That's a that's a good point. So the the thing is, if you look at all the ways and how this transformation happens, it just doesn't make sense. Um, this is just something that the transformer learned internally. To how to keep transforming these input sequences such that at the very end, the final vector after you apply softmax, it would just, um, statistically
+
+ByteByte
+01:36:15
+
+to implement it. But I think it's good. It can help a lot to understand, like, the real magic of elements. Because, like, the real magic of elements is transformer, and the transformer is just knowing that transformer is a neural network with a bunch of layers and these layers are mostly, uh, self attention and feed forward network. I think that's that's what you mostly need to know just to, um, know enough that you can continue building on, uh, on top of transformers. Probably, you don't need to go, um, deeper unless you are interested or you are a researcher, as you mentioned. Um, so yeah. I hope that answers question. Yeah. So we we can say that this can be like a black box. Right? You can you can feed certain input to it and you get some, uh, free fall or whatever output output out of it. Yeah. And and then everything can stay black box inside the transform. Yeah. You can you can definitely think of it that way. Um, Yeah. Just a very simple black box. So that's, I think, the my my main point. It's just sequence of, like, a stack of layers, and those layers are at at their core, they're just linear transformation. So I think that's that's mostly the the the the depth that you may need to know. That that transformer is just a bunch of layers and mostly at their core, they are linear layers. So it's just a linear transformation. And by applying these linear transformations to some input, at the very end, you get a bunch of tokens. And then the last one is a it's basically you have plus Softmax. You get probabilities for the next token. Um, That's how most elements work, and that's how the initial version of chat chat GPT was able to predict tokens. Um, it's basic at the at the at the very core. It's just a next token prediction. Um, whatever your query is, it becomes the the input sequence. And then the model iteratively just generate probability distribution, picks the next token, append the token to the input, and and just keep repeating this process until your final response is generated. Um, but, yeah, definitely, you don't need to know all the details They like a simple example that, uh, you can share, you know, under looking for a very simple algorithm. Right? Let's say I have, like, a vocabulary of second tokens, and I feed, say, two tokens two input, uh, words to it, And I'm expecting out of the 10, you know, to get the third third one. So is that, like, a simple, uh, logo you can share? You know, to understand how actually the transformer layer or how the neural network is actually behaving internally to figure out, you know, what's the third, uh, word coming into the sequence. Um, Yeah. That's a that's a good point. So the the thing is, if you look at all the dates on how these transformations happens, it just doesn't make sense. Um, this is just something that the transformer learned internally to how keep transforming these input sequences such that at the very end, the final vector after you apply softmax it would just, um, statistically
+
+You
+01:36:45
+
+produce the probability of the tokens that are likely to come next. Um, so if you just visualize all these layers, I think I there was some visualization tools I can I can try to find it and I share? If you look at the visualization, it it it does not really make sense. It's just a bunch of transport. Transformations of the input numbers. So it's just a bunch of numbers. But at the very end, because of how the training works, during training, we just train this whole model on on Internet data. So there are lots of sequences. So this model is static
+
+ByteByte
+01:37:05
+
+reduce the probability of the tokens that are likely to come next. Um, so if you just visualize all these layers, I think I there was some visualization tools I can I can try to find it and share? But if you look at the visualization, it it it does not really make sense. It's just a bunch of transport. Transformations of the input numbers. So it's just a bunch of numbers. But at the very end, because of how the training works, during training, you just train his old model on interim data. So there are lots of sequences. So this model statistically learns all the dependency between those sequences. And the way that you have played a loss. But after training, it just it just works. It becomes a really good next token predictor. Um, but, again, I'm going to share a list of, uh, resources that are good to understand the internals of, um, transformers. I think there is also a good
+
+You
+01:37:05
+
+is statistically learned all the dependency between those sequences. And the way that you have labeled loss. But after training, it just it just works. It becomes a really good next function predictor. Um, but again, I'm going to share a list of uh, resources that are good to understand the internals of um, transformers. I think there is also a good
+
+You
+01:37:29
+
+YouTube video. Yeah. This one. Which words in the cut? So if you are interested, you can also take a look at this one, transformers. Uh, three blue, one brown. Um, it goes a little bit deep, and you may you helps you understand how internally it actually works and how these numbers change and so on.
+
+ByteByte
+01:37:30
+
+YouTube video. Yeah. This one. Which words in the cunt? So if you are interested, you can also take a look at this one, transformers. Um, three Google One brand. Um, it was a little bit deep, and you may you helps you understand how internally it actually works and how these numbers change as well.
+
+You
+01:37:39
+
+So, yeah, I'm going to share the list, Henry. Um, in in in the course platform.
+
+ByteByte
+01:37:41
+
+So, yeah, I'm going to share the list, Amy. Um, in in in the course platform. Um, Emily?
+
+You
+01:38:39
+
+Um, Emily? Yeah. Ellie, uh, so this video actually might help answer the question I'm about to ask. Um, I was working on section 2.2 of the playground. And just wanted to better understand, like, we have these word embeddings and positional embeddings and then those create the hidden state. And I just I wanted to better understand, like, the positional embeddings are the words or the tokens in relation to each other. And then like, how does that build the hidden state? Because I understand the hidden state is like, the meaning behind the whole series of tokens. So I I think I just don't understand the relationship between all of those parts. Sure. So I think, yeah, if I explain positional embeddings, probably it's going to help. Um, let me
+
+ByteByte
+01:38:39
+
+Yeah. Ali. Uh, so this video actually might help answer the question I'm about to ask. Um, I was working on section 2.2 of the playground, and just wanted to better understand, like, we have these word embeddings and positional embeddings. And then those create the hidden state. And I wanted to better understand, like, the positional embeddings are the words or the tokens in relation to each other. And then, like, how does that build the hidden stake I understand the hidden state is, like, the meaning behind the whole series of tokens. So I I think I just don't understand the relationship between all of those parts. Sure. So I think, yeah, if I explain positional embeddings, probably it's going to help. Um, let me go here.
+
+You
+01:38:39
+
+go here.
+
+You
+01:40:42
+
+Yep. Here. So let's say we are we are training this model. Right? So there are some inputs coming from Internet. It can be sentences like, hi, how are you, and whatever. And then it goes through these layers during training. So it goes to a embedding layer, then we have this input sequence. This input sequence goes through the transformer blocks. We get this. We get that, um, the probability we come we measure the loss, and then we optimize. So during the optimization, all the parameters of this model gets updated. Such that next time with the exact same input, these probabilities become more and more like, closer to what it should be. Now if you change this, the order of this input, uh, instead of how hi. How are you? If you change it to how high are, um, the self attention layers, it would have no sense of the order. So, again, it goes into internals of how self attention works. But if you look at this formula here, softmax is not introducing any, um, like, ordering information. And, uh, there is also no ordering information here. It's just tokens within the sequence attend to each other. And then they figure out how relevant they could be to each other. Um, so if you do not introduce any kind of positional information and inject it into this input sequence, um, there is no way so the output you would be exactly the same even if you change the order of your input. Right? So so that's why in the first place, positional encodings are important and necessary. It's just it's just so that we can inject position information so the model gets a sense of can distinguish between hi, how are you, and how are you, hi, or something like that. Now the way that those are combined is so we have these input sequences here, which is the just embeddings of these tokens. And now we have also positional encoding also have have different, uh, forms. Uh, but the simplest way you can think of those is that you can, um,
+
+ByteByte
+01:40:42
+
+Yeah. Here. So let's say we are we are training this model. Right? Um, so there are some inputs coming from Internet. It can be sentences like, hi. How are you? And whatever. And then it goes through these layers during training. So it goes through embedding layer, then we have this input sequence. This input sequence goes through transformer blocks. We get this. We get the, um, the probability we come we measure the loss, and then we optimize. So during the optimization, all the parameters of this model gets updated. Such that next time with the exact same input, these probabilities become more more, like, closer to what it should be. Now if you change this, the order of this input, uh, instead of how hi. How are you? If you change it to how high are, um, the self attention layers, you would have no sense of the order. So, again, it goes into internals of how self attention works. But if you look at this formula here, softmax is not introducing any, um, like, ordering information. And, um, there is also no ordering information here. It's just tokens within the sequence attend to each other. And then they figure out how relevant they could be to each other. Um, so if you do not introduce any kind of positional information and inject it into this input sequence, Um, there is no way so the output you would be exactly the same even if you change the order of your input. Right? So so that's why in the first place, positional recordings are important and necessary. K? It's just it's just so that we can so the model gets a sense of can distinguish between hi. How are you? And how are you, hi, or something like that. Now the way that those are combined is so we have these input sequences here, which is the just embeddings of these tokens. And now we have also uh, positional encoding also have have different, uh, forms. Uh, but the simplest way you can think of those is that you can, um,
+
+You
+01:40:48
+
+um, the transformer paper is using fixed positional encoding. I think it is
+
+ByteByte
+01:40:48
+
+um, the transformer is using fixed positional encoding. I think it is
+
+You
+01:41:02
+
+So this is the formula. They just come up with some
+
+You
+01:41:29
+
+like, sign and cosign functions so that they can assign a unique vector to each position, which is fixed. So always position one would end up with some embeddings. Position two with some other embeddings and so on. And then those positional embeddings gets combined with this. So for example, in this case, positional embeddings would be, um, three vectors of the same size.
+
+ByteByte
+01:41:31
+
+So this is the formula. They just come up with some, um, like, sine and cosine functions so that they can assign a unique vector to each position. Which is fixed. So always position one would end up with some embeddings. Position two with some other embeddings and so on. And then those position embeddings gets combined with this. So, for example, in this case, their positional embeddings would be um, three vectors of the same size.
+
+You
+01:41:57
+
+Right? And now these four are going to be just added with these four. So the first vector would be added with this one, second with this one, third with this one, and fourth with this So this is how we inject positional information into the input. Um, and that's the only place that we inject positional information. The rest, the assumption is that the transformer would just learn it and take care of.
+
+ByteByte
+01:41:58
+
+Right. And now these four are going to be just added with this score. The first vector would be added with this one, second with this one, third with this one, and fourth with this one. So this is how we inject positional information into the input. Um, and that's the only place that we inject positional information. The rest the assumption is that the transformer would just learn it and take care of it.
+
+ByteByte
+01:42:48
+
+Yeah. Go ahead. Thank thanks. Thanks. Um, no. That that helps a lot. So then, like, that positioning information is kind of digested at the same time as the words and the tokens themselves, and they go together, like, through the transformer. And those they're, like, one value essentially after that point. And then they just go through each layer. Yes. Is that their summation? Okay. Exactly. That's that's accurate. Let me see here. And also with me, Joel, I saw a yeah. So even so this is the original picker. And here you can see also how they are having this plus. It's very small, but the but there is this plus here. So, basically, it's just saying that they're adding, yeah, positional embedding with the with the vectors.
+
+You
+01:42:48
+
+Yeah. Go ahead. Hey. Thanks. Thanks. Um, no. That that helps a lot. And so then, like, that positioning information is kind of digested at the same time as the words and the tokens themselves, and they go together, like, through the transformer. And those they're, like, one value essentially after that point, and then they just go through each layer. Yep. Is that fair? Submission? Okay. Exactly. That's that's accurate. Let me see if there's a also good visual. I saw a yeah. So even so this is the original paper. And here, you can see also how they are having this plus. It's very small, but but there is this plus here. So, basically, it's just saying that they're adding a position of embedding with the with the vectors.
+
+You
+01:43:06
+
+But yeah. I mean, these days, uh, there are better, more advanced position embeddings. They no longer like, advanced AI they no longer use sine cosine or any kind of fixed positional encoding. It's different. Um, if you are interested, you can take a look at this rope, um, paper.
+
+ByteByte
+01:43:09
+
+But yeah. I mean, these days, uh, they're better, more advanced position of embeddings. They no longer like, at advanced airlabs, they no longer use sine cosine or any kind of fixed position. I think it's different. Um, if you are interested, you can take a look at this rope, um, paper. Or there are also some newer versions.
+
+You
+01:43:11
+
+Or there are also some newer versions.
+
+ByteByte
+01:43:30
+
+So a lot of a lot of, um, uh, recent LLMs or even text to image and text to video models are relying on rope. Um, it's basically just a different formulation and different way of, um, encoding positions.
+
+ByteByte
+01:43:37
+
+So just just if you're interested, It's very math math heavy and yeah. Only if you are curious. Thank you.
+
+You
+01:43:39
+
+So a lot of a lot of, um, recent LLMs or even text to image and text to video models are relying on ROPE. It's basically just a different formulation and different way of encoding positions. So just just if you're interested. It's very math math heavy, and yeah, only if you are curious. Thank you.
+
+ByteByte
+01:43:46
+
+Sure. So, um, yeah, next question. Nikolai?
+
+ByteByte
+01:44:46
+
+Sure. Um, so it relates to the vocab size. Only at the very beginning and at the very end. Um, Internally, I mean, it doesn't matter. So what is important in this sequence of layers is that the shape the shapes should match in a sense that um, if the input is upsized, in general, any linear layer, If the input is upsized, um, a times b,
+
+You
+01:44:47
+
+Sure. So, um, yeah. Next question. Nikolai? Hi. Um, yeah. My question is about, uh, dimensions. So I I guess I'm trying to, uh, gain an, uh, like, an intuition for for the dimensions. I I know, for example, in the in the lab work, we started with an example of, like, a two by three matrix And then at some point, um, we get a vector I understand there's, like, a linear algebra calculation going on. Mhmm. And I I guess I uh, I'm also guess, a little confused about how it relates to the vocab size. If you could explain that. Sure. Um, so it relates to the vocab size only at the very beginning and at the variant. Internally, I mean, it doesn't matter. So what is important in this sequence of layers is that the shape the shapes should match in a sense that um, if the input is upsize in general, any linear layer, If the input is of size, um, a times b,
+
+You
+01:45:38
+
+So it's going to be, um, okay. So just for simplification simplification, let's say there is no batch. Um, so input is ops. Yep. So here it's simply so in this visual, these all these gray lines, it's basically the kind of you can think of it as the linear layer. It is transforming this input of size three to the output of size four. Mhmm. So as you mentioned, there is a weight matrix of size three by four or maybe transpose of that to go from this to that. Um, so that's the only thing that is important. For this layer, what is important is that the shape should match the expected input size. Now the in the very beginning, this input size is of, uh, vocabulary size. It is not vocabulary size. In the very beginning here, it is
+
+ByteByte
+01:45:56
+
+So it's going to be, um, um, okay. So just for simplification simplification, let's say there is no patch Um, so 10 booty stops. Yeah. So here it seems there. So in this visual, this all these gray lines, it's a kind of you can think of it as the linear layer. It is transforming this input of size three to the output of size four. So as you mentioned, there is a great metrics of size three by four or maybe transpose of that. To go from this to that. Um, so that's the only thing that is important. For this layer, what is important is that the shape should match the expected input size. Now the in the very beginning, this input size is of, uh, vocabulary size. It is not vocabulary size. In the very beginning here, it is, um, so we have the IDs here, and the embedding layer converts those into some some fixed size. It's it's it's typically called, um, like, hidden dimension or internal, uh, size of what trans what this transformer is is expecting. So let's say this size is h.
+
+You
+01:45:57
+
+so we have the IDs here. And the embedding layer converts those into some some fixed size. It's it's it's typically called, um, like, hidden dimension or internal size of what trans what this transformer is is expecting. So let's say this size is h.
+
+You
+01:46:28
+
+So embedding layer converts numbers into vectors of size h. Now from here, moving forward, whenever there is a linear layer, the rate should just match the shapes. Um, it doesn't have to match the vocabulary sets because the input is going to be h. Not vocabulary sense. And this h could be anything, depending on this embedding rate. Okay. And same goes for other layers. Like, feed forward here, this last feed forward, The only important thing is that it the weight matches what the expected input size. Mhmm.
+
+You
+01:47:00
+
+Now the only place that you have to deal with the vocabulary size is the very last linear layer. And that's because we intentionally now want to convert this vector of size h or whatever into a vocabulary size here. So here, it's going to be of size vocabulary. Mhmm. This is the output that we want so that we can interpret those as as probabilities. So now this linear layer, the weight matrix, has to be of shape v times h. So that's the only place where the size should be
+
+ByteByte
+01:47:03
+
+So embedding layer converts numbers into vectors of size h. Now from here, moving forward, whenever there is a bigger layer, the weight should just match the shapes. Um, it doesn't have to match the vocabulary it says because the input is going to be eight. Not vocabulary size. And this h could be anything, depending on this embedding layer. And same goes for other layers. Like, feed forward here, this last feed forward The only important thing is that it the weight matches what the expected input size. Now the only place that you have to deal with the vocabulary size it's the very last linear layer. And that's because we intentionally now want convert this vector of size h or whatever into a vocabulary size. Here. So here, it's going to be of size vocabulary. This is the output that we want so that we can interpret those as as probabilities. So now this linear layer, the rate metrics has to be of shape v times h. So that's the only place where the size should be is, um, is related to the vocabulary size.
+
+You
+01:47:05
+
+is, um, is related to the vocabulary size.
+
+You
+01:47:10
+
+Got it. Okay. That makes sense. Thank you. Yep. Sure. Um, I think it was also
+
+ByteByte
+01:47:12
+
+Yeah. Sure. Um, I think it was also
+
+ByteByte
+01:47:17
+
+yep. We'll we'll we'll also cover this morning there on Saturday.
+
+You
+01:47:20
+
+yeah. We'll we'll we'll also cover this morning there on Saturday. Um, next question, Julia.
+
+ByteByte
+01:47:20
+
+Um, next question.
+
+You
+01:49:50
+
+Um, so just to follow on the previous question that, uh, embedding some matrix, it's like a vector. What about tokens? Are those can understand that those are, like, integers Mhmm. For all metrics? Yeah. Exactly. So tokens or token IDs basically, here, the input to the embedding, any neural network expects numbers, not raw. They test it. So even this embedding layer expects numbers. So these are, like, the token IDs. Has to go into the embedding layer. So Got it. The app input sentence tokenization, converts them into smaller chunks or tokens in the text format, and then each of those gets replaced by their token ID. So what goes here is just a sequence of numbers. Yeah. Absolutely. Gotcha. So I have another question separate to this is, uh, inference. I think in our guided learning, uh, there's very little coverage about that. Mhmm. It's a topic. And but it's also very important part And, like, could you go over, like, even briefly on the main framework used for reference, like, like VLM, Olam, like all that, SGLAN, and also the typical optimization use. Sure. Yeah. Actually, in our, uh, project three and project four, we would work on with Olama, and I would also cover the LLM. But, basically, I can I can briefly share those? Those are simply just inference engines. So, um, the underlying algorithm is going to be the same with some additional optimization. So under the hood, what they're doing is that they're just doing this iterative generation process. It's just already implemented. Um, anytime you provide some input and to some element, that inputs first goes to tokenizer. It it gets converted to IDs. Those IDs goes into the LMM like it's shown here. The LMM produce probabilities, then some algorithm that you specify can be up k, uh, for instance, is is the default mode. To pick the next token. And then once you pick the next token here, then it gets appended, uh, and it goes to the LMM. So all inference engines are implementing this or some variations of this with additional optimizations. Now those optimize optimizations are more, um, like, details. For example, they have a feature called, um, in general, like, prefix caching. And VLIM has a very good
+
+ByteByte
+01:50:13
+
+Um, so just to follow on the previous question that, uh, embedding the matrix So it's like vector. What about tokens? Are those you can understand that? Those are, like, enter yours Mhmm. For all the interest? Yeah. Exactly. So tokens or token IDs Basically, here, they input to the meeting. Any neural network expects numbers, not to log. Exactly. So even this embedding layer expects numbers. Um, so these are like, the token ID has to go into the embedding layer. So Got it. We have input sentence, tokenization, converts them into a smaller chunk. Or tokens in the text format, and then each of those gets replaced by their token ID. So what goes here is just a sequence of numbers. Yeah. Absolutely. Got you. I have another question. Separate to this is, uh, inference. I think in our guided learning, uh, there's very little coverage about that. Topic. And but it's also very important part. And, like, could you go over, like, you know, briefly on the main framework used for reference? Like, a, all that, and and also the typical optimization. You Sure. Yep. Actually, in our, uh, project three and project four, we would work on with Olama, and I would also cover the LLM. But, basically, I can I can briefly share those? Those are simply just inference engines. So, um, the underlying algorithm is going to be the same with some additional optimizations. So under the hood, what they're doing is that they're just doing this iterative generation process. It's just already implemented. Um, anytime you provide some input and some element, that inputs first goes to tokenizer. It it gets converted to IDs. Those IDs goes into the element like it's shown here. The element produce probabilities and some algorithm that you specify can be okay. Uh, for instance, is is the default mode. To pick the next token. And then once you pick the next token here, then it gets appended, uh, and it goes to the element. So all interactions are implementing this or some variations of this with additional optimizations. Now those optimize optimizations are more, um, like, details. For example, they have a feature called, um, in general, like, prefix caching. And BLM has a very good um, very good explanation of how it works. Um, so they implement these kind of things to make this entire thing more efficient and more faster. This whole iterative generation process. But we are going to work with Olama and then is just, uh, similar to Olama. It's more for, like, production applications.
+
+You
+01:50:40
+
+very good explanation of how it works. So they implement these kind of things to make this entire thing more efficient and more faster. This whole iterative generation process. Um, but we are going to work with Olama, and then VLMM is just uh, similar to Olama. It's more for, like, production applications. What else? For for the optimization, I there are a bunch of things. One is prefix caching and, in general, any sort of caching. Um, the other is, which is not covered in the guided learning, is there is this speech related decoding. So we we covered different decoding algorithms, like autinomial, top k, top p as a statistic. There is also a, uh, speculative decoding.
+
+ByteByte
+01:50:41
+
+What else for for the optimization? I there are a bunch of things. One is perfect caching and, in general, any sort of caching. Um, the other is is not covered in the current learning, is there is this speculative decoding. So we we covered, uh, different decoding algorithms, like multinomial, top k, top b, as a statistic. There is also a speculatively decoding
+
+ByteByte
+01:51:54
+
+And then, like, for example, purple electricity uses it for very fast generation. Also, a lot of coding agents. Uh, use specially native decoding to generate, uh, tokens. I know for sure that cursor is using it in their agent, uh, in their quoting agent to generate the tokens one by one. Using this speculative decoding. Basically, it's just a different algorithm. Uh, a diff different from this. If you're interested, you can take a look. Uh, high level is that they there is a draft model. There is a, um, the main model. So instead of asking the main model to generate these tokens one by one, This draft model, which is very small and and efficient, it produces a few tokens. And then the main model tries to just, um, like, approve them if they are correct or not or or reject them. But, again, if you're interested, you can take a look at this paper. It's a lot of modern use cases that need speed. Uh, relying on speed related decoding. But those are me. Those are mostly don't think there is much. If you have more questions about the details of how text generation work, let me know and I can explain more.
+
+You
+01:51:54
+
+And then, like, for example, Perplexity uses it for very fast generation. Also, a lot of coding agents uh, use a speculative decoding to generate, uh, tokens. I know for sure that Kircher is using it in their agent, uh, in their coding agent to generate the tokens one by one. Using this speculative decoding. Basically, it's just a different algorithm. Uh, a difference something different from this. If you're interested, you can take a look. The high level is that they they there is a draft model. There is a, uh, the main model. So instead of asking the main model to generate these tokens one by one, this draft model, which is very small and and efficiently produces a few tokens, and then the main model tries to just, um, like, approve them if they are correct or not or or reject them. But, again, if you're interested, you can take a look at this paper. It's a lot of modern use cases that need speed. Are relying on speed related decoding. But those are my those are mostly I don't think there is much. If you have more questions about the details of how text generation work, let me know, and I can explain more.
+
+You
+01:52:28
+
+Thank you. Um, this can be another time I will give other people more time to ask their questions. The another topic I feel haven't covered or maybe will cover in the future is around um, financially. Basically, adaptation, that's taking the base model, like, what are the I mean, you talk about SFT and RL. Mhmm. But, uh, not to the level, for example, Laura versus
+
+ByteByte
+01:52:29
+
+Thank you. Um, this can be another time. I will give other people more time to ask their questions. The another topic I feel haven't covered or maybe will cover in the future is around, um, fine tuning. Basically, adaptation that's taking the base model like a wall art. I mean, you talk about SF and RL. Mhmm. Um, but, uh, not to the level, for example, Laura versus Sanchunk.
+
+ByteByte
+01:52:47
+
+Versus in comparison in comparative. Yeah. We have it in the guided learning next week for that. So we have Okay. Um, different topics for adaptation. And as part of that, we go over uh, Laura, um, like, different techniques, like, parameter efficient techniques, food fine tuning, the trade offs, and also rank.
+
+ByteByte
+01:53:03
+
+Thank you so much. Yeah. But, also, if aside from those, if you have you need you want you have questions on on topics different topics, feel free to ask or or, uh, post on the on the chat.
+
+You
+01:53:03
+
+in comparison in comparative. Yeah. We have it in the guided learning next week for that. So we have Okay. Um, different topics for our adaptation. And as part of that, we go over, um, Laura, like, different technique, like, parameter efficient techniques, food fine tuning, the trade offs, and also rack. Thank you so much. Yeah. But also if aside from those, if you have you need you want you have questions on on topics different topics, feel free to ask or or, uh, post on the on the chats.
+
+ByteByte
+01:53:07
+
+Next question.
+
+You
+01:53:08
+
+Next question.
+
+ByteByte
+01:53:45
+
+Jack Jaim? Sorry if I'm mispronouncing. Yes. Again, thank you. Oh, Okay. Yeah. Sorry. Go ahead. It's, uh, when the last token is getting generated, so how the word is mapped to the token? Because one word can be mixture of three or four tokens. Right? And Um, yeah. Sorry. Go ahead. Yeah. And each token, uh, token will have their own probability of occurring. Yep. And So you can think of this. It's you can think of this. It's happening at a token level. Not not necessarily word level. Um, so
+
+You
+01:53:45
+
+Cheyenne? Sorry if I'm mispronouncing. It's again. Thank you. Oh, Okay. Yeah. Sorry. Go ahead. It's, uh, when the last token is getting generated, So how the word is mapped to the token? Because one word can be mixture of three or four tokens. Right? And then So, um, yes. Sorry. Go ahead. Yeah. And each token, um, token will have their own priority of, uh, offering. Yeah. So you can think of this as you can think of this as happening at a token level. Not not necessarily word level. Um, So
+
+ByteByte
+01:55:00
+
+So for example here, hi. How are you? Right? So high high goes into the transformer, and let's let me pick the exact tokenizer that OpenAir used for the g p t four. So how it goes into the transformer? The output is uh, basically, this number goes into this becomes the highest probability or whatever the next token. And now the tokenizer knows that this maps to a space hop. So it just simply happens it to Um, and it just it just keeps happening like that. It's basically everything is is being operate like, everything is happening at a token level, not at a word level. The model has no idea about words, and the tokenizer has no idea about words. All there are no are tokens. My question is, uh, when we are converting from numbers to word, data organizer, at the last step, Okay. So the the the token the numbers are getting generated, and the probability for that after the maximum, their probability is given to that. So if if I I have a word perfectly, this means in my sentence, it should come perfectly. But a token is PER and then f maybe FEC or maybe divide it into three or four tokens. How it is combining these tokens and creating a word at the end?
+
+You
+01:55:02
+
+so for example here, alright, how are you? Right? So how how it goes into the transformer, and let's let me pick the exact tokenizer that OpenAI used for the GPT four. So how it goes into the transformer, the output is uh, basically, this number goes into transformer, This becomes the the highest probability or whatever the next token. And now the tokenizer knows that this maps to a space hub. It just simply happens it to Um, and it just it just keeps happening like that. It's basically everything is is being operate like, everything is happening at a token level, not at a word level. The model has no idea about words. And the tokenizer has no idea about words. All there are no are tokens. My question is, uh, when we are converting from numbers to word, recognizer, at the last step. Okay. So the the the token the numbers are getting generated, and the probability for that after the softmax, then their probability is given to that. So if if I I have a word perfectly, that means in my sentence, it should come perfectly, but a token is PER and then f maybe FEC or maybe divided into three or four tokens. How it is combining these tokens and creating a word at the end?
+
+You
+01:55:34
+
+So it it all also depends on the actual tokenizer with character level, word level. I think it's it's obvious. For example, character level, you just need to put them just next to each other to form the final output. Or if if the tokenizer is word level, tokenizer, um, you can just add a space between all the generated tokens. I think the main thing is, um, like, PP or software dev tokenizer. Um, so I am trying to write something that can be
+
+ByteByte
+01:55:35
+
+So it it also depends on the actual tokenizer with, uh, character level, water level, I think is it's obvious. Um, for example, character level, you just need to put them just next to each other to form the final output. Or if if the tokenizer is word level tokenizer, um, you can just add a space between all the generated tokens. I think the main thing is, um, like, p p or software level tokenizer. Um, so I am trying to write something that can be
+
+ByteByte
+01:55:42
+
+Yeah. All these are having their own tokens.
+
+You
+01:55:43
+
+Yeah. All these are having their own tokens.
+
+You
+01:55:46
+
+Um, but, basically, I
+
+ByteByte
+01:56:32
+
+But, basically, I, um, so just to make sure I understand your question correctly. So you're saying that the model produces tokens. And during the etoconization step, the tokenizer converts these numbers into the, like, sub words. How are we going to create incremental sentence from the sub words? Yes. So as in general, I mean, simple answer is you just need to put them next to each other. Because, for example, here you can see it's PPE, and then it space and you see it's just a token. So the spaces are part of the tokens. Um, so you just need to put them together. But um, implementations like BP implementations, they have some logic
+
+You
+01:56:33
+
+so just to make sure I understand your question correctly, so you're saying that the model produces tokens. And during the d tokenization step, the tokenizer converts these numbers into the, like, sub words. How are we going to create the final sentence from the sub words? Yes. So as in general, I mean, simple as is you just need to put them next to each other because, for example, here you can see it's BP and then the space m is is just a token. So spaces are part of the tokens. Uh, so you just need to put them together. But, um, implementations, like, d p implementations, they have some logic to combine,
+
+You
+01:56:54
+
+things like emojis or things that might have multiple tokens. But, um, but they should be visual like, it they should be they should be generated as one um, one item. So for those, they have some logics. Already implemented. If you see, um, PPE
+
+ByteByte
+01:56:54
+
+to combine, things like emojis or things that might have multiple tokens. But, um, but they should be visual like, they should be they should be generated as one, um, um, one item. So for those, they have some logics already implemented. If you see, um, BPE
+
+ByteByte
+01:57:19
+
+So if you look at, for example, this is the open source. And if you if you go and and see the source code, you will see how the the tokenization and work. There is usually it just goes from the the the the, um, IDs to tokens. And then from tokens, if if it requires to combine some of those, there is there is some logic that does that.
+
+You
+01:57:32
+
+So TikTok and, for example, this is the open source. And if you use if you go and and see the source code, you would see how uh, the the deep tokenization and work. There is usually it just goes from the the the the, um, IDs to tokens. And then from tokens, if if it requires to combine some of those, there is there is some logic that does that. I think it's you go over this call, you would see. I mean, there are lots of, um, lots of, like, if if else's and, um, like, manual logics that take care of that.
+
+You
+01:57:37
+
+Let me see if I can find it.
+
+ByteByte
+01:57:37
+
+I think it's if you go over this call, you would see I mean, there are lots of, um, lots of, like, if if else test and, um, like, manual logics that take care of that. Let me see if I can find it.
+
+ByteByte
+01:58:51
+
+Does it make sense, uh, again? Yeah. Uh, I haven't heard any or read any article. I tried to find it out, but how it is combining into a single word. I didn't find anything Yeah. I tried to, uh, find the exact, um, part in the quote that does this. But, basically, you don't again, you don't have to convert that that, um, uh, sub word or predict tokens into words. It just automatically works. Uh, Yeah. Yeah. I understand. Reason. I mean, so how they are doing it. Because the they are preparing, uh, for, uh, based on the vocabulary size, they are giving the percentage, and then we are picking the top top females and the numbers of percentage. And then Yeah. You can talk about. So yeah. I'll try to find the code in the in the in the source code just just if you want to take a look. But, again, for, like, ninety five percent of cases, you just need to put them together. Put them right next to each other. 40 maps to I. Uh, ten ninety seven maps to a space m. This maps to a space amazingly because it's just its own token. In the, um, in their vocabulary and so on.
+
+You
+01:58:51
+
+Does it make sense, uh, again? Yeah. Uh, I haven't heard any or read any article. I tried to find it out, but how it is combining into a single word. I didn't find anything Yeah. I'll try to, uh, find the exact, um, part in the code that does this. But, basically, you don't again, you don't have to convert the the, um, sub words or pretty clear tokens into words. It just automatically works. Yeah. Yeah. I don't I do understand the reason. I mean, so how they are doing it. Because they are preparing, uh, for, uh, based on the vocabulary size, they are giving the percentage, and then we are picking the top top females, any numbers of percentage. And then Right. You can put the word. So yeah. I'll try to find the code in the in the in the source code just just if you want to take a look. But again, for, like, ninety five percent of cases, you just need to put them together. Put them right next to each other. 40 maps to I. Uh, ten ninety seven maps to a space ham. This maps to a space, amazingly, because it's just its own token. In the, um, in their vocabulary and so on.
+
+You
+02:00:20
+
+Okay. My next question is on transformers. Means, um, within the transformers, there's a multi multi head and the then, sir, linear. We we are going with this step. So how did you decide it? How many times, uh, it will go and do the multipliescence or multipliers of embedding of each, uh, word with each other. So so, like, uh, it's a query and I think query is matched with the key embedding. And the so how many layers it, uh, it goes into levels? How we're deciding that? So the question is how do we decide things like number of transformer blocks or Yes. Yes. Can you highlight the Yes. So those are more those are more hyper parameters. Um, so a lot of experiments usually happens in companies to figure out what is the right scale. There is some, um, experimentally, people found some good values that work well with each other, and there are papers that are showing that, for example, if you increase one, you have to, uh, also increase another one. With some, like, proportionality. Um, but in general, those are high background. For example, GPT two, they tried they use these two hyperparameters. Number of layers and the model. Number of layers is simply the transformer blocks. So the times and here. Okay. Like, how how many of these? So in one variation, they use 12 layers, and then um, seven sixty eight is the hidden size. It is the size of these vectors.
+
+You
+02:00:42
+
+I'm reading. Yeah. Yeah. Um, and then as a result of this, they end up with a model with 117,000,000 parameters. Um, but as you increase this, you end up with bigger models. Bigger models mean more capacity to learn, and they generally work better. So that's why GPT two, they use these numbers, and then the biggest model was this, which with 1.5, uh,
+
+ByteByte
+02:00:42
+
+Okay. Um, my next question is on the transformers. Means, um, um, within the transformers, it's a multi multi head and that's a linear. We we are going with this capture. How did you decide it? How many times, uh, it will go and do the modifications or multiplications of embedding of each, uh, word with each other. So, like, uh, it's a query and I think query is matched with the key embedding. And the so how many layers it, uh, it goes into levels? How we are deciding that? So the question is, how do we decide things like number of transforming blocks for Yes. Yes. You can type Is it and yes. Those are more those are more hyperparameters? So a lot of experiments usually happens in companies to figure out what is the right scheme. There is some, um, experimentally, people found some good value that work well with each other. And there are some papers that are showing that, for example, if you increase one, you have to, uh, also increase another one with some like, proportionality. Um, but in general, those are hyperparameters. For example, in GPT two, they tried they use these two hyperparameters. Number of layers and the model. Now there is simply the transformer blocks. So the times end here. Okay. Like, how how many of these? So in one variation, they use 12 layers. And then um, $7.68 is the hidden price. It is the size of these vectors. Embedded. Yeah. Yeah. Um, and then as a result of this, they end up with a model with 117,000,000 parameters. But as you increase this, you end up with bigger models. And bigger models mean more capacity to learn, and they generally work better. Uh, so that's why GPT two, they use these numbers, and then the biggest model was this. Which fit 1.5, um,
+
+You
+02:03:10
+
+1,500 parameters, and these are the hyperparameters. And then all they did in GPT three was just to scale it. So they the architecture, everything was almost similar. They just increased this number of layers to 96 and, um, dimensions to all the way up to 12,000 something. And then that became the GPT three, which was the model that they released after their their fine tuning. Um, so this model was one seventy five five billion. So long answer, um, long story short, to answer your question, it these are high-tech parameters that experimentally, you just need to try different things, um, to see what works best based on your dataset size, your domain, and, um, your your like, the rest of the, uh, your training settings. Okay. And these parameters are the, uh, modifications of your vectors, uh, in the embedding model. And then adding everything that decide the parameter size. Yes. Basically, you just go over each layer, and there is a base matrix. So you just, um, if you just count all of them, over the entire, um, network, it would be these numbers. So We have embedding we have embedding methods. Every token is from a team. Dooms is every token is have some some embedding embedding of some numbers. It can contain to some numbers. So embedding the, uh, embedding size might be 512 to 12,000 or something depending on the models. Mhmm. Then, uh, these tokens, uh, goes to the multiplications with each other, uh, tokens. Means, one query with the matches with the the other, uh, key tokens, the get multiply multiplied. And the embedding value of this token got changed. Right? In every one transformer layer. And we repeat it up to end time of a model. Yes. So, basically, you have n blocks that are stacked and each block, the main components are multi headed at attention and feed forward. I mean, in between, you have some normalization and things that, but they're not introducing any additional parameters, um, or or various one number of parameters. But these are the key, uh, components. And if you look inside these components, both feed forward and multi attention, they end up with some linear layers. And linear layer mean means just some, uh, just a weight matrix. Um, and those weight matrices, just keeps transforming input to some output. So when did I have three years.
+
+You
+02:05:17
+
+Didn't interrupt. Uh, miss, then how the embedding and weight metrics, uh, I get confused with that. What is the weight metrics and I mean, I understand now. So it's a value for any token. We are given it. A thousand layer or 2,000 layers. But where the make metrics is coming into, it's So I think the confusion is the fact that the input versus parameters. So, um, inputs are, um, so the input is start from here. And then at the at after each layer, we end up with some, uh, like, modified uh, sequences. Right? So those are not the parameters. For example, these these sequence three, uh, three vectors are not, uh, parameters. They are just transformed version of our input. Yeah. And it's going to be the same inside this. For example, this goes into market attention. Market attention has some parameters. Those parameters gets multiplied by by this sequence. And then it produces some output. Now that output is no longer parameters. They're just they're called activations. Um, but those activations now again go to feed forward. And feed forward now has its own parameters. So it transforms the activations, and then it produces a a a different, uh, activation here. So does that help? Yeah. Uh, and I think it's just the meeting is just the intermediate representations Yes. When we are going from it. I'm waiting for yeah. Yeah. Means, uh, everything that I have, uh, it might be a hidden layer. Uh, and every layer has some some meanings. Something maybe is it grammatical dialect or it's a place or something in their in in the AI language. Something is there. Right? Not a human language, but some value is given to that. Every layer. Yeah. So, basically, each each layer has, um, some outputs. It's called Yeah. Hidden representations or or also activations. Dose has meaning for the model itself. If if you look at them, they're just some numbers. It it's it's always been best for us. Yeah. One layer might be, is it animal or is it a human or something? So they have given some numbers to that test.
+
+You
+02:05:32
+
+Every word have those meanings to that layers. Mhmm. That is, uh, I understand that, uh, for embedding. But when it goes to, uh, multiplications, So, uh, with query, with the key,
+
+You
+02:06:01
+
+is that a bit parameter, do you say? Where those, uh, value coming up weight bias weight or wire bias, those hits? Yep. Um, so, um, yeah. And where is the dot product is coming? I mean, sir, and then we have cosine similarity So where the cosine similarity is coming into the picture? Sure. Um, let me find a combination of self attention.
+
+ByteByte
+02:06:02
+
+1,500 newton parameters, and these are the hyperparameters. And then all they did in g p t three was just to scale it. So they the architecture, everything was almost similar. They just increased this number of layers to 96, and um, dimensions to all the way up to 12,000 something. And then that became the GPT three, which was the model that they released after their their point unit. Um, so this model was one seventy five billion. So long answer short, um, long story short, to answer your question, it these are hyperparameters. That experimentally, you just need to try different things. Um, to see what works best based on your dataset size. Your domain, and, um, your your like, the rest of the, uh, your training settings. Okay. And these parameters are the, uh, multiplications of your vectors in the embedding model. And then adding everything that decide the parameter size. Yes. Basically, you just go over each layer, and there is a weight matrix. So you just, um, if you just count all of them, over the entire network, it would be these numbers. So We have embedding we have embedding because every token is converting to because every token is have some uh, some embedding embedding of some numbers. It's converting to some numbers. So embedding the, uh, embedding size might be five and twelve to 12,000 something. On the models. Then, uh, these tokens uh, goes to the multiplications with each other, uh, tokens. Means, one query with the matches with the the other, uh, key tokens, they get multiply multiplied and embedding value of, uh, this token got changed. Right? In every one transformer layer. And we repeat it up to end time of the models. Yes. So, basically, you have n blocks that are stacked and each block, the the main components are model attention and feed forward. I mean, in between, you have some normalization, I think, that, but they're not introducing any additional parameters, um, or or various one number of parameters. But these are the key, uh, components. And if you look inside these components, both feedforward and motor attention, they end up with some linear layers. And linear layer means means just some, uh, just a weight matrix. Um, and those weight matrix says just keeps transforming into some output. So when the I see here. Sorry to interrupt. Uh, please then how the embedding and weight metrics uh, I get confused with that. What is the weight metrics and I'm ready. I understand now. So but it's a well, value for any token. We'll give it. Thousand layer or 2,000 layers. But where the main metrics is coming into? Picture? So I think the confusion is the fact that the input versus parameters. So inputs are, um, so the input has start from here. And then at the at after each layer, we end up with some, uh, like, modified uh, sequences. Right? So those are not parameters. For example, these these sequence three, uh, three vectors are not parameters. They are just a transformed version of our input. Yeah. And and it's going to be the same inside this. For example, this goes into motor attention. Motor head attention has some parameters. Those parameters gets multiplied by by this sequence. And then it produces some output. Now that output is no longer parameters. They're just they're called activations. Um, but those activations now, again, going to forward. And feed forward now has its own parameters. So it transforms the activations, and then it produces a a a different, activation here. So does that help? Yeah. Uh, and I think it's just I think it's just the intermediate representations. Yes. What we are going to do. Yeah. Yeah. Everything that I it might be a hidden layer, uh, and every layer have some some meanings. Uh, something. Maybe is it grammatical, correct, or it's a place or something? In their in in the AI language. Something is there. Right? Not a human language, but some value is given to that. Average. Yeah. So, basically, each each layer has, um, some output It's called Yeah. CNN representations or or also activations. Those has meaning for the model itself. If if you look at them, there are just some numbers. So it it's it's always been the best for us. Yeah. So one layer might be, is it animal or is it a woman or something? So they have given some numbers to that layer every word have those meanings to that, uh, layers. Mhmm. That is, uh, I understand that, uh, for embedding. But when did it go to, uh, multiplications? So, uh, with query with the key, if that a weight parameter, we say where those, uh, value coming up weight bias weight or why bias? Those things. Yep. Um, so, um, yeah. And where is the dot product is coming? I mean, sir, and and we have a cosine similarity So where the cosine similarity is coming into the picture? Sure. Um, let me find the formulation of self attention.
+
+ByteByte
+02:06:17
+
+Or, actually, maybe I'll take that. I'm sorry. Um, I want to, uh, your video, this one. No. Yeah. I'm looking for a particular part to explain the key values.
+
+You
+02:07:59
+
+Or, actually, maybe I'll take that. I'm sorry. Yeah. I want to, uh, your video, this one. No. Yeah. I'm looking for a particular part to explain the key values. Here. So, um, this is the input tokens. This is you can think of those as the activations that I was just explaining. Yeah. Now this is going into self attention layer. This whole thing, you can think of it as self attention. So this entire thing is now self attention formulation. It has three linear layers, and each linear layer, they have their own I mean, again, this is this is, uh, this is a bit technical, so don't have to necessarily fully understand it to, um, for future weeks. But since you are since you are asking. Self attention has three linear layers. One is called, uh, query, and debates or WQ. One is called case. And the weight are w k and same for values. So we have queries, case values. Now this input goes into these linear layers. Separately, and each of these linear layers transform this input to some output. Now you can see we have three outputs. Now these outputs goes into this formulation. And this part is called um, like, it's basically where they are attending to each other. So each token in the sequence is attending to each other. And then they figure out how relevant they are to each other. And and they apply softmax so that it becomes probabilities. So for example, here, AI is finding itself very relevant to AI and more relevant to aid and less relevant to like, smaller numbers. So, basically, the output of this part is just
+
+ByteByte
+02:08:39
+
+Here. So, um, this is the input tokens. This is you can think of those as the activation that I was just explaining. Yeah. Now this is going into self attention later. This whole thing, you can think of it as self attention. So this entire thing is now self attention formulation. It has three linear layers, and each linear layer, they have their own I mean, again, this is this is, um, this is a bit technical, so don't have to necessarily fully understand it to, um, for future weeks. But um, since you are since you are asking, self attention has three linear layers. One is called, uh, query, and debates are w q. One is called keys, and the rate are w k. And same for values. So we have query case values. Now this input will then to these linear layers. Separately. And each of these linear layers transform this input to some output. Now you can see we have three outputs. Now these outputs goes into this formulation. And this part is called um, like, it's basically where they are attending to each other. So each token in the sequence is attempting to each other, and then they figure out how relevant they are to each other. And and they apply softmax so that it becomes probabilities. So, for example, here, AI is finding itself very relevant to AI and more relevant to eight and less relevant to, like, smaller numbers. So, basically, the output of this part is just, uh, like, end by end metrics. And those numbers are showing how relevant these tokens are. Right, in the self management layer. And then based on that, we again, it is is a matrix another matrix multiplication by the output of this with the values that were obtained here. And this becomes the output. If you want to understand the details, this is the details of self attention. If you want to think of it as a black box, basically, an input goes in, three linear layers. These are all the bits. Keep transforming this, and it goes to some mathematical expressions. And then the output is something that is has the exact same shape as the input.
+
+You
+02:08:40
+
+like, end by end entries. And those numbers are showing how relevant these tokens are, right, in the self attention rate. And then based on that, we again, it is is a matrix another matrix multiplication by the output of this. With the values that we are obtained here. And this becomes the output. If you want to understand the details, this is the details of self attention. If you want to think of it as a black box, basically, an input goes in, three linear layers. These are all the weights. Keep transforming this, and it goes to some mathematical expressions. And then the output is something that is has the exact same shape as the input.
+
+You
+02:09:19
+
+So yeah. So that's that's basically what happens inside self attention. And when you are saying at the linear, uh, I think, uh, in your previous comments, uh, you said, uh, if it is linear, then it will it will be a size of a vocabulary. Is that correct? No. No. So, um, yeah. I I think I also mentioned this earlier. Um, these linear layers are the size determines based on the expected input and output size. For example, if we always expect that at this point, in their neural network, the input be a will be this size, These rates would be the the size of the rates would be determined based on that.
+
+ByteByte
+02:09:20
+
+So yeah. Okay. So that's that's basically what happens inside self attention. And when you are saying that the linear, uh, I think, uh, in your previous comments, you said, uh, if it is linear, then it it will be a size of a vocabulary? Is that correct? In the No. No. So I yeah. But I think I also mentioned this earlier. Um, these linear layers are the size determines based on the expected input and output size. For example, if we always expect that at this point, in their neural network, they would be will be this size. These rates would be the the size of the rates would be determined based on that.
+
+ByteByte
+02:09:24
+
+Can you repeat that, please? Yes. So
+
+You
+02:09:25
+
+Can you repeat again, please? Yes. So
+
+You
+02:10:30
+
+So maybe here. Um, I just you just saw the multi attention. Inside inside the attention. It was here. The size is determined by the the shape of the expected inputs. For example, here, this this shape, if it's of size h, Right? Now if the expected output of the self attention that we want to produce is also size h, then the weight metrics test will be determined based on these expected input output checks. Right? It has nothing to do with the initial vocabulary sense because by the time the vectors reaches, um, this this layer, they're no longer of size vocabulary size. They are of size h.
+
+ByteByte
+02:10:30
+
+So maybe here. I just you just saw the multi add attention inside inside the attention. It was here. The size is determined by this the shape of the expected inputs. For example, here, this this shape, if it's of size h, Right? And if the expected output of the self attention, that we want to produce is also size h, then the weight metrics has to be determined based on these expected input output shapes. Right? It has nothing to do with the initial vocabulary sets because by the time the vectors reaches, um, this this layer, they're no longer of size vocabulary size. They are of size h.
+
+You
+02:10:56
+
+Yeah. Got it. Right? The only the only time that a linear layer has to deal with a vocabulary size is the the very last linear layer. And that's because we want to go from this vector of size again h to something of size vocabulary size. That's the only part that the weight metrics one side one side of the weight metrics would be vocabulary
+
+You
+02:11:17
+
+size. Okay. Yeah. I try to keep it generic, but in practice, it's all of the layers are usually the same size. I mean, theoretically, it can be different, but most transformers, they just operate with with some, uh, fixed hidden representation called h. So all these layers, they have to deal with inputs of size h, and then they produce outputs of size h.
+
+ByteByte
+02:11:19
+
+Yeah. Got it. Right? The only the only time that the linear layer has to deal with vocabulary size is the the very last linear layer. And that's because we want to go from this vector of size again h to something of size vocabulary size. That's the only part that the weight metrics one side one side of the weight metrics would be vocabulary size. Okay. Yep. Yep. I try to keep it generic, but in practice, it's all of the layers are usually the same size. I mean, theoretically, it can be different, but most transformers, they just operate with with some, uh, fixed hidden representation called h. So all these layers, they have to deal with inputs of size h, and then they produce outputs of size h. Okay. Thank you. Yeah.
+
+You
+02:11:19
+
+Okay. Thank you. Yeah.
+
+ByteByte
+02:11:22
+
+Uh, Nitya?
+
+You
+02:11:24
+
+Uh, Nitin?
+
+ByteByte
+02:11:31
+
+Yeah. Uh, I I
+
+You
+02:13:37
+
+Yeah. Uh, hi. Hi, Ali. Thank you. Uh, so, uh, most my question has already been answered. So I just have one question In the earlier part of the guided learning video, uh, you mentioned, uh, to create say, GPT four zero five billion model. Uh, we require, like, thousands of GPUs. And So I just, uh, want to know how those thousand of GPUs uh, play their part. Is it like, uh, we do divide and conquer Do we just train one part in one GPU and the other and later the club all to make one four zero five billion model. Mhmm. Is it like that? Yeah. Um, um, um, Yeah. Exactly. So we have this thing. Again, the the that that is the like, historically, initially, the earlier models, like, JPG two, they're very small. I think I can even train it load it and train it on my, uh, on my laptop. Um, because these the sizes, the h is the small, and the number of blocks is small. I think maximum was 48, but 12 is definitely manageable. And total, it would be, like, 117,000,000 pounds. So it's not going to be very big. But if you increase this, into something very big, even g p t three, it's it's very big. It's 175 These days, we have models with 1,000,000,000,000 parameters. So the issue is that if you continue to train using on a single machine or single GPU, um, it would run out of memory. GPU memories are usually, like, good ones like h 100 or 80 gigabytes. So if your model is beyond, I would say, like, 20 GB, 30 GB, or something, it's not easy to train it. So at some point, you cannot train your neural network on a single GPU. Because you would run out of memory. Now the way that um, companies do it is that they use more mem you use more GPUs. And then they distribute the computations. So there are different ways that these distributions can, um, like, the distributions can work. Um, if you are basically, this is the library. Right? It's
+
+You
+02:13:40
+
+distributed, um, training.
+
+ByteByte
+02:13:41
+
+Yeah. Uh, so, uh, your support question has already been answered. But I just have one question. Are you part of the guide learning video? Uh, you mentioned, uh, to be, uh, say, GPT four zero five million model. Uh, we require, like, thousands of GPUs. Right? So I I just, uh, want to know how those top enough GPUs, uh, play their part. So is it like uh, we would they widen and conquer? Do we just pin one part in one GPU and the other and later the club all to make one four zero? $5,000,000,000? Mhmm. Is it like that? Yep. Um, um, yep. Exactly. So we have this thing Again, that that that is the like, historically, initially, the earlier models, like, GPT two, they're very small. I think I can't even train it load it and train it on my uh, on my laptop, um, because these the sizes, the edge is small. And the number of blocks is small. I think maximum was 48, but 12 is definitely manageable. And total, it would be, like, 117,000,000 parameters. So it's not going to be very big. But if you increase this, into something very big, even GPT three, it's it's very big. It is 175 These days, we have models with 1,000,000,000,000 parameters. So the issue is that if you continue to train using on a single machine or a single GPU, um, it would run out of memory. Um, GPU memories are usually, like like, good ones like h 100 are 80 gigabytes. So if your model is beyond, I would say, like, 20 GB, 30 GB, or something, it's not easy to train it. So at some point, you cannot train your neural network on a single GPU because it would run out of memory. Now the way that, um, companies do it is then they use more men you use more GPUs. And then they distribute the computations. So there are different ways that these distributions can, uh, let the distributions can work. Um, if you're basically, this is the library prior towards distributed, um, training.
+
+You
+02:14:35
+
+So you maybe you take it take a look at this. It can it can clarify a lot of things. Like how how like, the details of uh, distributed training. But there are lots of techniques. One is data data, um, data parallel distributions. FSTP two or tensor parallel are more recently used the models are too big, and then there are different dimensions that the tensors can be split across GPUs and also, um, pipeline parties. Um, it's a very big topic. Also, I think um, one of the chapters of the January book talks goes into the detail of parallelism. I think it it is probably the introduction. Um, so if you're interested, you can also take a look that. But but yeah. That's that's how it works. You just parallelize the computations across GPUs. So that you don't you don't go out of memory.
+
+ByteByte
+02:14:36
+
+So maybe you take it, um, take a look at this. It can it can clarify a lot of things. Like, how how like, the details of, you know, distributed training. But there are lots of techniques. One is data data, um, data parallel distributions. Um, FSPP two or tensor parallel are more recently used because products are too big, and then there are different dimensions that the tensors can be split across GPUs. And also, um, pipeline parallelism. It's a very big topic. Also, I think um, one of the chapters of the general book talks goes into the detail of parallelism. I think it it is probably the introduction. Um, so if you are interested, you can also take a at that. But but, yeah, that's that's how it works. You just parallelize the computations across GPUs so that you don't you don't go out of memory.
+
+ByteByte
+02:14:43
+
+Alright. Any other questions?
+
+You
+02:14:44
+
+Alright. Any other questions?
+
+You
+02:14:59
+
+No more question. Alright. So I think we can end the session, and we'll, um, see you on Saturday. Thank you so much for joining and asking great questions. See you. Bye.
+
+ByteByte
+02:15:01
+
+No more question? Alright. So I think we can end the session, and we'll, um, I'll see you on Saturday. Thank you so much for joining and asking great questions. See you. Bye.
